@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Política de Gestión de Cuentas de Usuario">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <title>Política de Gestión de Cuentas de Usuario - Prodismo SRL</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../dist/output.css" rel="stylesheet">
+    
+</head>
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../index.html">
+                            <img src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png" alt="Logo Prodismo" width="200px" height="40px">
+                        </a>
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Política de Gestión de Cuentas de Usuario</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input" 
+                                class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                                placeholder="Buscar en el contenido...">
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+                    
+                    <!-- PDF Download -->
+                    <button id="pdf-download" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input" 
+                            class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                            placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../autenticacion-accesos/autenticacion-accesos.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Autenticación y Control de Acceso</span>
+                    </a>
+                    <a href="../gestion-contrasenas/gestion-contrasenas.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Contraseñas Seguras</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Gestión de Cuentas de Usuario</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC413-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 25/8/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 0</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objetivo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETIVO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Establecer los controles y procedimientos para la gestión segura del ciclo de vida de las cuentas de usuario en los sistemas de información de <strong>PRODISMO SRL</strong>, con el fin de garantizar que solo personal autorizado tenga acceso adecuado a los recursos, prevenir accesos no autorizados y cumplir con los requisitos del marco TISAX y los controles A.5.3 (Segregación de funciones), A.8.2 (Autenticación) y A.8.3 (Control de acceso físico) del Anexo A de ISO/IEC 27001:2022.
+                        </p>
+                    </section>
+
+                    <section id="alcance" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            ALCANCE
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a:</p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Todos los empleados de <strong>PRODISMO SRL</strong>.</li>
+                            <li>Todos los sistemas de información corporativos (SIP/SIP4.0, App Gastos, CATIA/NX, Redes Prodismo, Active Directory).</li>
+                            <li>Todos los tipos de cuentas de usuario (individuales, colectivas, temporales, privilegiadas).</li>
+                            <li>Todo el ciclo de vida de las cuentas de usuario (creación, modificación, desactivación y eliminación).</li>
+                        </ul>
+                    </section>
+
+                    <section id="referencias-normativas" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            REFERENCIAS NORMATIVAS
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>ISO/IEC 27001:2022 - Anexo A.5.3, A.8.2, A.8.3</li>
+                            <li>ISO/IEC 27002:2022 - Guía para los controles de seguridad</li>
+                            <li>Marco de evaluación TISAX</li>
+                            <li>Política de Autenticación y Control de Accesos MC412-IT-1</li>
+                            <li>Procedimiento de Gestión de Cuentas de Usuario P413-IT-1</li>
+                            <li>Formulario de Solicitud de Alta de Cuenta F413-IT-1</li>
+                            <li>Matriz de Asignación de Privilegios M413-IT-1</li>
+                        </ul>
+                    </section>
+
+                    <section id="definiciones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            DEFINICIONES
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Cuenta de usuario:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Identidad digital que permite acceder a sistemas y recursos.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Cuenta colectiva:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Cuenta compartida por múltiples usuarios para funciones específicas.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Cuenta privilegiada:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Cuenta con permisos elevados para administración de sistemas.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Credenciales temporales:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Accesos con vigencia limitada para casos específicos.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Desactivación:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Suspensión temporal del acceso a una cuenta.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Eliminación:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Borrado permanente de una cuenta del sistema.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="responsables" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            RESPONSABLES
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5.1. Alta Dirección</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Aprobar esta política y asignar los recursos necesarios para su implementación.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5.2. Responsable de Seguridad de la Información (RSI)</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Supervisar el cumplimiento de la política.</li>
+                                <li>Revisar y autorizar excepciones.</li>
+                                <li>Investigar incidentes relacionados con cuentas de usuario.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5.3. Departamento de IT</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Crear, modificar, desactivar y eliminar cuentas.</li>
+                                <li>Implementar automatizaciones para gestión de cuentas.</li>
+                                <li>Mantener el inventario actualizado de cuentas.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5.4. Jefes de Departamento</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Autorizar solicitudes de creación y modificación de cuentas.</li>
+                                <li>Validar la necesidad de acceso para su personal.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5.5. Recursos Humanos</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Notificar altas, bajas y cambios laborales al departamento de IT.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="ciclo-vida" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            CICLO DE VIDA DE LAS CUENTAS DE USUARIO
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.1. Creación de Cuentas</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Solicitud mediante Formulario de Alta F413-IT-1 aprobado por jefe de departamento.</li>
+                                <li>Asignación de permisos según el principio de menor privilegio.</li>
+                                <li>Credenciales temporales con caducidad de 24 horas.</li>
+                                <li>Notificación al usuario con instrucciones de primer acceso.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.2. Modificación de Cuentas</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Actualización de permisos ante cambio de roles o responsabilidades.</li>
+                                <li>Revisión semestral de privilegios asignados.</li>
+                                <li>Documentación de cambios en el historial de la cuenta.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.3. Desactivación de Cuentas</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Desactivación en menos de 24 horas tras baja laboral (automatizado vía script PowerShell).</li>
+                                <li>Preservación de información para fines legales y de auditoría.</li>
+                                <li>Notificación al RSI de la desactivación.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.4. Eliminación de Cuentas</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Eliminación permanente tras 90 días de desactivación.</li>
+                                <li>Backup de información crítica antes de eliminación.</li>
+                                <li>Registro en bitácora de eliminaciones realizadas.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="tipos-especiales" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            TIPOS ESPECIALES DE CUENTAS
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.1. Cuentas Colectivas</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Requisito</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Especificación</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Uso</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Restringido a casos aprobados por IT Manager</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Rotación de contraseñas</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Cada 120 días</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Registro</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">De usuarios autorizados para su uso</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Monitoreo</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Especial de actividades realizadas</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.2. Cuentas Privilegiadas</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Requisito</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Especificación</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Acceso</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Limitado a personal autorizado</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Autenticación</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Multifactor obligatoria</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Rotación de contraseñas</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Cada 90 días</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Logging</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Monitoreo de todas las actividades</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.3. Cuentas de Servicio</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Inventario actualizado de cuentas de servicio.</li>
+                                <li>Contraseñas gestionadas mediante herramienta especializada.</li>
+                                <li>Revisión trimestral de necesidad y permisos.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="requisitos-tecnicos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            REQUISITOS TÉCNICOS
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">8.1. Estándares de Configuración</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Parámetro</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Valor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Longitud mínima de contraseña</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">12 caracteres</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Complejidad</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Mayúsculas, minúsculas, números y símbolos</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Bloqueo tras intentos fallidos</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">5 intentos</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Expiración de sesiones</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">30 minutos de inactividad</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">8.2. Automatizaciones</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Script PowerShell para desactivación automática de cuentas.</li>
+                                <li>Flujo automatizado de aprobación de solicitudes.</li>
+                                <li>Notificaciones automáticas por caducidad de credenciales.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="registros-evidencias" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            REGISTROS Y EVIDENCIAS
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">9.1. Registros Obligatorios</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>F413-IT-1: Formulario de Solicitud de Alta de Cuenta.</li>
+                                <li>Inventario de cuentas: Registro centralizado de todas las cuentas.</li>
+                                <li>Bitácora de cambios: Historial de modificaciones en cuentas.</li>
+                                <li>Registro de desactivaciones: Control de bajas y desactivaciones.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">9.2. Retención de Registros</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo de Registro</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Período de Retención</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Solicitudes de acceso</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">3 años</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Registros de actividades de cuentas privilegiadas</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">5 años</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Bitácoras de desactivación y eliminación</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">3 años</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="monitoreo-cumplimiento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
+                            MONITOREO Y CUMPLIMIENTO
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Auditorías trimestrales del inventario de cuentas.</li>
+                            <li>Revisión mensual de cuentas activas vs. personal empleado.</li>
+                            <li>Indicadores de desempeño:
+                                <ul class="list-circle pl-6 mt-2">
+                                    <li>Tiempo de desactivación de cuentas: Objetivo < 24 horas</li>
+                                    <li>Porcentaje de cuentas con permisos adecuados: Objetivo 100%</li>
+                                    <li>Tiempo de aprobación de solicitudes: Objetivo < 48 horas</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="sanciones-incumplimiento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
+                            SANCIONES POR INCUMPLIMIENTO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo de Incumplimiento</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Consecuencia</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Uso de cuentas compartidas no autorizadas</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Suspensión temporal del acceso</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Creación de cuentas no autorizadas</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Sanción disciplinaria según reglamento interno</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Manejo inadecuado de cuentas privilegiadas</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Reasignación de funciones</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section id="anexos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
+                            ANEXOS
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li><strong>Anexo A:</strong> Formulario de Solicitud de Alta de Cuenta (F413-IT-1)
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">[Documento para solicitud formal de creación de cuentas]</p>
+                            </li>
+                            <li><strong>Anexo B:</strong> Procedimiento de Gestión de Cuentas de Usuario (P413-IT-1)
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">[Instrucciones detalladas para la gestión del ciclo de vida de cuentas]</p>
+                            </li>
+                            <li><strong>Anexo C:</strong> Matriz de Asignación de Privilegios (M413-IT-1)
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">[Definición de permisos por rol y sistema]</p>
+                            </li>
+                            <li><strong>Anexo D:</strong> Diagrama de Flujo del Ciclo de Vida de Cuentas
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">[Representación gráfica de los procesos de gestión]</p>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
+                            REVISIONES DEL DOCUMENTO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">0</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión del documento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows (Bottom) -->
+                <div class="flex justify-between items-center mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+                    <a href="../autenticacion-accesos/autenticacion-accesos.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Autenticación y Control de Acceso</span>
+                    </a>
+                    <a href="../gestion-contrasenas/gestion-contrasenas.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Contraseñas Seguras</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Sidebar Navigation -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objetivo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1. OBJETIVO</a>
+                            <a href="#alcance" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2. ALCANCE</a>
+                            <a href="#referencias-normativas" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3. REFERENCIAS NORMATIVAS</a>
+                            <a href="#definiciones" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4. DEFINICIONES</a>
+                            <a href="#responsables" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5. RESPONSABLES</a>
+                            <a href="#ciclo-vida" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. CICLO DE VIDA</a>
+                            <a href="#tipos-especiales" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. TIPOS ESPECIALES</a>
+                            <a href="#requisitos-tecnicos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8. REQUISITOS TÉCNICOS</a>
+                            <a href="#registros-evidencias" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9. REGISTROS Y EVIDENCIAS</a>
+                            <a href="#monitoreo-cumplimiento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10. MONITOREO Y CUMPLIMIENTO</a>
+                            <a href="#sanciones-incumplimiento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11. SANCIONES</a>
+                            <a href="#anexos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12. ANEXOS</a>
+                            <a href="#revisiones-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13. REVISIONES</a>
+                        </nav>
+                    
+
+                        <!-- Quick Actions -->
+                        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                                Acciones Rápidas
+                            </h4>
+                            <div class="space-y-2">
+                                <button id="report-incident" class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    Reportar incidente
+                                </button>
+                                <button id="contact-support" class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-headset mr-2"></i>
+                                    Contactar soporte
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC413-IT-1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../images/logo01-bco.png" alt="Prodismo" width="120px" height="30px">
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>. Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>ISO 27001:2022 | TISAX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../../js/documentacion/gestion-cuentas-usuario.js"></script>
+</body>
+</html>

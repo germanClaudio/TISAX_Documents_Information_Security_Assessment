@@ -1,0 +1,33 @@
+{
+  "name": "17_Archivos_Web_Prodismo_2025",
+  "version": "1.0.0",
+  "description": "Normas_Tisax_ISO27001",
+  "keywords": [],
+  "homepage": "https://github.com/germanClaudio/planCapacitacionSeguridadIT#readme",
+  "bugs": {
+    "url": "https://github.com/germanClaudio/planCapacitacionSeguridadIT/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/germanClaudio/planCapacitacionSeguridadIT.git"
+  },
+  "license": "ISC",
+  "author": "German Montalbetti",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --minify",
+    "tailwind:install": "npm install -D tailwindcss@latest postcss@latest autoprefixer@latest"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18"
+  }
+}

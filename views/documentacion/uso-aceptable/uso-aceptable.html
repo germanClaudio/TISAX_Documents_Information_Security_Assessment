@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Política de Uso de Recursos IT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <title>Política de Uso de Recursos IT - Prodismo SRL</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../dist/output.css" rel="stylesheet">
+    
+</head>
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../index.html">
+                            <img src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png" alt="Logo Prodismo" width="200px" height="40px">
+                        </a>
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Política de Uso Aceptable de Recursos IT</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input" 
+                                class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                                placeholder="Buscar en el contenido...">
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+                    
+                    <!-- PDF Download -->
+                    <button id="pdf-download" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input" 
+                            class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                            placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../puestos-clave/puestos-clave.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Puestos Clave</span>
+                    </a>
+                    <a href="../acceso-visitantes/accesos-visitantes.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Política de Acceso Visitantes</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Uso Aceptable de Recursos IT</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC131-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 25/8/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 0</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objetivo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETIVO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            El objetivo de la presente política es establecer los lineamientos para el uso adecuado, seguro y responsable de los recursos de Tecnologías de la Información (IT) de <strong>Prodismo SRL</strong>, incluyendo hardware, software, información, redes y servicios de correo electrónico. Esta política busca proteger los activos de información de la compañía, mitigar riesgos, garantizar la continuidad del negocio y asegurar el cumplimiento de los requisitos de los marcos de seguridad TISAX e ISO/IEC 27001:2022.
+                        </p>
+                    </section>
+
+                    <section id="alcance" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            ALCANCE
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a:</p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Todos los colaboradores, contratistas, pasantes y cualquier otro usuario que tenga acceso a los recursos tecnológicos de <strong>Prodismo SRL</strong>, incluyendo, pero no limitándose a equipos de computación, redes, software, servicios en la nube y correo electrónico corporativo.</li>
+                        </ul>
+                    </section>
+
+                    <section id="definiciones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            DEFINICIONES
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Hardware:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Todos los recursos físicos proporcionados por la empresa (ej.: computadoras portátiles, estaciones de trabajo, monitores, impresoras, teléfonos, dispositivos de red).</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Software:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Sistemas operativos, aplicaciones, suites ofimáticas, herramientas de desarrollo y cualquier programa instalado en los equipos corporativos.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">DIT:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Departamento de Tecnologías de la Información, responsable de la gestión y soporte de los recursos IT.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">VPN:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Red Privada Virtual (Virtual Private Network), solución segura para el acceso remoto a los recursos internos de la empresa.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="politicas" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            POLÍTICAS
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">4.1. Uso General de Hardware y Software</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Todo el hardware y software es proporcionado exclusivamente para el desarrollo de actividades profesionales relacionadas con los objetivos de la empresa.</li>
+                                <li><strong>Modificaciones:</strong> Se debe notificar al DIT de cualquier modificación no contemplada en los protocolos establecidos (instalación de software, cambios de hardware, configuraciones de red).</li>
+                                <li><strong>Mantenimiento:</strong> El DIT gestiona el mantenimiento de todo el hardware, excepto de las impresoras, cuyo mantenimiento es responsabilidad de otra área específica. Cualquier falla debe ser reportada mediante ticket de soporte.</li>
+                                <li><strong>Solicitudes e Incidencias:</strong> Todo error de sistema operativo, plataforma Office, solicitud de actualización o instalación de software específico debe ser notificado al DIT para su registro, control y adecuada gestión.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">4.2. Conectividad y Red</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>El acceso remoto a los recursos de la empresa debe realizarse exclusivamente mediante la VPN corporativa gestionada por el DIT (Proveedor: Armanet). Queda prohibido el uso de soluciones de conexión remota no autorizadas.</li>
+                                <li>La red corporativa está segmentada. El acceso a cada segmento se otorgará según la necesidad del puesto de trabajo y previa autorización.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">4.3. Gestión de Licencias de Software</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Está estrictamente prohibida la instalación y el uso de software sin licencia ("pirata").</li>
+                                <li>El uso de programas con licencias costosas (Catia, Process Simulate, NX, Autoform, Visualizadores) debe regirse por el principio de necesidad.</li>
+                                <li>El DIT gestionará los permisos de acceso a las licencias según un cuadro de asignación variable, priorizando su uso para las áreas y proyectos que lo requieran de forma permanente ("reserva") o temporal.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">4.4. Gestión de Altas y Bajas de Usuarios</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Proceso</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Requisitos</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Altas</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-1">
+                                                    <li>Cada gerente o supervisor debe informar al DIT con la antelación suficiente (mínimo 5 días hábiles) sobre el ingreso de un nuevo colaborador.</li>
+                                                    <li>Gestionar la creación de usuario, correo electrónico, configuración de equipos y accesos a sistemas necesarios.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Bajas</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-1">
+                                                    <li>El gerente o supervisor debe informar inmediatamente al DIT sobre la baja de un colaborador.</li>
+                                                    <li>Deshabilitar su cuenta de correo y acceso a sistemas.</li>
+                                                    <li>Realizar una copia de seguridad (backup) de los archivos corporativos en la nube.</li>
+                                                    <li>Recuperar el equipo físico para su análisis, limpieza y reasignación.</li>
+                                                    <li>Dar de baja al usuario en todas las plataformas externas (Ejemplo: MS Teams, TuLegajo.com, SIP/SIP4.0, App de Viajes, etc.).</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">4.5. Política de Correo Electrónico</h3>
+                            <div class="p-4 bg-blue-50 rounded-lg dark:bg-blue-900/20 mb-4">
+                                <h4 class="font-semibold text-blue-800 dark:text-blue-300 mb-2">Principio General</h4>
+                                <p class="text-blue-700 dark:text-blue-300">La cuenta de correo electrónico corporativa es un activo de la empresa y debe ser utilizada exclusivamente para fines profesionales.</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Obligatorio:</h4>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                                    <li>Todas las comunicaciones deben incluir una firma electrónica con los datos profesionales del remitente.</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Usos Prohibidos:</h4>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                                    <li>Fines comerciales ajenos a la empresa.</li>
+                                    <li>Envío de cadenas, spam, campañas personales, o contenido para hacer bullying/acoso.</li>
+                                    <li>Registrarse en sitios web, foros o servicios no relacionados con las funciones del puesto (ej.: diarios, redes sociales personales).</li>
+                                    <li>Enviar o almacenar material pornográfico, ilegal, difamatorio o con derechos de autor violados.</li>
+                                    <li>Distribuir deliberadamente virus, ransomware o cualquier otro código malicioso.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">4.6. Medidas Técnicas</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>El DIT programará el apagado automático de equipos fuera del horario laboral para optimizar el consumo energético y aplicar mantenimientos de seguridad.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="responsabilidades" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            RESPONSABILIDADES
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">DIT:</h3>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">Es responsable de implementar, mantener, hacer cumplir esta política y proporcionar soporte técnico.</p>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Gerentes/Supervisores:</h3>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">Son responsables de notificar altas/bajas a tiempo, autorizar solicitudes de acceso de sus equipos y promover el cumplimiento de esta política entre sus colaboradores.</p>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Todos los Usuarios:</h3>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">Son responsables de utilizar los recursos IT de forma responsable, cumplir con esta política y reportar inmediatamente incidente de seguridad o uso inapropiado al DIT.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="cumplimiento-sanciones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            CUMPLIMIENTO Y SANCIONES
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            El incumplimiento de esta política puede resultar en acciones disciplinarias, que pueden incluir desde una advertencia formal hasta la terminación de la relación contractual, dependiendo de la gravedad de la infracción. Además, las actividades ilegales se reportarán a las autoridades competentes.
+                        </p>
+                    </section>
+
+                    <section id="excepciones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            EXCEPCIONES
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Cualquier excepción a esta política debe ser solicitada por escrito al DIT y aprobada por la Gerencia correspondiente.
+                        </p>
+                    </section>
+
+                    <section id="revision-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            REVISIÓN DEL DOCUMENTO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Esta política será revisada anualmente por el DIT o ante cualquier cambio significativo en el entorno tecnológico o de negocio para asegurar su continua idoneidad, adecuación y efectividad.
+                        </p>
+                    </section>
+
+                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            REVISIONES DEL DOCUMENTO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">0</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión del documento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mt-12">
+                    <a href="../puestos-clave/puestos-clave.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Puestos Clave</span>
+                    </a>
+                    <a href="../acceso-visitantes/accesos-visitantes.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Política de Acceso Visitantes</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objetivo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1. OBJETIVO</a>
+                            <a href="#alcance" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2. ALCANCE</a>
+                            <a href="#definiciones" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3. DEFINICIONES</a>
+                            <a href="#politicas" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4. POLÍTICAS</a>
+                            <a href="#responsabilidades" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5. RESPONSABILIDADES</a>
+                            <a href="#cumplimiento-sanciones" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. CUMPLIMIENTO Y SANCIONES</a>
+                            <a href="#excepciones" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. EXCEPCIONES</a>
+                            <a href="#revision-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8. REVISIÓN DEL DOCUMENTO</a>
+                            <a href="#revisiones-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9. REVISIONES DEL DOCUMENTO</a>
+                        </nav>
+
+                        <!-- Quick Actions -->
+                        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                                Acciones Rápidas
+                            </h4>
+                            <div class="space-y-2">
+                                <button id="report-incident" class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    Reportar incidente
+                                </button>
+                                <button id="contact-support" class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-headset mr-2"></i>
+                                    Contactar soporte
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Informacion del Documento -->
+                    <div class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC221-IT-2</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">0.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../images/logo01-bco.png" alt="Prodismo" width="120px" height="30px">
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>. Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>ISO 27001:2022 | TISAX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="../../../js/documentacion/uso-recursos-it.js"></script>
+</body>
+</html>

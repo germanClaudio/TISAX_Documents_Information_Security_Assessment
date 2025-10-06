@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Gestión de Activos de Información">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <title>Gestión de Activos de Información - Prodismo SRL</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../dist/output.css" rel="stylesheet">
+    
+</head>
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../index.html">
+                            <img src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png" alt="Logo Prodismo" width="200px" height="40px">
+                        </a>
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Gestión de Activos de Información</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input" 
+                                class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                                placeholder="Buscar en el contenido...">
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+                    
+                    <!-- PDF Download -->
+                    <button id="pdf-download" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input" 
+                            class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                            placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../organizacion-seguridad/organizacion-seguridad.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Organización de la Seguridad</span>
+                    </a>
+                    <a href="../gestion-riesgos/gestion-riesgos.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Gestión de Riesgos</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Gestión de Activos de Información</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC131-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 25/8/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 0</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objetivo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETIVO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Establecer los requisitos para la creación, mantenimiento y protección de un inventario completo y actualizado de los activos de información y soporte de <strong>PRODISMO SRL</strong>, con el fin de garantizar su identificación, responsabilidad y gestión adecuada, en cumplimiento de los controles A.5.9 (Inventario de la información y otros activos) y A.8.1 (Responsabilidad por los activos) del Anexo A de ISO/IEC 27001:2022 y los requisitos del marco TISAX.
+                        </p>
+                    </section>
+
+                    <section id="alcance" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            ALCANCE
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a:</p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Todos los activos de información propiedad de, o manejados por, <strong>PRODISMO SRL</strong>.</li>
+                            <li>Todos los activos de soporte (hardware, software, servicios) que almacenan, procesan o transmiten información.</li>
+                            <li>Todos los empleados, contratistas y terceros responsables de la gestión o uso de los activos inventariados.</li>
+                            <li>Todas las ubicaciones donde se almacenen o procesen activos de la organización.</li>
+                        </ul>
+                    </section>
+
+                    <section id="referencias-normativas" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            REFERENCIAS NORMATIVAS
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>ISO/IEC 27001:2022 - Anexo A.5.9, A.8.1</li>
+                            <li>ISO/IEC 27002:2022 - Guía para los controles de seguridad</li>
+                            <li>Marco de evaluación TISAX</li>
+                            <li>Política de Clasificación de Activos MC131-IT-1</li>
+                            <li>Procedimiento de Gestión del Inventario de Activos P132-IT-1</li>
+                            <li>Formulario de Alta/Baja/Modificación de Activos F132-IT-1</li>
+                        </ul>
+                    </section>
+
+                    <section id="definiciones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            DEFINICIONES
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Activo de Información:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Datos o información que tiene valor para la organización (ej.: diseños CATIA, base de datos SIP 4.0).</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Activo de Soporte:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Componentes hardware, software, redes o servicios que permiten el procesamiento de la información (ej.: servidores, licencias de software).</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Propietario del Activo:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Persona o rol con responsabilidad asignada sobre la gestión, clasificación y protección de un activo.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Inventario de Activos:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Registro centralizado que identifica todos los activos relevantes para el SGSI.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="responsables" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            RESPONSABLES
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">5.1. Alta Dirección</h3>
+                                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1 mt-2">
+                                    <li>Aprobar esta política y asignar los recursos necesarios para su implementación.</li>
+                                    <li>Garantizar la priorización de la gestión de activos dentro de la organización.</li>
+                                </ul>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">5.2. Responsable de Seguridad de la Información (RSI)</h3>
+                                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1 mt-2">
+                                    <li>Supervisar el cumplimiento de esta política.</li>
+                                    <li>Revisar y aprobar el inventario de activos críticos.</li>
+                                    <li>Reportar a la Alta Dirección sobre el estado del inventario.</li>
+                                </ul>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">5.3. IT Manager</h3>
+                                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1 mt-2">
+                                    <li>Gestionar la implementación y mantenimiento del inventario de activos de TI.</li>
+                                    <li>Asegurar que todos los activos de soporte bajo responsabilidad del departamento de TI sean identificados e inventariados.</li>
+                                    <li>Aprobar las altas, bajas y modificaciones de activos de soporte.</li>
+                                </ul>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">5.4. Propietarios de los Activos</h3>
+                                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1 mt-2">
+                                    <li>Identificar y registrar los activos de información bajo su responsabilidad.</li>
+                                    <li>Asegurar que la información del inventario para sus activos sea precisa y esté actualizada.</li>
+                                    <li>Notificar altas, bajas o cambios significativos en los activos.</li>
+                                </ul>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">5.5. Departamento de TI / Administrador de TI</h3>
+                                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1 mt-2">
+                                    <li>Mantener el inventario centralizado de activos de soporte.</li>
+                                    <li>Ejecutar los escaneos periódicos para la detección de activos no registrados.</li>
+                                    <li>Brindar soporte técnico para la gestión de la herramienta de inventario.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="requisitos-inventario" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            REQUISITOS PARA EL INVENTARIO
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.1. Alcance del Inventario</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">El inventario debe incluir, como mínimo, la siguiente información para cada activo:</p>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Campo</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Identificador Único</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Código único asignado</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Nombre del Activo</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Descripción clara del activo</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Tipo</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Información, Software, Hardware, Servicio, etc.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Clasificación</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Crítico, Alto, Medio, Bajo (según MC131-IT-1)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Propietario</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Nombre y datos de contacto del responsable</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Ubicación</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Física o lógica (ej.: Servidor AWS, Oficina CBA)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Fecha de Registro</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Fecha de incorporación al inventario</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.2. Herramienta de Inventario</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Se utilizará una herramienta centralizada (ej.: Snipe-IT) para el mantenimiento del inventario.</li>
+                                <li>El acceso a la herramienta estará restringido basado en el principio de mínimos privilegios (MC421-IT-2).</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="gestion-ciclo-vida" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            GESTIÓN DEL CICLO DE VIDA DEL INVENTARIO
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.1. Registro de Activos</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Alta:</strong> Todo activo nuevo debe ser registrado en el inventario utilizando el formulario F132-IT-1 antes de ser puesto en producción.</li>
+                                <li><strong>Aprobación:</strong> El alta debe ser aprobada por el IT Manager y el Propietario del Activo asignado.</li>
+                                <li><strong>Clasificación:</strong> Al momento del registro, el activo debe ser clasificado según MC131-IT-1.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.2. Mantenimiento y Actualización</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Evento</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Acción</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Plazo Máximo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Cambio de Propietario</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualizar inventario</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">5 días hábiles</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Cambio de ubicación</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualizar inventario</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">3 días hábiles</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Baja o Retiro</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Baja o Retiro</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Inmediato</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.3. Revisiones Periódicas</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Nivel</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Revisión</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Crítico</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Trimestral</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">IT Manager + Dueño del Activo</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Alto</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Semestral</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Administrador TI + Responsable</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Medio/Bajo</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anual</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Soporte TI</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.4. Categorías de Clasificación</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Nivel</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Definición</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Ejemplos en <strong>PRODISMO SRL</strong></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Crítico</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Pérdida o compromiso causa impacto financiero-legal grave</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-1">
+                                                    <li>Diseños 3D (CATIA/NX)</li>
+                                                    <li>Base de datos SIP/SIP4.0 (ERP)</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Alto</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Impacto operacional significativo (interrupción >24h)</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-1">
+                                                    <li>Windows Server</li>
+                                                    <li>Cuentas de correos corporativos (MS Office 365)</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Medio</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Afecta procesos no críticos (interrupción <24h)</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-1">
+                                                    <li>Documentación en SharePoint</li>
+                                                    <li>MS Teams</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Bajo</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Impacto mínimo o nulo en operaciones</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-1">
+                                                    <li>Manuales internos obsoletos</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-400 dark:bg-blue-900/20 dark:border-blue-600">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Criterios de Clasificación:</h4>
+                                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+                                    <li><strong>Confidencialidad:</strong> ¿Qué tan sensible es el dato? (ej.: CATIA = Crítico)</li>
+                                    <li><strong>Integridad:</strong> ¿Qué pasa si se altera? (ej.: SIP = Crítico para facturación)</li>
+                                    <li><strong>Disponibilidad:</strong> ¿Tiempo máximo tolerable de inactividad? (ej.: Windows Server = Alto)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="proteccion-inventario" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            PROTECCIÓN DEL INVENTARIO
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>El inventario de activos será tratado como información Crítica debido a su sensibilidad.</li>
+                            <li>El acceso de solo lectura podrá ser concedido a roles específicos (ej.: Auditores Internos) previa aprobación del RSI.</li>
+                            <li>Se mantendrá una copia de seguridad del inventario de forma segura, de acuerdo con la política de backups.</li>
+                        </ul>
+                    </section>
+
+                    <section id="registros-evidencias" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            REGISTROS Y EVIDENCIAS
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">9.1. Registros Obligatorios</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>F132-IT-1: Formulario de Alta/Baja/Modificación de Activos</li>
+                                <li>Reportes de Revisiones Periódicas del inventario</li>
+                                <li>Historial de cambios del inventario centralizado</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">9.2. Retención de Registros</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Inventario histórico: 5 años después de la baja del activo</li>
+                                <li>Formularios de gestión: 3 años</li>
+                                <li>Reportes de revisión: 3 años</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="monitoreo-cumplimiento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
+                            MONITOREO Y CUMPLIMIENTO
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>El cumplimiento de esta política será verificado en auditorías internas semestrales.</li>
+                            <li>El IT Manager generará un reporte trimestral sobre la integridad y actualización del inventario.</li>
+                            <li>Indicadores de desempeño:
+                                <ul class="list-circle pl-5 mt-2 space-y-1">
+                                    <li>Porcentaje de activos críticos con información correcta en el inventario: Objetivo > 98%</li>
+                                    <li>Tiempo promedio entre la baja de un activo y su actualización en el inventario: Objetivo < 48 horas</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="sanciones-incumplimiento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
+                            SANCIONES POR INCUMPLIMIENTO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            El incumplimiento de esta política, como la omisión en el registro de activos o la falta de actualización de la información, podrá dar lugar a acciones disciplinarias de acuerdo con la política de sanciones de la empresa.
+                        </p>
+                    </section>
+
+                    <section id="revision-actualizacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
+                            REVISIÓN Y ACTUALIZACIÓN
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Esta política será revisada anualmente por el RSI y el IT Manager.</li>
+                            <li>Se actualizará de forma inmediata ante cambios significativos en la infraestructura tecnológica o los procesos de negocio.</li>
+                        </ul>
+                    </section>
+
+                    <section id="anexos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
+                            ANEXOS
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Anexo A: Formulario de Alta/Baja/Modificación de Activos (F132-IT-1)</h3>
+                                <p class="text-gray-700 dark:text-gray-300">[Formulario estandarizado para la gestión de cambios en el inventario]</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Anexo B: Procedimiento de Gestión del Inventario de Activos (P132-IT-1)</h3>
+                                <p class="text-gray-700 dark:text-gray-300">[Instrucciones detalladas para el registro, mantenimiento y revisión del inventario]</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">14</span>
+                            REVISIONES DEL DOCUMENTO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">0</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión del documento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../organizacion-seguridad/organizacion-seguridad.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Politica de Seguridad</span>
+                    </a>
+                    <a href="../gestion-riesgos/gestion-riesgos.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Gestión de Riesgos</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+            </main>
+
+            <!-- Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objetivo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1. OBJETIVO</a>
+                            <a href="#alcance" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2. ALCANCE</a>
+                            <a href="#referencias-normativas" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3. REFERENCIAS NORMATIVAS</a>
+                            <a href="#definiciones" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4. DEFINICIONES</a>
+                            <a href="#responsables" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5. RESPONSABLES</a>
+                            <a href="#requisitos-inventario" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. REQUISITOS INVENTARIO</a>
+                            <a href="#gestion-ciclo-vida" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. GESTIÓN CICLO VIDA</a>
+                            <a href="#proteccion-inventario" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8. PROTECCIÓN INVENTARIO</a>
+                            <a href="#registros-evidencias" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9. REGISTROS Y EVIDENCIAS</a>
+                            <a href="#monitoreo-cumplimiento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10. MONITOREO Y CUMPLIMIENTO</a>
+                            <a href="#sanciones-incumplimiento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11. SANCIONES INCUMPLIMIENTO</a>
+                            <a href="#revision-actualizacion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12. REVISIÓN Y ACTUALIZACIÓN</a>
+                            <a href="#anexos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13. ANEXOS</a>
+                            <a href="#revisiones-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14. REVISIONES DOCUMENTO</a>
+                        </nav>
+                    
+                        <!-- Quick Actions -->
+                        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                                Acciones Rápidas
+                            </h4>
+                            <div class="space-y-2">
+                                <button id="report-incident" class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    Reportar incidente
+                                </button>
+                                <button id="contact-support" class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-headset mr-2"></i>
+                                    Contactar soporte
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Informacion del Documento -->
+                    <div class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC131-IT-1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">0.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../images/logo01-bco.png" alt="Prodismo" width="120px" height="30px">
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>. Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>ISO 27001:2022 | TISAX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-colors opacity-0 invisible z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="../../../js/documentacion/gestion-activos.js"></script>
+</body>
+</html>

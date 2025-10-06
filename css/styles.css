@@ -1,0 +1,292 @@
+@charset "UTF-8";
+/* @import "../dist/output.css"; */
+/* Custom Styles for Prodismo Security Policy */
+
+/* ------ reseteo navegador ---------------*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'system-ui', 'sans-serif';
+    background-color: #f0f4f8;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+.smooth-page-transition {
+    cursor: pointer;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* Table of Contents active state */
+.toc-link.active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Print styles for PDF generation */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    h1, h2, h3, h4 {
+        page-break-after: avoid;
+    }
+    
+    table, figure {
+        page-break-inside: avoid;
+    }
+}
+
+/* Search highlight */
+.search-highlight {
+    background-color: #fef3c7;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.dark .search-highlight {
+    background-color: #92400e;
+    color: #fef3c7;
+}
+
+/* Floating table of contents responsive behavior */
+@media (max-width: 1023px) {
+    .lg\\:w-80 {
+        width: 100%;
+    }
+}
+
+/* Animation for theme toggle */
+.theme-transition {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Custom list style for TISAX notes */
+.list-circle {
+    list-style-type: circle;
+}
+
+/* Enhanced focus styles for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Loading state for PDF download */
+.pdf-loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Custom badge styles */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 6px;
+    background-color: #eff6ff;
+    color: #1e40af;
+}
+
+.dark .badge {
+    background-color: #1e3a8a;
+    color: #dbeafe;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+}
+.card-hover {
+    transition: all 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+  }
+
+.bg-gray-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-300 {
+--tw-bg-opacity: 1;
+background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-400 {
+--tw-bg-opacity: 1;
+background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-500 {
+--tw-bg-opacity: 1;
+background-color: rgb(107 114 128 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-600 {
+--tw-bg-opacity: 1;
+background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-700 {
+--tw-bg-opacity: 1;
+background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-800 {
+--tw-bg-opacity: 1;
+background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-900 {
+--tw-bg-opacity: 1;
+background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+}
+
+
+/* Estilos mejorados para el botón de imprimir y banner de cookies */
+
+/* Botón de imprimir */
+#boton-imprimir-politica {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#boton-imprimir-politica:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Banner de cookies */
+#banner-cookies-politica {
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Asegurar que los elementos sean visibles */
+#boton-imprimir-politica,
+#banner-cookies-politica {
+    z-index: 10000;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    #banner-cookies-politica {
+        padding: 1rem;
+    }
+    
+    #banner-cookies-politica .flex {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    #banner-cookies-politica .flex > div {
+        width: 100%;
+    }
+}
+
+/* Estilos para modo de alto contraste */
+@media (prefers-contrast: high) {
+    #boton-imprimir-politica {
+        border: 2px solid #000;
+    }
+    
+    #banner-cookies-politica {
+        border-top: 2px solid #fff;
+    }
+}
+
+/* Mejoras de accesibilidad */
+#boton-imprimir-politica:focus,
+#aceptar-cookies-politica:focus,
+#rechazar-cookies-politica:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}

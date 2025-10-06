@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Seguridad de la Informacióno">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/Logo_Prodismo.ico">
+    <title>Prodismo SRL - Seguridad de la Información</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <!-- Tailwind styles -->
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-6">
+            <div class="flex items-center space-x-3">
+                <img src="./images/ITProdimo_logo.png" alt="Logo Prodismo" width="200px" height="40px">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900">Prodismo SRL</h1>
+                    <p class="text-sm text-gray-600">Seguridad de la Información</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1">Inicio</a>
+                
+                <!-- Menú desplegable Documentación -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center focus:outline-none">
+                        Documentación
+                        <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-200 max-h-96 overflow-y-auto">
+                        <div class="py-2">
+                            <div class="px-4 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                1 - Políticas y Organización de SI
+                            </div>
+                            <a href="./views/documentacion/politicas-seguridad/politica-seguridad.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.1 - Políticas de Seguridad de la Información
+                            </a>
+                            <a href="./views/documentacion/organizacion-seguridad/organizacion-seguridad.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.2 - Organización de la Seguridad de la Información
+                            </a>
+                            <a href="./views/documentacion/gestion-activos/gestion-activos.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.3 - Gestión de Activos
+                            </a>
+                            <a href="./views/documentacion/gestion-riesgos/gestion-riesgos.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.4 - Gestión de Riesgos
+                            </a>
+                            <a href="./views/documentacion/evaluaciones/auditorias-internas.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.5 - Evaluaciones
+                            </a>
+                            <a href="./views/documentacion/gestion-incidentes/gestion-incidentes.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.6 - Gestión de Incidentes
+                            </a>
+                        </div>
+                        <div class="py-2">
+                            <div class="px-4 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                2 - Recursos Humanos
+                            </div>
+                            <a href="./views/documentacion/puestos-clave/puestos-clave.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                2.1 - Política de Requisitos Específicos para Puestos Claves
+                            </a>
+                            <a href="./views/documentacion/uso-aceptable/uso-aceptable.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                2.2 - Política de Uso Aceptable de Recursos de IT
+                            </a>
+                        </div>
+                        <div class="py-2">
+                            <div class="px-4 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                3 - Seguridad Física y Continuidad del Negocio
+                            </div>
+                            <a href="./views/documentacion/acceso-visitantes/accesos-visitantes.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                3.1 - Política de Acceso para Visitantes
+                            </a>
+                            <a href="./views/documentacion/proveedores-criticos/proveedores-criticos.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                3.2 - Política de Gestión de Proveedores Críticos
+                            </a>
+                            <a href="./views/documentacion/dispositivos-moviles/dispositivos-moviles.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                3.3 - Política de Seguridad para Dispositivos Móviles y Medios de Almacenamiento
+                            </a>
+                        </div>
+
+                        <div class="py-2">
+                            <div class="px-4 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                4- Gestión de Identidad y Acceso
+                            </div>
+                            <div class="py-2">
+                                <div class="px-6 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                    4.1 - Gestión de Identidad
+                                </div>
+                                    <a href="./views/documentacion/gestion-medios-identificacion/gestion-medios-identificacion.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        4.1.1 - Política de Gestión de Medios de Identificación
+                                    </a>
+                                    <a href="./views/documentacion/autenticacion-accesos/autenticacion-accesos.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        4.1.2 - Política de Autenticación y Control de Accesos
+                                    </a>
+                                    <a href="./views/documentacion/cuestas-usuarios/cuentas-usuarios.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        4.1.3 - Política de Gestión de Cuentas de Usuario
+                                    </a>
+                                    <a href="./views/documentacion/gestion-contrasenas/gestion-contrasenas.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        4.1.4 - Política de Contraseñas Seguras
+                                    </a>
+                                <div class="px-6 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                    4.2 - Gestión de Acceso
+                                </div>
+                                    <a href="./views/documentacion/minimos-privilegios/minimos-privilegios.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        4.2.1 - Política de Mínimos Privilegios
+                                    </a>
+                            </div>
+                        </div>
+
+                        <div class="py-2">
+                            <div class="px-4 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                5- Seguridad Informática - Ciberseguridad
+                            </div>
+                            <div class="py-2">
+                                <div class="px-6 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                    5.1 - Criptografía
+                                </div>
+                                <div class="py-2">
+                                    <div class="px-8 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                        5.1.1 - Gestion de Procedimiento Criptográficos
+                                    </div>
+                                        <a href="./views/documentacion/clasificacion-datos/clasificacion-datos.html" class="block px-12 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.1.1.1 - Política de Clasificación de Datos
+                                        </a>
+                                        <a href="./views/documentacion/protocolos-criptograficos/protocolos-criptograficos.html" class="block px-12 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.1.1.2 - Política de Protocolos Criptográficos Seguros
+                                        </a>
+                                    <div class="px-8 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                        5.1.2 - Protección de Información Durante Transferencia
+                                    </div>
+                                        <a href="./views/documentacion/transferencia-segura/transferencia-segura.html" class="block px-12 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.1.2.1 - Política de Transferencia Segura de Información
+                                        </a>
+
+                                    <div class="px-6 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                        5.2 - Seguridad de Operaciones
+                                    </div>
+                                        <a href="./views/documentacion/gestion-cambios/gestion-cambios.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.1 - Gestión de Cambios
+                                        </a>
+                                        <a href="./views/documentacion/gestion-entornos-desarrollo/gestion-entornos-desarrollo.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.2 - Gestión de Entornos de Desarrollo
+                                        </a>
+                                        <div class="px-8 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                            5.2.3 - Gestión de Sistemas IT Contra Malware
+                                        </div>
+                                        <a href="./views/documentacion/configuracion-segura/configuracion-segura.html" class="block px-12 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.3.1 - Política de Configuración Segura
+                                        </a>
+                                        <a href="./views/documentacion/minimos-privilegios/minimos-privilegios.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.4 - Gestión y Analisis de Registros de Eventos
+                                        </a>
+                                        <a href="./views/documentacion/minimos-privilegios/minimos-privilegios.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.5 - Gestión de Vulnerabilidades
+                                        </a>
+                                        <a href="./views/documentacion/minimos-privilegios/minimos-privilegios.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.6 - Gestión de Auditoría de Sistemas
+                                        </a>
+                                        <a href="./views/documentacion/minimos-privilegios/minimos-privilegios.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.7 - Gestión de Red de la Organización
+                                        </a>
+                                    <div class="px-6 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                        5.3 - Adquisición de Sistemas, Gestión de Requisitos y Desarrollo
+                                    </div>
+                                        <a href="./views/documentacion/minimos-privilegios/minimos-privilegios.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.3.1 - Gestión de Sistemas IT Nuevos o en Desarrollo
+                                        </a>
+                                        <a href="./views/documentacion/minimos-privilegios/minimos-privilegios.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.3.2 - Gestión de Requisitos de Servicios de Red
+                                        </a>
+                                        <a href="./views/documentacion/minimos-privilegios/minimos-privilegios.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.3.3 - Gestión de Retirada Segura de Activos Externos
+                                        </a>
+                                        <a href="./views/documentacion/minimos-privilegios/minimos-privilegios.html" class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.3.4 - Gestión de Servicios de IT Externos Compartidos
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Menú desplegable Procedimientos -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center focus:outline-none">
+                        Procedimientos
+                        <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-200 max-h-96 overflow-y-auto">
+                        <div class="py-2">
+                            <div class="px-4 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                1 - Políticas y Organización de SI
+                            </div>
+                            <a href="./views/documentacion/politicas-seguridad/politica-seguridad.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.1 - Políticas de seguridad de la información
+                            </a>
+                            <a href="./views/documentacion/organizacion-seguridad/organizacion-seguridad.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.2 - Organización de la seguridad de la Información
+                            </a>
+                            <a href="./views/documentacion/gestion-activos/gestion-activos.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.3 - Gestión de activos
+                            </a>
+                            <a href="./views/documentacion/gestion-riesgos/gestion-riesgos.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.4 - Gestión de riesgos
+                            </a>
+                            <a href="./views/documentacion/evaluaciones/auditorias-internas.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.5 - Evaluaciones
+                            </a>
+                            <a href="./views/documentacion/gestion-incidentes/gestion-incidentes.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.6 - Gestión de incidentes
+                            </a>
+                        </div>
+                        <div class="py-2">
+                            <div class="px-4 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                2 - Recursos Humanos
+                            </div>
+                            <a href="./views/documentacion/puestos-clave/puestos-clave.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                2.1 - Política de Requisitos Específicos para Puestos Claves
+                            </a>
+                            <a href="./views/documentacion/uso-aceptable/uso-aceptable.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                2.2 - Política de Uso Aceptable de Recursos de IT
+                            </a>
+                        </div>
+                        <div class="py-2">
+                            <div class="px-4 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                3 - Seguridad Física y Continuidad del negocio
+                            </div>
+                            <a href="./views/documentacion/politicas-seguridad/politica-seguridad.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                3.1 - Política de Acceso para Visitantes
+                            </a>
+                            <a href="./views/documentacion/organizacion-seguridad/organizacion-seguridad.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                3.2 - Mapa de Proveedores Críticos
+                            </a>
+                            <a href="./views/documentacion/gestion-activos/gestion-activos.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                3.3 - Política de Seguridad para Dispositivos Móviles
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Menú desplegable Formularios -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center focus:outline-none">
+                        Formularios
+                        <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-200 max-h-96 overflow-y-auto">
+                        <div class="py-2">
+                            <div class="px-4 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                1 - Políticas y Organización de SI
+                            </div>
+                            <a href="./views/documentacion/politicas-seguridad/politica-seguridad.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.1 - Políticas de seguridad de la información
+                            </a>
+                            <a href="./views/documentacion/organizacion-seguridad/organizacion-seguridad.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.2 - Organización de la seguridad de la Información
+                            </a>
+                            <a href="./views/documentacion/gestion-activos/gestion-activos.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.3 - Gestión de activos
+                            </a>
+                            <a href="./views/documentacion/gestion-riesgos/gestion-riesgos.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.4 - Gestión de riesgos
+                            </a>
+                            <a href="./views/documentacion/evaluaciones/auditorias-internas.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.5 - Evaluaciones
+                            </a>
+                            <a href="./views/documentacion/gestion-incidentes/gestion-incidentes.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                1.6 - Gestión de incidentes
+                            </a>
+                        </div>
+                        <div class="py-2">
+                            <div class="px-4 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                2 - Recursos Humanos
+                            </div>
+                            <a href="./views/documentacion/puestos-clave/puestos-clave.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                2.1 - Política de Requisitos Específicos para Puestos Claves
+                            </a>
+                            <a href="./views/documentacion/uso-aceptable/uso-aceptable.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                2.2 - Política de Uso Aceptable de Recursos de IT
+                            </a>
+                        </div>
+                        <div class="py-2">
+                            <div class="px-4 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                3 - Seguridad Física y Continuidad del negocio
+                            </div>
+                            <a href="./views/documentacion/politicas-seguridad/politica-seguridad.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                3.1 - Política de Acceso para Visitantes
+                            </a>
+                            <a href="./views/documentacion/organizacion-seguridad/organizacion-seguridad.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                3.2 - Política de Gestión de Proveedores Críticos
+                            </a>
+                            <a href="./views/documentacion/gestion-activos/gestion-activos.html" class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                3.3 - Política de Seguridad para Dispositivos Móviles y Medios de Almacenamiento
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- Contacto con SweetAlert2 -->
+                <button id="contacto-btn" class="text-gray-600 hover:text-blue-600 font-medium focus:outline-none">
+                    Contacto
+                </button>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-6">Seguridad de la Información</h1>
+                <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                    Garantizando la confidencialidad, integridad y disponibilidad de los sistemas y datos de <strong>Prodismo SRL</strong>, 
+                    cumpliendo con los más altos estándares de seguridad.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="./views/documentacion/politicas-seguridad/politica-seguridad.html" 
+                        class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Ver Política Completa
+                    </a>
+                    <button id="pdf-download"
+                        class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                        Descargar PDF
+                </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Cumpliendo con Estándares Internacionales</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Nuestra política de seguridad está alineada con los principales frameworks y normativas del sector.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">TISAX AL2</h3>
+                    <p class="text-gray-600">
+                        Cumplimiento completo con los requisitos de TISAX Assessment Level 2 para la industria automotriz.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-certificate text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">ISO 27001:2022</h3>
+                    <p class="text-gray-600">
+                        Sistema de Gestión de Seguridad de la Información basado en la norma internacional ISO 27001.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-user-shield text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Controles Técnicos</h3>
+                    <p class="text-gray-600">
+                        Implementación de controles avanzados como MFA, EDR, cifrado AES-256 y gestión de accesos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policy Highlights -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Aspectos Clave de la Política</h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Alcance Integral</h3>
+                            <p class="text-gray-600">
+                                Aplica a todos los sistemas de IT, empleados, contratistas y terceros con acceso a recursos de TI.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Responsabilidades Definidas</h3>
+                            <p class="text-gray-600">
+                                Roles y responsabilidades claramente establecidos para Dirección, Equipo IT y empleados.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Controles Específicos</h3>
+                            <p class="text-gray-600">
+                                Controles técnicos y organizativos para mitigar riesgos de seguridad identificados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Cumplimiento Normativo</h3>
+                            <p class="text-gray-600">
+                                Alineación con TISAX AL2, ISO 27001:2022 y requisitos específicos del sector automotriz.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Revisión Continua</h3>
+                            <p class="text-gray-600">
+                                Revisión anual de la política y actualización ante cambios críticos o nuevos riesgos.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Sanciones y Auditorías</h3>
+                            <p class="text-gray-600">
+                                Proceso disciplinario para incumplimientos y auditorías internas anuales de verificación.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-4">¿Listo para explorar la política completa?</h2>
+            <p class="text-xl mb-8 opacity-90">
+                Acceda a la documentación detallada de nuestra Política de Seguridad de la Información.
+            </p>
+            <a href="./views/documentacion/politicas-seguridad/politica-seguridad.html" 
+                class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-block">
+                Ver Política de Seguridad Completa
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    
+                        <img src='./images/logo01-bco.png' title="Logo Prodismo" class="h-8 sm:h-10 w-auto" alt="Prodismo">
+                    
+                    <div>
+                        <p class="font-semibold">Prodismo SRL</p>
+                        <p class="text-sm text-gray-300">Equipo Prodismo IT</p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ftext-center sm:text-right space-y-2">
+                    
+                    
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <a href="./views/politica-privacidad/politica-privacidad.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors mr-2">Política de Privacidad</a>
+                        | <a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
+                    </div>
+                    <i class="fas fa-shield-alt"></i>
+                        <span>ISO 27001:2022 | TISAX</span>
+                    <p class="text-gray-200 text-sm">
+                        Seguridad de la Información &copy; 2025
+                    </p>
+                    <p class="text-gray-300 text-sm">
+                        Developed by Germán C. Montalbetti
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="./js/documentacion/politica-seguridad.js"></script>
+
+</body>
+</html>
