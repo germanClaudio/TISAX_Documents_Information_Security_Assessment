@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Prodismo - Política de Gestión de Contraseñas">
+    <meta name="description" content="Prodismo - Política de Gestión de Logs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
-    <title>Política de Gestión de Contraseñas - Prodismo SRL</title>
+    <title>Política de Gestión de Logs - Prodismo SRL</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +39,7 @@
                         </a>
                         <div class="pl-6">
                             <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Política de Gestión de Contraseñas Seguras</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Política de Gestión de Logs</p>
                         </div>
                     </div>
                 </div>
@@ -88,12 +88,12 @@
             <main class="flex-1 max-w-4xl mx-auto">
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
-                    <a href="../gestion-cuentas-usuarios/cuentas-usuarios.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                    <a href="../configuracion-segura/configuracion-segura.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Gestión de Cuentas de Usuario</span>
+                        <span>Anterior: Configuración Segura</span>
                     </a>
-                    <a href="../minimos-privilegios/minimos-privilegios.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Mínimo Privilegio</span>
+                    <a href="../retencion-eliminacion-logs/retencion-eliminacion-logs.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Retención y Eliminación de Logs</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -101,11 +101,11 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Gestión de Contraseñas Seguras</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Gestión de Logs</h1>
                         <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
-                                <span>Código: MC414-IT-1</span>
+                                <span>Código: MC524-IT-1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
@@ -129,7 +129,7 @@
                             OBJETIVO
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Establecer los requisitos para la creación, gestión y protección de contraseñas en todos los sistemas de información de <strong>Prodismo SRL</strong>. Esta política tiene como objetivo proteger el acceso no autorizado a los activos de información, garantizar la confidencialidad, integridad y disponibilidad de los datos, y cumplir con los requisitos de los controles A.5.17 (Autenticación), A.8.2 (Gestión de derechos de acceso) y A.8.3 (Responsabilidad del usuario por el acceso) del Anexo A de la norma ISO/IEC 27001:2022, así como con los requisitos de protección de información del marco TISAX.
+                            Establecer los requisitos para la generación, recolección, almacenamiento, protección y análisis de registros de eventos (logs) de todos los sistemas críticos de información de <strong>Prodismo SRL</strong>. Esta política tiene como objetivo detectar actividades maliciosas, anomalías operativas, investigar incidentes de seguridad y cumplir con los requisitos legales, reglamentarios y los controles del Anexo A.8.15 (Registro de actividades), A.8.16 (Supervisión del uso de los medios) y A.8.23 (Seguridad de la información para el uso de servicios en la nube) de la norma ISO/IEC 27001:2022, así como con los requisitos de evidencia y auditoría del marco TISAX.
                         </p>
                     </section>
 
@@ -138,11 +138,13 @@
                             <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
                             ALCANCE
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a:</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a todos los:</p>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li>Todos los usuarios: Empleados, contratistas, proveedores y terceros que tengan acceso a los sistemas de información de la organización.</li>
-                            <li>Todos los sistemas: Servidores, estaciones de trabajo, aplicaciones, bases de datos, servicios en la nube, dispositivos de red y cualquier otro sistema que requiera autenticación por contraseña.</li>
-                            <li>Todos los dispositivos: Equipos corporativos y personales (BYOD) utilizados para acceder a recursos de la empresa.</li>
+                            <li><strong>Sistemas de Información:</strong> Servidores (físicos y virtuales), equipos de red, servicios en la nube.</li>
+                            <li><strong>Aplicaciones Críticas:</strong> ERP SIP 4.0, aplicaciones internas de desarrollo y bases de datos.</li>
+                            <li><strong>Estaciones de Trabajo:</strong> Equipos de usuarios con acceso a información confidencial.</li>
+                            <li><strong>Dispositivos de Red:</strong> Firewalls, switches, routers.</li>
+                            <li><strong>Personal:</strong> Administradores de sistemas, desarrolladores, y cualquier usuario cuyas acciones deban ser registradas para fines de auditoría y seguridad.</li>
                         </ul>
                     </section>
 
@@ -152,11 +154,14 @@
                             REFERENCIAS NORMATIVAS
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li>ISO/IEC 27001:2022 - Anexo A.5.17 (Autenticación), A.8.2 (Gestión de derechos de acceso)</li>
+                            <li>ISO/IEC 27001:2022 - Anexo A.8.15 (Registro de actividades), A.8.16 (Supervisión del uso de los medios)</li>
                             <li>ISO/IEC 27002:2022 - Guía para los controles de seguridad</li>
                             <li>Marco de evaluación TISAX</li>
+                            <li>Política de Gestión de Incidentes MC161-IT-1 Política Gestión de Eventos de Seguridad por Departamento</li>
                             <li>Política de Control de Acceso MC412-IT-1 Política de Autenticación y Control de Accesos</li>
-                            <li>Política de Uso Aceptable de los Recursos de TI ISMS-POL-00X</li>
+                            <li>Procedimiento de Registro de Eventos P524-IT-1 Procedimiento Gestión de Registros de Eventos</li>
+                            <li>Procedimiento de Configuración de Logs P524-IT-2 Procedimiento de Configuración de Logs</li>
+                            <li>Formulario F524-IT-4 Reporte de Incidentes</li>
                         </ul>
                     </section>
 
@@ -165,22 +170,23 @@
                             <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
                             DEFINICIONES
                         </h2>
+                        
                         <div class="space-y-4">
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Contraseña Fuerte:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Contraseña que cumple con los requisitos de complejidad establecidos en esta política.</p>
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Log (Registro):</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Entrada automatizada que registra un evento ocurrido en un sistema o aplicación.</p>
                             </div>
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">MFA (Autenticación Multifactor):</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Método de autenticación que requiere dos o más pruebas de identidad.</p>
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">SIEM (Security Information and Event Management):</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Sistema centralizado para la agregación, correlación y análisis de logs.</p>
                             </div>
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Hash:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Función criptográfica utilizada para almacenar contraseñas de forma segura.</p>
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Timestamp:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Marca de tiempo que indica el momento exacto en que ocurrió un evento.</p>
                             </div>
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Gestor de Contraseñas:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Herramienta autorizada para almacenar y gestionar contraseñas de forma segura.</p>
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Retención:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Período de tiempo durante el cual los logs deben ser almacenados y preservados.</p>
                             </div>
                         </div>
                     </section>
@@ -194,202 +200,138 @@
                         <div class="space-y-4">
                             <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Alta Dirección:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Aprobar la política y asegurar los recursos para su implementación.</p>
+                                <p class="text-gray-700 dark:text-gray-300">Aprobar la política y asignar los recursos necesarios para su implementación.</p>
                             </div>
                             <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Responsable de Seguridad de la Información (RSI):</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Mantener, supervisar y auditar el cumplimiento de esta política.</p>
+                                <p class="text-gray-700 dark:text-gray-300">Definir los requisitos de logging, supervisar el cumplimiento de la política y autorizar el acceso a los logs.</p>
                             </div>
                             <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Departamento de TI:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Implementar controles técnicos para aplicar los requisitos de contraseñas (longitud, complejidad, caducidad) en todos los sistemas. Gestionar el acceso de usuarios y proporcionar gestores de contraseñas corporativos.</p>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Departamento de IT/Sistemas:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Implementar la generación y recolección de logs, configurar los sistemas para cumplir con los requisitos, garantizar el almacenamiento seguro y la integridad de los logs.</p>
                             </div>
                             <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Responsables de Área:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Asegurar que el personal bajo su supervisión conoce y cumple esta política.</p>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Equipo de SOC/Seguridad:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Monitorizar y analizar los logs de manera proactiva en busca de incidentes de seguridad.</p>
                             </div>
                             <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Todos los Usuarios:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Crear y proteger contraseñas fuertes, cumplir con los requisitos establecidos y reportar cualquier contraseña comprometida.</p>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Auditores Internos/Externos:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Utilizar los logs como evidencia durante las auditorías del SGSI y TISAX.</p>
                             </div>
                         </div>
                     </section>
 
-                    <section id="requisitos-minimos" class="mb-12 scroll-mt-20">
+                    <section id="requisitos-generales-logging" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            REQUISITOS MÍNIMOS PARA CONTRASEÑAS
+                            REQUISITOS GENERALES DE LOGGING
+                        </h2>
+                        
+                        <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li><strong>Habilitación de Logs:</strong> El registro de eventos debe estar habilitado en todos los sistemas y aplicaciones dentro del alcance.</li>
+                            <li><strong>Sincronización de Hora:</strong> Todos los sistemas generadores de logs deben estar sincronizados con un servidor NTP (Network Time Protocol) corporativo para garantizar la precisión de las marcas de tiempo.</li>
+                            <li><strong>Protección de Logs:</strong> Los logs deben ser protegidos contra modificaciones, alteraciones y eliminaciones no autorizadas. Se implementarán controles de integridad (ej: hashing).</li>
+                            <li><strong>Almacenamiento Centralizado:</strong> Los logs deben ser enviados a un sistema SIEM centralizado para su agregación, correlación y análisis.</li>
+                            <li><strong>Retención:</strong> Los logs deben ser almacenados por un período mínimo de 90 días en línea para análisis inmediato y por 12 meses en almacenamiento frío (offline) para fines de auditoría e investigación forense. Los logs relacionados con incidentes de seguridad deben ser retenidos hasta que el incidente sea cerrado.</li>
+                        </ol>
+                    </section>
+
+                    <section id="ambitos-especificos-eventos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            ÁMBITOS ESPECÍFICOS Y EVENTOS A REGISTRAR
                         </h2>
                         
                         <div class="space-y-6">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">1. Longitud Mínima</h3>
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                        <thead class="bg-gray-50 dark:bg-gray-800">
-                                            <tr>
-                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo de Usuario</th>
-                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Longitud Mínima</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                            <tr>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Usuarios estándar</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">12 caracteres</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Cuentas administrativas y de servicio</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">16 caracteres</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">2. Complejidad</h3>
-                                <p class="text-gray-700 dark:text-gray-300 mb-3">Debe incluir caracteres de al menos tres de las siguientes cuatro categorías:</p>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">7.1. ERP SIP 4.0</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Letras mayúsculas (A-Z)</li>
-                                    <li>Letras minúsculas (a-z)</li>
-                                    <li>Números (0-9)</li>
-                                    <li>Caracteres especiales (ej: !, @, #, $, %, &, *)</li>
+                                    <li><strong>Eventos de Autenticación:</strong> Inicios de sesión exitosos y fallidos (timestamp, usuario, IP).</li>
+                                    <li><strong>Eventos de Autorización:</strong> Intentos de acceso a funciones o datos sensibles (ej: módulos financieros, exportación masiva de datos).</li>
+                                    <li><strong>Eventos de Modificación de Datos:</strong> Creación, modificación y eliminación de registros críticos (ej.: datos de clientes, transacciones financieras).</li>
+                                    <li><strong>Eventos de Administración:</strong> Cambios en la configuración del sistema, permisos de usuario y roles.</li>
                                 </ul>
                             </div>
                             
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">3. Caducidad (Rotación)</h3>
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                        <thead class="bg-gray-50 dark:bg-gray-800">
-                                            <tr>
-                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo de Contraseña</th>
-                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Período de Rotación</th>
-                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Restricciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                            <tr>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Contraseñas de usuario</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">90 días</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">No se permite el reuso de las últimas 5 contraseñas</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Contraseñas de administrador</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">60 días</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">-</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Contraseñas de servicio/sistema</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anualmente o ante cambios</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Rotar ante cualquier cambio en el personal responsable</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">4. Bloqueo de Cuenta</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Tras 5 intentos fallidos de inicio de sesión, la cuenta se bloqueará durante un período de 15 minutos.</p>
-                            </div>
-                            
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5. Almacenamiento</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Las contraseñas deben almacenarse en forma de hash con sal (salt) utilizando algoritmos fuertes (ej: bcrypt, Argon2). Queda prohibido almacenar contraseñas en texto plano.</p>
-                            </div>
-                            
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6. Autenticación Multifactor (MFA)</h3>
-                                <p class="text-gray-700 dark:text-gray-300 mb-3">Es obligatorio el uso de MFA para:</p>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">7.2. Servidores (Windows/Linux)</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Acceso remoto (VPN, escritorio remoto)</li>
-                                    <li>Acceso a sistemas críticos (ERP SIP 4.0, servidor de diseños 3D)</li>
-                                    <li>Todas las cuentas con privilegios administrativos</li>
-                                    <li>Acceso a servicios en la nube (Microsoft 365, Azure, AWS)</li>
+                                    <li><strong>Eventos de Autenticación:</strong> Logon/logoff exitosos y fallidos.</li>
+                                    <li><strong>Eventos del Sistema:</strong> Apagados, reinicios, errores críticos.</li>
+                                    <li><strong>Eventos de Administración:</strong> Creación/modificación/eliminación de cuentas de usuario y grupos, elevación de privilegios (sudo, RunAs).</li>
+                                    <li><strong>Eventos de Seguridad:</strong> Activación/desactivación de políticas de seguridad, cambios en reglas de firewall local.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">7.3. Redes Internas (Firewalls, Switches)</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li><strong>Eventos de Tráfico:</strong> Intentos de conexión denegados (bloqueos por ACL), conexiones permitidas a servicios críticos.</li>
+                                    <li><strong>Eventos de Administración:</strong> Cambios en la configuración de reglas de firewall, ACLs o VLANs.</li>
+                                    <li><strong>Eventos de Sistema:</strong> Disponibilidad del dispositivo, altos niveles de uso de CPU/ancho de banda.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">7.4. Aplicaciones Internas</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li><strong>Eventos de Autenticación y Autorización:</strong> Accesos a la aplicación y a funcionalidades sensibles.</li>
+                                    <li><strong>Eventos de Negocio:</strong> Transacciones críticas ejecutadas (ej: aprobaciones, cambios de estado).</li>
+                                    <li><strong>Eventos de Error:</strong> Errores de aplicación, excepciones no manejadas (stack traces para debugging).</li>
+                                    <li><strong>Eventos de Auditoría:</strong> Cualquier acción que modifique datos persistentes (CRUD).</li>
                                 </ul>
                             </div>
                         </div>
                     </section>
 
-                    <section id="prohibiciones" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
-                            PROHIBICIONES
-                        </h2>
-                        <div class="p-4 rounded-lg border-l-4 border-red-500 bg-white dark:bg-gray-800 shadow-sm space-y-2">
-                            <h3 class="font-semibold text-gray-900 dark:text-white my-2">Queda estrictamente prohibido:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong class="text-red-400 dark:text-red-300">Compartir contraseñas:</strong> Cada usuario es responsable de su contraseña. Bajo ninguna circunstancia se deben compartir las credenciales.</li>
-                                <li><strong class="text-red-400 dark:text-red-300">Reutilizar contraseñas:</strong> No utilizar la misma contraseña para diferentes sistemas (corporativos y personales).</li>
-                                <li><strong class="text-red-400 dark:text-red-300">Almacenar contraseñas en claro:</strong> No escribirlas en post-its, agendas, archivos de texto sin cifrar o emails.</li>
-                                <li><strong class="text-red-400 dark:text-red-300">Utilizar contraseñas débiles o comunes:</strong> Ej: "Password123", "Welcome1", "123456", nombres de familiares o mascotas, fechas de cumpleaños.</li>
-                                <li><strong class="text-red-400 dark:text-red-300">Enviar contraseñas por canales no cifrados:</strong> Como mensajes de texto SMS, WhatsApp no corporativo o correo electrónico sin cifrar.</li>
-                            </ul>
-                        </div>
-                        
-                    </section>
-
-                    <section id="gestion-contrasenas" class="mb-12 scroll-mt-20">
+                    <section id="monitoreo-analisis" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
-                            GESTIÓN DE CONTRASEÑAS
+                            MONITOREO Y ANÁLISIS
                         </h2>
                         
-                        <div class="space-y-4">
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Asignación Inicial:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Las contraseñas iniciales deben ser generadas de forma aleatoria y segura, y se deben cambiar en el primer inicio de sesión.</p>
-                            </div>
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Recuperación:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">El proceso de recuperación de contraseñas debe verificar la identidad del usuario a través de métodos alternativos seguros (preguntas de seguridad robustas, email alternativo, MFA). No se deben restablecer contraseñas por teléfono sin una verificación rigurosa.</p>
-                            </div>
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Herramientas:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Se proporcionará y recomendará el uso de un gestor de contraseñas corporativo (ej: Bitwarden, Keeper) para almacenar y generar contraseñas fuertes.</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="sanciones" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
-                            SANCIONES
-                        </h2>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">
-                            El incumplimiento de esta política se considerará una violación de las normas de seguridad de la información y dará lugar a acciones disciplinarias, que podrán incluir, dependiendo de la gravedad de la infracción:
-                        </p>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li>Amonestación verbal o escrita.</li>
-                            <li>Capacitación obligatoria en seguridad de la información.</li>
-                            <li>Suspensión de los privilegios de acceso a los sistemas.</li>
-                            <li>Desvinculación laboral en casos graves o reincidentes que pongan en riesgo significativo la seguridad de la información.</li>
+                            <li>El equipo de seguridad/SOC monitorizará de forma proactiva los logs centralizados en el SIEM.</li>
+                            <li>Se implementarán reglas de correlación para detectar patrones de ataque (ej: múltiples intentos de login fallidos, acceso a datos fuera del horario laboral).</li>
+                            <li>Se generarán alertas automatizadas para eventos críticos de seguridad.</li>
                         </ul>
                     </section>
 
-                    <section id="revision-auditoria" class="mb-12 scroll-mt-20">
+                    <section id="acceso-confidencialidad" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            ACCESO Y CONFIDENCIALIDAD
+                        </h2>
+                        
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>El acceso a los logs estará restringido basándose en el principio de menor privilegio.</li>
+                            <li>El acceso a los logs crudos estará limitado al personal autorizado (RSI, equipo de SOC, auditores).</li>
+                            <li>Los logs contienen información confidencial y su divulgación a personal no autorizado está estrictamente prohibida.</li>
+                        </ul>
+                    </section>
+
+                    <section id="auditoria-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
-                            REVISIÓN Y AUDITORÍA DEL DOCUMENTO
+                            AUDITORÍA DEL DOCUMENTO
                         </h2>
+                        
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li>Esta política será revisada anualmente por el RSI, o ante cambios en el panorama de amenazas o tecnologías.</li>
-                            <li>El cumplimiento de esta política se auditará mediante:
-                                <ul class="list-circle pl-6 mt-2">
-                                    <li>Revisiones técnicas de la configuración de los sistemas para verificar el cumplimiento de los requisitos de longitud, complejidad y caducidad.</li>
-                                    <li>Simulaciones de phishing para evaluar la concienciación de los usuarios.</li>
-                                    <li>Auditorías internas del SGSI y evaluaciones TISAX.</li>
+                            <li>Esta política será revisada anualmente por el RSI.</li>
+                            <li>El cumplimiento de esta política se auditará de forma periódica mediante:
+                                <ul class="list-circle pl-6 mt-2 space-y-1">
+                                    <li>Auditorías Internas del SGSI.</li>
+                                    <li>Muestreos técnicos para verificar que los sistemas generan y envían los logs requeridos.</li>
+                                    <li>Evaluaciones TISAX externas.</li>
                                 </ul>
                             </li>
-                            <li>Los resultados de las auditorías se presentarán a la Dirección.</li>
                         </ul>
                     </section>
 
                     <section id="revision-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
-                            REVISIONES DEL DOCUMENTO
+                            REVISIÓN DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -412,20 +354,20 @@
                     </section>
                 </article>
 
-                <!-- Navigation Arrows (Bottom) -->
-                <div class="flex justify-between items-center mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
-                    <a href="../gestion-cuentas-usuarios/cuentas-usuarios.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mt-12">
+                    <a href="../configuracion-segura/configuracion-segura.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Gestión de Cuentas de Usuario</span>
+                        <span>Anterior: Configuración Segura</span>
                     </a>
-                    <a href="../minimos-privilegios/minimos-privilegios.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Mínimo Privilegio</span>
+                    <a href="../retencion-eliminacion-logs/retencion-eliminacion-logs.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Retención y Eliminación de Logs</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
             </main>
 
-            <!-- Sidebar Navigation -->
+            <!-- Sidebar -->
             <aside class="lg:w-80 xl:w-90 flex-shrink-0">
                 <div class="sticky top-24">
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
@@ -439,16 +381,16 @@
                             <a href="#referencias-normativas" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3. REFERENCIAS NORMATIVAS</a>
                             <a href="#definiciones" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4. DEFINICIONES</a>
                             <a href="#responsables" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5. RESPONSABLES</a>
-                            <a href="#requisitos-minimos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. REQUISITOS MÍNIMOS</a>
-                            <a href="#prohibiciones" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. PROHIBICIONES</a>
-                            <a href="#gestion-contrasenas" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8. GESTIÓN DE CONTRASEÑAS</a>
-                            <a href="#sanciones" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9. SANCIONES</a>
-                            <a href="#revision-auditoria" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10. REVISIÓN Y AUDITORÍA</a>
-                            <a href="#revision-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11. REVISIONES</a>
+                            <a href="#requisitos-generales-logging" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. REQUISITOS GENERALES DE LOGGING</a>
+                            <a href="#ambitos-especificos-eventos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. ÁMBITOS ESPECÍFICOS Y EVENTOS</a>
+                            <a href="#monitoreo-analisis" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8. MONITOREO Y ANÁLISIS</a>
+                            <a href="#acceso-confidencialidad" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9. ACCESO Y CONFIDENCIALIDAD</a>
+                            <a href="#auditoria-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10. AUDITORÍA DEL DOCUMENTO</a>
+                            <a href="#revision-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11. REVISIÓN DEL DOCUMENTO</a>
                         </nav>
 
                         <!-- Quick Actions -->
-                        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <div class="mt-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
                             <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
                                 <i class="fas fa-bolt mr-2 text-primary-600"></i>
                                 Acciones Rápidas
@@ -464,7 +406,6 @@
                                 </button>
                             </div>
                         </div>
-
                     </div>
 
                     <!-- Informacion del Documento -->
@@ -476,7 +417,7 @@
                         <div class="space-y-3 text-sm">
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Código:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">MC414-IT-1</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC524-IT-1</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
@@ -485,10 +426,6 @@
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
                                 <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
@@ -521,7 +458,7 @@
                     </div>
                 </div>
                 <div class="flex items-center space-x-6">
-                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="../../politica-privacidad/politica-privacidad.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
                     <a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
                     <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
                         <i class="fas fa-shield-alt"></i>
@@ -533,11 +470,11 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Scripts -->
-    <script type="text/javascript" src="../../../js/documentacion/gestion-contrasenas.js"></script>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="../../../js/documentacion/gestion-logs.js"></script>
 </body>
 </html>

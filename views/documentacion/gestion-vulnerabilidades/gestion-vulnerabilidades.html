@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Política de Gestión de Vulnerabilidades Técnicas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <title>Política de Gestión de Vulnerabilidades - Prodismo SRL</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../dist/output.css" rel="stylesheet">
+    
+</head>
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../index.html">
+                            <img src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png" alt="Logo Prodismo" width="200px" height="40px">
+                        </a>
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Política de Monitorización de Vulnerabilidades</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input" 
+                                class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                                placeholder="Buscar en el contenido...">
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+                    
+                    <!-- PDF Download -->
+                    <button id="pdf-download" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input" 
+                            class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                            placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../retencion-eliminacion-logs/retencion-eliminacion-logs.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Retención y Eliminación de Logs</span>
+                    </a>
+                    <a href="../gestion-auditorias/gestion-auditorias.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Gestión Auditorías de Sistemas</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Monitorización de Vulnerabilidades</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC525-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 25/8/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 0</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objetivo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETIVO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Establecer un programa continuo de identificación, evaluación, tratamiento y monitorización de vulnerabilidades técnicas en los sistemas de información de <strong>PRODISMO SRL</strong>, con el fin de reducir la superficie de ataque, mitigar riesgos de seguridad y cumplir con los controles A.8.8 (Gestión de vulnerabilidades técnicas) y A.5.5 (Gestión de riesgos) del Anexo A de la norma ISO/IEC 27001:2022, así como con los requisitos de protección de activos críticos del marco TISAX.
+                        </p>
+                    </section>
+
+                    <section id="alcance" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            ALCANCE
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a todos los:</p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li><strong>Sistemas críticos:</strong> ERP SIP 4.0, servidores de diseño 3D, aplicaciones internas</li>
+                            <li><strong>Infraestructura de red:</strong> Firewalls, switches, routers, sistemas de seguridad</li>
+                            <li><strong>Estaciones de trabajo:</strong> Equipos de usuarios con acceso a información confidencial</li>
+                            <li><strong>Servicios en la nube:</strong> Microsoft 365, Azure, otros servicios SaaS corporativos</li>
+                            <li><strong>Dispositivos IoT/OT:</strong> Sistemas de producción y control industrial</li>
+                            <li><strong>Aplicaciones web:</strong> Sitios web corporativos y portales de clientes</li>
+                        </ul>
+                    </section>
+
+                    <section id="referencias-normativas" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            REFERENCIAS NORMATIVAS
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>ISO/IEC 27001:2022 - Anexo A.8.8, A.5.5</li>
+                            <li>ISO/IEC 27002:2022 - Guía para los controles de seguridad</li>
+                            <li>Marco de evaluación TISAX</li>
+                            <li>Política de Gestión de Cambios MC521-IT-1 Política de Comunicación de Cambios</li>
+                            <li>Política de Gestión de Riesgos MC141-IT-1 Política Análisis de Riesgos</li>
+                        </ul>
+                    </section>
+
+                    <section id="definiciones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            DEFINICIONES
+                        </h2>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Vulnerabilidad:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Debilidad o fallo en un sistema que puede ser explotado para comprometer la seguridad.</p>
+                            </div>
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">CVSS (Common Vulnerability Scoring System):</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Sistema estándar para evaluar la criticidad de vulnerabilidades.</p>
+                            </div>
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Scanner de Vulnerabilidades:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Herramienta automatizada para identificar vulnerabilidades.</p>
+                            </div>
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Patch Management:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Proceso sistemático de aplicación de actualizaciones de seguridad.</p>
+                            </div>
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Surface de Ataque:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Conjunto de puntos donde un atacante puede intentar entrar o extraer datos.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="responsables" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            RESPONSABLES
+                        </h2>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">5.1. Alta Dirección:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Aprobar la política y asignar recursos necesarios. Autorizar la aceptación de riesgos cuando sea necesario.</p>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">5.2. Responsable de Seguridad de la Información (RSI):</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Liderar el programa de gestión de vulnerabilidades. Supervisar la ejecución de scans y análisis de vulnerabilidades. Priorizar la remediación basada en el riesgo empresarial. Reportar el estado del programa a la dirección.</p>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">5.3. Departamento de TI/Sistemas:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Ejecutar scans de vulnerabilidades según la frecuencia establecida. Implementar medidas de remediación y parcheo. Mantener el inventario de activos actualizado. Configurar y operar herramientas de scanning.</p>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">5.4. Equipo de SOC/Seguridad:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Monitorizar alertas de vulnerabilidades críticas. Investigar vulnerabilidades explotadas activamente. Coordinar la respuesta a incidentes relacionados con vulnerabilidades.</p>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">5.5. Dueños de Sistemas:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Aprobar ventanas de mantenimiento para la remediación. Validar que las remediaciones no afecten la operación del negocio.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="frecuencia-escaneos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            FRECUENCIA DE ESCANEOS
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">6.1. Escaneos Automatizados Continuos</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo de Activo</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Frecuencia</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Herramienta</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Nivel de Profundidad</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Sistemas Críticos (ERP SIP 4.0, servidores diseño)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Semanal</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Tenable.io/Nessus</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Alto (Credenciales)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Servidores Internos</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Quincenal</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Tenable.io/Nessus</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Medio (Credenciales)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Estaciones de Trabajo</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Mensual</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Microsoft Defender ATP</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Básico</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Aplicaciones Web</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Continuo</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">OWASP ZAP/Burp Suite</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Alto</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Dispositivos de Red</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Mensual</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Nessus/Qualys</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Medio</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Servicios en la Nube</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Continuo</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">CSPM (Azure Security Center)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Alto</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">6.2. Escaneos Adicionales Obligatorios</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Después de cambios significativos en la infraestructura (72 horas)</li>
+                                    <li>Antes del despliegue a producción de nuevas aplicaciones</li>
+                                    <li>Después de incidentes de seguridad (como parte del análisis post-incidente)</li>
+                                    <li>Ante vulnerabilidades críticas de día cero (scan inmediato)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="clasificacion-priorizacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            CLASIFICACIÓN Y PRIORIZACIÓN
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">7.1. Sistema de Clasificación CVSS v3.1</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">CVSS Score</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Nivel de Criticidad</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tiempo Máximo de Remedición</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">9.0 - 10.0</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Crítico</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">72 horas</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">7.0 - 8.9</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Alto</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">14 días</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">4.0 - 6.9</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Medio</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">30 días</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">0.1 - 3.9</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Bajo</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">90 días</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">7.2. Factores de Contexto Empresarial</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Exposición a Internet: Vulnerabilidades en sistemas expuestos se priorizan</li>
+                                    <li>Datos Procesados: Sistemas con información confidencial tienen mayor prioridad</li>
+                                    <li>Explotación Activa: Vulnerabilidades con exploits públicos disponibles</li>
+                                    <li>Impacto Operacional: Sistemas críticos para el negocio</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="proceso-gestion-vulnerabilidades" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            PROCESO DE GESTIÓN DE VULNERABILIDADES
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">8.1. Fase 1: Identificación</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Escaneos automatizados según frecuencia establecida</li>
+                                    <li>Monitoreo de fuentes externas (CVE, advisories de vendors)</li>
+                                    <li>Reportes de investigadores de seguridad externos</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">8.2. Fase 2: Evaluación</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Validación manual de vulnerabilidades identificadas</li>
+                                    <li>Evaluación de impacto empresarial</li>
+                                    <li>Asignación de prioridades basada en riesgo</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">8.3. Fase 3: Tratamiento</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Remediación: Aplicación de parches o configuraciones seguras</li>
+                                    <li>Mitigación: Implementación de controles compensatorios</li>
+                                    <li>Aceptación: Documentación formal de aceptación de riesgo (para vulnerabilidades de bajo impacto)</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">8.4. Fase 4: Verificación</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Re-escaneo para confirmar la remediación efectiva</li>
+                                    <li>Documentación de evidencias de cierre</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="sistema-alertas-notificaciones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            SISTEMA DE ALERTAS Y NOTIFICACIONES
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">9.1. Alertas Automatizadas</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo de Alerta</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Condición</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Canal</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsables Notificados</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Crítica Inmediata</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">CVSS ≥ 9.0 o explotación activa</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Email, SMS, MS Teams</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI, SOC, Alta Dirección</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Alta Prioridad</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">CVSS 7.0-8.9</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Email, MS Teams</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI, Administradores de sistemas</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Mediana Prioridad</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">CVSS 4.0-6.9</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Email</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Administradores de sistemas</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Vulnerabilidad Día Cero</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anuncio público de exploit</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Email, MS Teams</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI, SOC, Todos los administradores</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">9.2. Umbrales de Notificación</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>>10 vulnerabilidades críticas en un sistema: Notificación a dirección</li>
+                                    <li>Tasa de remediación <80% por 2 ciclos consecutivos: Escalación a comité de seguridad</li>
+                                    <li>Vulnerabilidades no remediadas después del plazo máximo: Reporte de incumplimiento</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="herramientas-tecnologias" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
+                            HERRAMIENTAS Y TECNOLOGÍAS
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">10.1. Herramientas Autorizadas</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li><strong>Escaneo de Red:</strong> Tenable.io, Nessus Professional</li>
+                                    <li><strong>Escaneo de Aplicaciones Web:</strong> OWASP ZAP, Burp Suite Enterprise</li>
+                                    <li><strong>Seguridad en Endpoints:</strong> Microsoft Defender Vulnerability Management</li>
+                                    <li><strong>Cloud Security:</strong> Azure Security Center, AWS Security Hub</li>
+                                    <li><strong>Gestión de Parches:</strong> Microsoft WSUS, ManageEngine Patch Manager</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">10.2. Integraciones Requeridas</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>SIEM para correlación de eventos</li>
+                                    <li>Sistema de ticketing para seguimiento de remediaciones</li>
+                                    <li>Plataforma de gestión de activos (CMDB)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="metricas-indicadores-gestion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
+                            MÉTRICAS E INDICADORES DE GESTIÓN
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">11.1. Métricas Principales</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li><strong>Tiempo Promedio de Detección (MTTD):</strong> < 24 horas para vulnerabilidades críticas</li>
+                                    <li><strong>Tiempo Promedio de Remedición (MTTR):</strong> Según niveles de criticidad</li>
+                                    <li><strong>Tasa de Remedición:</strong> Objetivo >90% para vulnerabilidades críticas/altas</li>
+                                    <li><strong>Cobertura de Escaneo:</strong> >95% de activos inventariados</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">11.2. Reporte a Dirección</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li><strong>Reporte Mensual:</strong> Estado general del programa, métricas clave</li>
+                                    <li><strong>Reporte Trimestral:</strong> Tendencias, análisis de efectividad, ajustes al programa</li>
+                                    <li><strong>Reporte Anual:</strong> Revisión completa del programa para la revisión de la dirección</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="excepciones-gestion-riesgos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
+                            EXCEPCIONES Y GESTIÓN DE RIESGOS
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">12.1. Solicitud de Excepción</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Justificación técnica/business para no remediar en plazo establecido</li>
+                                    <li>Evaluación de riesgo formal y plan de mitigación</li>
+                                    <li>Aprobación requerida del RSI y área de negocio afectada</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">12.2. Aceptación de Riesgo</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Documentación formal en registro de riesgos</li>
+                                    <li>Revisión periódica (máximo 6 meses)</li>
+                                    <li>Reevaluación ante cambios en el contexto de threat intelligence</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="revision-mejora-continua" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
+                            REVISIÓN Y MEJORA CONTINUA
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">13.1. Revisiones Periódicas</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li><strong>Revisión Mensual:</strong> Efectividad de procesos operativos</li>
+                                    <li><strong>Revisión Trimestral:</strong> Actualización basada en threat intelligence</li>
+                                    <li><strong>Revisión Anual:</strong> Evaluación completa del programa frente a mejores prácticas</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">13.2. Auditorías de Cumplimiento</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Auditorías internas semestrales del proceso</li>
+                                    <li>Verificación de la efectividad de los controles</li>
+                                    <li>Inclusión en evaluaciones TISAX y auditorías ISO 27001</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white-300 mb-2">13.3. Mejora Basada en Métricas</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Análisis de causas raíz para vulnerabilidades recurrentes</li>
+                                    <li>Ajuste de frecuencias de escaneo basado en resultados</li>
+                                    <li>Incorporación de nuevas tecnologías y técnicas de scanning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="anexos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">14</span>
+                            ANEXOS
+                        </h2>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Anexo A: Matriz de Criticidad de Activos</h3>
+                                <p class="text-gray-700 dark:text-gray-300">[Clasificación detallada de todos los activos según su criticidad para el negocio]</p>
+                            </div>
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Anexo B: Procedimiento de Remedición de Emergencia</h3>
+                                <p class="text-gray-700 dark:text-gray-300">[Proceso acelerado para vulnerabilidades críticas y día cero]</p>
+                            </div>
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Anexo C: Plantilla de Aceptación de Riesgo</h3>
+                                <p class="text-gray-700 dark:text-gray-300">[Formulario estándar para documentar excepciones y aceptación de riesgos]</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="revision-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">15</span>
+                            REVISIÓN DEL DOCUMENTO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">0</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión del documento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mt-12">
+                    <a href="../retencion-eliminacion-logs/retencion-eliminacion-logs.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Retención y Eliminación de Logs</span>
+                    </a>
+                    <a href="../gestion-auditorias/gestion-auditorias.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Gestión Auditorías de Sistemas</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objetivo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1. OBJETIVO</a>
+                            <a href="#alcance" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2. ALCANCE</a>
+                            <a href="#referencias-normativas" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3. REFERENCIAS NORMATIVAS</a>
+                            <a href="#definiciones" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4. DEFINICIONES</a>
+                            <a href="#responsables" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5. RESPONSABLES</a>
+                            <a href="#frecuencia-escaneos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. FRECUENCIA DE ESCANEOS</a>
+                            <a href="#clasificacion-priorizacion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. CLASIFICACIÓN Y PRIORIZACIÓN</a>
+                            <a href="#proceso-gestion-vulnerabilidades" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8. PROCESO DE GESTIÓN</a>
+                            <a href="#sistema-alertas-notificaciones" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9. SISTEMA DE ALERTAS</a>
+                            <a href="#herramientas-tecnologias" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10. HERRAMIENTAS Y TECNOLOGÍAS</a>
+                            <a href="#metricas-indicadores-gestion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11. MÉTRICAS E INDICADORES</a>
+                            <a href="#excepciones-gestion-riesgos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12. EXCEPCIONES Y GESTIÓN DE RIESGOS</a>
+                            <a href="#revision-mejora-continua" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13. REVISIÓN Y MEJORA CONTINUA</a>
+                            <a href="#anexos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14. ANEXOS</a>
+                            <a href="#revision-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">15. REVISIÓN DEL DOCUMENTO</a>
+                        </nav>
+
+                        <!-- Quick Actions -->
+                        <div class="mt-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                                Acciones Rápidas
+                            </h4>
+                            <div class="space-y-2">
+                                <button id="report-incident" class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    Reportar incidente
+                                </button>
+                                <button id="contact-support" class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-headset mr-2"></i>
+                                    Contactar soporte
+                                </button>
+                                <button id="cvss-calculator" class="w-full text-left px-3 py-2 text-sm bg-orange-50 text-orange-700 rounded-lg hover:bg-orange-100 dark:bg-orange-900/20 dark:text-orange-400 dark:hover:bg-orange-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-calculator mr-2"></i>
+                                    Calculadora CVSS
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC525-IT-1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../images/logo01-bco.png" alt="Prodismo" width="120px" height="30px">
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>. Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../politica-privacidad/politica-privacidad.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>ISO 27001:2022 | TISAX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="../../../js/documentacion/gestion-vulnerabilidades.js"></script>
+</body>
+</html>

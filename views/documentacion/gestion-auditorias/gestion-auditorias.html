@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Plan Anual de Auditorías del SGSI 2026">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <title>Gestión de Auditorías del SGSI 2026 - Prodismo SRL</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../dist/output.css" rel="stylesheet">
+    
+</head>
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../index.html">
+                            <img src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png" alt="Logo Prodismo" width="200px" height="40px">
+                        </a>
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Gestión de Auditorías del SGSI 2026</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input" 
+                                class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                                placeholder="Buscar en el contenido...">
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+                    
+                    <!-- PDF Download -->
+                    <button id="pdf-download" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input" 
+                            class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                            placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../gestion-vulnerabilidades/gestion-vulnerabilidades.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Gestión de Vulnerabilidades</span>
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: #</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Gestión de Auditorías del SGSI 2026</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC526-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 25/8/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 0</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objetivo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETIVO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Establecer el programa de auditorías internas y externas para el Sistema de Gestión de Seguridad de la Información (SGSI) de PRODISMO SRL para el año 2026, con el fin de verificar la conformidad, eficacia y mejora continua del SGSI, cumpliendo con los requisitos de la cláusula 9.2 (Auditoría interna) de ISO/IEC 27001:2022 y los criterios de evaluación del marco TISAX.
+                        </p>
+                    </section>
+
+                    <section id="alcance" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            ALCANCE
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Este plan aplica a:</p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Todos los procesos del SGSI incluidos en el alcance de certificación</li>
+                            <li>Todos los controles del Anexo A de ISO/IEC 27001:2022 implementados</li>
+                            <li>Todos los dominios TISAX evaluados según el alcance definido (AL2)</li>
+                            <li>Todas las áreas y personal involucrado en el SGSI</li>
+                        </ul>
+                    </section>
+
+                    <section id="referencias-normativas" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            REFERENCIAS NORMATIVAS
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>ISO/IEC 27001:2022 - Cláusula 9.2 (Auditoría interna)</li>
+                            <li>ISO/IEC 27002:2022 - Guía para los controles de seguridad</li>
+                            <li>Marco de evaluación TISAX v5.0.2</li>
+                            <li>Alcance del SGSI MC111-IT-1 Política de Seguridad de la Información</li>
+                            <li>Procedimiento P121-IT-1 Gestión de la Seguridad de la Información SGSI</li>
+                            <li>Declaración de Aplicabilidad (DoA)</li>
+                        </ul>
+                    </section>
+
+                    <section id="responsables" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            RESPONSABLES
+                        </h2>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">4.1. Alta Dirección:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Aprobar el plan anual de auditorías. Asignar los recursos necesarios. Recibir y revisar los informes de auditoría.</p>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">4.2. Representante de la Dirección:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Supervisar la ejecución del plan. Asegurar la independencia y objetividad de las auditorías. Revisar y aprobar los informes finales.</p>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">4.3. Responsable de Seguridad de la Información (RSI):</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Elaborar y mantener el plan anual. Coordinar la ejecución de las auditorías. Seguimiento del plan de acciones correctivas.</p>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">4.4. Auditores Internos:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Ejecutar las auditorías según lo planificado. Documentar hallazgos y evidencias. Elaborar informes de auditoría.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="criterios-auditoria" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            CRITERIOS DE AUDITORÍA
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">5.1. Criterios Generales</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Requisitos de ISO/IEC 27001:2022</li>
+                                    <li>Controles del Anexo A implementados según DoA</li>
+                                    <li>Requisitos específicos TISAX según alcance</li>
+                                    <li>Políticas y procedimientos internos del SGSI</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">5.2. Enfoque Basado en Riesgos</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Alta frecuencia: Procesos/controles de alto riesgo</li>
+                                    <li>Media frecuencia: Procesos/controles de riesgo medio</li>
+                                    <li>Baja frecuencia: Procesos/controles de bajo riesgo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="programa-auditorias" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            PROGRAMA DE AUDITORÍAS 2026
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div class="p-4 bg-blue-50 rounded-lg dark:bg-blue-900/20">
+                                <h3 class="font-semibold text-blue-900 dark:text-blue-300 mb-2">6.1. Auditorías Internas</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Sistema/Proceso Auditado</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo Auditoría</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Frecuencia</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fechas Planificadas</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Herramientas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestión de Riesgos</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Completa</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anual</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q1: Mar-2026</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">ISO 27005, Matriz de Riesgos</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Controles de Acceso</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muestreo</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Semestral</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Auditor Interno</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q1: Feb-2026<br>Q3: Ago-2026</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Checklist A.5.1-A.8.3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestión de Incidentes</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Completa</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anual</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q2: May-2026</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Procedimiento Incidentes</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Protección de Activos Críticos</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muestreo</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Trimestral</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Auditor Interno</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q1: Ene-2026<br>Q2: Abr-2026<br>Q3: Jul-2026<br>Q4: Oct-2026</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Checklist TISAX Prototipos</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Cumplimiento Legal</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Completa</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anual</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Externo</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q4: Nov-2026</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Checklist RGPD/LOPD</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4 bg-orange-50 rounded-lg dark:bg-orange-900/20">
+                                <h3 class="font-semibold text-orange-900 dark:text-orange-300 mb-2">6.2. Auditorías a Procesos Específicos</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Proceso</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Frecuencia</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fechas</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Herramientas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">ERP SIP 4.0</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Seguridad</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Semestral</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Auditor Interno</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q2: Jun-2026<br>Q4: Dic-2026</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Checklist A.8.1-A.8.3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Desarrollo Seguro</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Proceso</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anual</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q3: Sep-2026</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">OWASP ASVS</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Continuidad del Negocio</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Completa</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anual</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Externo</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q2: May-2026</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">ISO 22301 Checklist</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Proveedores Críticos</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muestreo</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anual</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q4: Oct-2026</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Questionnaire TISAX</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4 bg-purple-50 rounded-lg dark:bg-purple-900/20">
+                                <h3 class="font-semibold text-purple-900 dark:text-purple-300 mb-2">6.3. Auditorías Externas</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Auditoría</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Organismo</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fechas Planificadas</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Alcance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Surveillance 1</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Certificación</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">[Entidad Certificadora]</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q1: Mar-2026</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muestra controles ISO 27001</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">TISAX Assessment</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Evaluación / Certificación</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">[Proveedor TISAX]</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q4: Dic-2026</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Nivel Medio Prototipos (AL2)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Surveillance 2</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Certificación</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">[Entidad Certificadora]</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q3: Jul-2026</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muestra controles ISO 27001</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Recertificación</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Certificación</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">[Entidad Certificadora]</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q4: Oct-2026</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Completo ISO 27001</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="metodologia-auditoria" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            METODOLOGÍA DE AUDITORÍA
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:textgray-300 mb-2">7.1. Enfoque de Auditoría</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Basado en procesos: Evaluación de entradas, actividades, salidas</li>
+                                    <li>Basado en evidencias: Verificación objetiva de la implementación</li>
+                                    <li>Basado en riesgos: Enfoque en controles de mayor impacto</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">7.2. Técnicas de Auditoría</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Entrevistas con personal clave</li>
+                                    <li>Revisión documental de políticas y procedimientos</li>
+                                    <li>Observación de actividades in situ</li>
+                                    <li>Muestreo representativo de evidencias</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="herramientas-recursos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            HERRAMIENTAS Y RECURSOS
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">8.1. Herramientas de Auditoría</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Checklists personalizados por dominio de control</li>
+                                    <li>Software de gestión de no conformidades</li>
+                                    <li>Plantillas de informes estandarizadas</li>
+                                    <li>Sistema de seguimiento de acciones correctivas</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-4">
+                                <h3 class="font-semibold text-grayn-900 dark:text-gray-300 mb-2">8.2. Recursos Necesarios</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Presupuesto asignado: €15,000 para auditorías externas</li>
+                                    <li>Días/hombre: 40 días para auditorías internas</li>
+                                    <li>Equipos: Laptops, software especializado, accesos a sistemas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="criterios-calificacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            CRITERIOS DE CALIFICACIÓN
+                        </h2>
+                        
+                        <div class="p-4 bg-blue-50 rounded-lg dark:bg-blue-900/20 border-l-4 border-blue-400">
+                            <h3 class="font-semibold text-blue-900 dark:text-blue-300 mb-2">9.1. Niveles de Conformidad</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Calificación</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Criterios</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 text-sm font-medium text-green-700 dark:text-green-400">Conforme</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Cumple totalmente con los requisitos</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">100% evidencia positiva</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 text-sm font-medium text-yellow-700 dark:text-yellow-400">Conforme con Observaciones</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Cumple, pero con oportunidades de mejora</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">>90% evidencia positiva</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 text-sm font-medium text-red-700 dark:text-red-400">No Conforme</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">No cumple con los requisitos</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300"><90% evidencia positiva</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="seguimiento-reporte" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
+                            SEGUIMIENTO Y REPORTE
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">10.1. Reportes de Auditoría</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Informe preliminar: Dentro de 24 horas después de la auditoría</li>
+                                    <li>Informe final: Dentro de 5 días hábiles</li>
+                                    <li>Presentación a dirección: Reunión trimestral de revisión</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">10.2. Indicadores de Desempeño</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Porcentaje de cumplimiento: Objetivo ≥95%</li>
+                                    <li>Tiempo de cierre de NC: Objetivo ≤30 días</li>
+                                    <li>Satisfacción del auditado: Encuesta post-auditoría</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="gestion-no-conformidades" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
+                            GESTIÓN DE NO CONFORMIDADES
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">11.1. Proceso de NC</h3>
+                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Identificación y registro durante la auditoría</li>
+                                    <li>Análisis de causa raíz por área responsable</li>
+                                    <li>Definición de acciones correctivas</li>
+                                    <li>Implementación y verificación de efectividad</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">11.2. Escalación</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>NC críticas: Reporte inmediato a dirección</li>
+                                    <li>NC recurrentes: Revisión en comité de seguridad</li>
+                                    <li>NC no resueltas: Escalación a alta dirección</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="revision-actualizacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
+                            REVISIÓN Y ACTUALIZACIÓN DEL PLAN
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">12.1. Revisiones Periódicas</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Revisión trimestral: Ajustes basados en cambios organizativos</li>
+                                    <li>Revisión anual: Elaboración del plan para el próximo año</li>
+                                    <li>Revisión post-auditoría: Incorporación de lecciones aprendidas</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">12.2. Triggers de Actualización</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Cambios significativos en la organización</li>
+                                    <li>Resultados de auditorías externas</li>
+                                    <li>Cambios en requisitos legales o regulatorios</li>
+                                    <li>Incidentes de seguridad relevantes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="confidencialidad" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
+                            CONFIDENCIALIDAD
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li>Los resultados de las auditorías son información confidencial</li>
+                            <li>Acceso restringido a personal autorizado</li>
+                            <li>Destrucción segura de borradores y notas</li>
+                        </ul>
+                    </section>
+
+                    <section id="anexos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">14</span>
+                            ANEXOS
+                        </h2>
+
+                        <div class="space-y-4">
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2"><strong>Anexo A:</strong> Checklist de Auditoría por Dominio</h3>
+                                <p class="text-gray-700 dark:text-gray-300">[Lista de verificación detallada para cada dominio de control]</p>
+                            </div>
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2"><strong>Anexo B:</strong> Plan de Acciones Correctivas 2026</h3>
+                                <p class="text-gray-700 dark:text-gray-300">[Seguimiento de acciones derivadas de auditorías]</p>
+                            </div>
+                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2"><strong>Anexo C:</strong> Cronograma Detallado de Auditorías</h3>
+                                <p class="text-gray-700 dark:text-gray-300">[Calendarización específica por semana y responsable]</p>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">15</span>
+                            REVISIONES DEL DOCUMENTO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">0</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión del documento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mt-12">
+                    <a href="../gestion-vulnerabilidades/gestion-vulnerabilidades.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Gestión de Vulnerabilidades</span>
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: #</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objetivo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1. OBJETIVO</a>
+                            <a href="#alcance" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2. ALCANCE</a>
+                            <a href="#referencias-normativas" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3. REFERENCIAS NORMATIVAS</a>
+                            <a href="#responsables" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4. RESPONSABLES</a>
+                            <a href="#criterios-auditoria" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5. CRITERIOS DE AUDITORÍA</a>
+                            <a href="#programa-auditorias" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. PROGRAMA DE AUDITORÍAS 2026</a>
+                            <a href="#metodologia-auditoria" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. METODOLOGÍA DE AUDITORÍA</a>
+                            <a href="#herramientas-recursos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8. HERRAMIENTAS Y RECURSOS</a>
+                            <a href="#criterios-calificacion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9. CRITERIOS DE CALIFICACIÓN</a>
+                            <a href="#seguimiento-reporte" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10. SEGUIMIENTO Y REPORTE</a>
+                            <a href="#gestion-no-conformidades" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11. GESTIÓN DE NO CONFORMIDADES</a>
+                            <a href="#revision-actualizacion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12. REVISIÓN Y ACTUALIZACIÓN DEL PLAN</a>
+                            <a href="#confidencialidad" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13. CONFIDENCIALIDAD</a>
+                            <a href="#anexos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14. ANEXOS</a>
+                            <a href="#revisiones-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">15. REVISIONES DEL DOCUMENTO</a>
+                        </nav>
+                    
+                        <!-- Quick Actions -->
+                        <div class="mt-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                                Acciones Rápidas
+                            </h4>
+                            <div class="space-y-2">
+                                <button id="report-incident" class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    Reportar incidente
+                                </button>
+                                <button id="contact-support" class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-headset mr-2"></i>
+                                    Contactar soporte
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Informacion del Documento -->
+                        <div class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                                Información del Documento
+                            </h3>
+                            <div class="space-y-3 text-sm">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                    <span class="font-medium text-gray-900 dark:text-white">MC526-IT-1</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                    <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                    <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                    <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                    <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                    <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                    <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../images/logo01-bco.png" alt="Prodismo" width="120px" height="30px">
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>. Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../politica-privacidad/politica-privacidad.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>ISO 27001:2022 | TISAX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../../js/documentacion/gestion-auditorias.js"></script>
+</body>
+</html>
