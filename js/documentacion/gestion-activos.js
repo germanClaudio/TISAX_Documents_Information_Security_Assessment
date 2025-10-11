@@ -2,7 +2,7 @@
 
 // Función para inicializar todos los componentes
 document.addEventListener('DOMContentLoaded', function() {
-    initializeThemeToggle();
+    initializeTheme();
     initializeSearch();
     initializeTableOfContents();
     initializeSmoothScroll();
@@ -13,35 +13,61 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Función para el toggle de tema claro/oscuro
-function initializeThemeToggle() {
+function initializeTheme() {
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
+    const savedTheme = localStorage.getItem('theme') || 'light';
     
-    // Verificar preferencia guardada o del sistema
-    const savedTheme = localStorage.getItem('theme') || 
-                        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    
-    // Aplicar tema guardado
-    if (savedTheme === 'dark') {
-        document.documentElement.classList.add('dark');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
+    // Función para cambiar imágenes
+    function updateImages(isDark) {
+        const logoImages = document.querySelectorAll('[data-theme-logo]');
+        
+        logoImages.forEach(img => {
+            if (isDark) {
+                img.src = img.getAttribute('data-dark-src');
+            } else {
+                img.src = img.getAttribute('data-light-src');
+            }
+        });
     }
     
-    // Manejar el toggle del tema
-    themeToggle.addEventListener('click', function() {
-        document.documentElement.classList.toggle('dark');
-        
-        if (document.documentElement.classList.contains('dark')) {
-            localStorage.setItem('theme', 'dark');
-            themeIcon.classList.remove('fa-moon');
+    // Apply saved theme on initial load
+    if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+        if(themeIcon) {
             themeIcon.classList.add('fa-sun');
-        } else {
-            localStorage.setItem('theme', 'light');
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
+            themeIcon.classList.remove('fa-moon');
         }
-    });
+        updateImages(true);
+    } else {
+        document.documentElement.classList.remove('dark');
+        if(themeIcon) {
+            themeIcon.classList.add('fa-moon');
+            themeIcon.classList.remove('fa-sun');
+        }
+        updateImages(false);
+    }
+    
+    // Toggle theme on button click
+    if(themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            if(themeIcon) {
+                if(isDark) {
+                    themeIcon.classList.add('fa-sun');
+                    themeIcon.classList.remove('fa-moon');
+                } else {
+                    themeIcon.classList.add('fa-moon');
+                    themeIcon.classList.remove('fa-sun');
+                }
+            }
+            
+            // Actualizar imágenes cuando se cambie el tema
+            updateImages(isDark);
+        });
+    }
 }
 
 // Función para la búsqueda en el contenido
@@ -195,6 +221,7 @@ function initializeBackToTop() {
 function initializeQuickActions() {
     const reportIncidentBtn = document.getElementById('report-incident');
     const contactSupportBtn = document.getElementById('contact-support');
+    const inventaryResume = document.getElementById('inventary-resume');
     
     if (reportIncidentBtn) {
         reportIncidentBtn.addEventListener('click', function() {
@@ -246,6 +273,13 @@ function initializeQuickActions() {
             });
         });
     }
+
+    if (inventaryResume) {
+        inventaryResume.addEventListener('click', function() {
+            // Abrir App inventario en nueva pestaña sin opciones específicas
+            window.open('https://snipeitapp.com/', '_blank', 'noopener,noreferrer');
+        });
+    }
 }
 
 // Función para la descarga de PDF (simulada)
@@ -279,8 +313,7 @@ function initializePDFDownload() {
 // Función para inicializar enlaces de contacto (email y WhatsApp)
 function initializeContactLinks() {
     // Los enlaces ya están en el HTML, esta función podría usarse para agregar funcionalidad adicional
-    console.log('Enlaces de contacto inicializados');
-    
+        
     // Podemos agregar tracking de clics aquí si es necesario
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
     const whatsappLinks = document.querySelectorAll('a[href^="https://wa.me/"]');
@@ -301,16 +334,3 @@ function initializeContactLinks() {
 }
 
 // Función para formatear activos para inventario
-function formatAssetForInventory(assetData) {
-    // Función auxiliar para formatear datos de activos
-    return {
-        id: generateAssetId(),
-        ...assetData,
-        registrationDate: new Date().toISOString().split('T')[0]
-    };
-}
-
-// Función para generar ID único de activo
-function generateAssetId() {
-    return 'AST-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
-}

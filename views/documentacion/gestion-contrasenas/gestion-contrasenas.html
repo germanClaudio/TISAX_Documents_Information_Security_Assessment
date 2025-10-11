@@ -35,7 +35,14 @@
                 <div class="flex items-center space-x-4">
                     <div class="flex items-center space-x-2">
                         <a href="../../../index.html">
-                            <img src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png" alt="Logo Prodismo" width="200px" height="40px">
+                            <img 
+                                src="../../../images/ITProdimo_logo.png" 
+                                data-light-src="../../../images/ITProdimo_logo.png" 
+                                data-dark-src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png" 
+                                alt="Logo Prodismo" 
+                                width="200" height="40"
+                                data-theme-logo
+                            >
                         </a>
                         <div class="pl-6">
                             <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
@@ -129,7 +136,7 @@
                             OBJETIVO
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Establecer los requisitos para la creación, gestión y protección de contraseñas en todos los sistemas de información de <strong>Prodismo SRL</strong>. Esta política tiene como objetivo proteger el acceso no autorizado a los activos de información, garantizar la confidencialidad, integridad y disponibilidad de los datos, y cumplir con los requisitos de los controles A.5.17 (Autenticación), A.8.2 (Gestión de derechos de acceso) y A.8.3 (Responsabilidad del usuario por el acceso) del Anexo A de la norma ISO/IEC 27001:2022, así como con los requisitos de protección de información del marco TISAX.
+                            Establecer los requisitos para la creación, gestión y protección de contraseñas en todos los sistemas de información de <strong>PRODISMO SRL</strong>. Esta política tiene como objetivo proteger el acceso no autorizado a los activos de información, garantizar la confidencialidad, integridad y disponibilidad de los datos, y cumplir con los requisitos de los controles A.5.17 (Autenticación), A.8.2 (Gestión de derechos de acceso) y A.8.3 (Responsabilidad del usuario por el acceso) del Anexo A de la norma ISO/IEC 27001:2022, así como con los requisitos de protección de información del marco TISAX.
                         </p>
                     </section>
 
@@ -271,12 +278,12 @@
                                         <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                             <tr>
                                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Contraseñas de usuario</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">90 días</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">180 días</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">No se permite el reuso de las últimas 5 contraseñas</td>
                                             </tr>
                                             <tr>
                                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Contraseñas de administrador</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">60 días</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">120 días</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">-</td>
                                             </tr>
                                             <tr>
@@ -296,7 +303,9 @@
                             
                             <div>
                                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5. Almacenamiento</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Las contraseñas deben almacenarse en forma de hash con sal (salt) utilizando algoritmos fuertes (ej: bcrypt, Argon2). Queda prohibido almacenar contraseñas en texto plano.</p>
+                                <p class="text-gray-700 dark:text-gray-300 py-2">Las contraseñas deben almacenarse en forma de hash con (salt) utilizando algoritmos fuertes (ej: bcrypt, Argon2).</p>
+                                <p class="text-gray-700 dark:text-gray-300 py-2"><strong>Algoritmos Fuertes (bcrypt, Argon2)</strong>: están diseñados para ser lentos y costosos computacionalmente. Esto hace que, si una base de datos se ve comprometida, la cantidad de tiempo y recursos son enormes al intentar acceder a cada contraseña.
+                                    Por lo tanto, <strong class="text-red-700 dark:text-red-300">queda prohibido almacenar contraseñas en texto plano</strong>.</p>
                             </div>
                             
                             <div>
@@ -317,7 +326,7 @@
                             <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
                             PROHIBICIONES
                         </h2>
-                        <div class="p-4 rounded-lg border-l-4 border-red-500 bg-white dark:bg-gray-800 shadow-sm space-y-2">
+                        <div class="p-4 rounded-lg border-l-4 border-red-500 bg-red-50 dark:bg-red-700 shadow-sm space-y-2">
                             <h3 class="font-semibold text-gray-900 dark:text-white my-2">Queda estrictamente prohibido:</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong class="text-red-400 dark:text-red-300">Compartir contraseñas:</strong> Cada usuario es responsable de su contraseña. Bajo ninguna circunstancia se deben compartir las credenciales.</li>
@@ -347,7 +356,11 @@
                             </div>
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Herramientas:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Se proporcionará y recomendará el uso de un gestor de contraseñas corporativo (ej: Bitwarden, Keeper) para almacenar y generar contraseñas fuertes.</p>
+                                <p class="text-gray-700 dark:text-gray-300">Se proporcionará y recomendará el uso de un gestor de contraseñas corporativo
+                                    <a href="https://bitwarden.com/download/" target="_blank" title="Descarga e instala la Extensión Bitwarden en tu navegador">
+                                        <kbd class="px-2 py-1 rounded bg-gray-200 text-blue-700 hover:text-purple-800 dark:text-blue-500 dark:hover:text-purple-800"><strong>Bitwarden</strong></kbd>
+                                    </a>
+                                , para almacenar y generar contraseñas fuertes.</p>
                             </div>
                         </div>
                     </section>
@@ -516,13 +529,20 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
                     <div class="flex items-center space-x-2">
-                        <img src="../../../images/logo01-bco.png" alt="Prodismo" width="120px" height="30px">
+                        <img 
+                            src="../../../images/logo01-bco.png" 
+                            data-light-src="../../../images/ProdismoFirma.png" 
+                            data-dark-src="../../../images/logo01-bco.png" 
+                            alt="Logo Prodismo" 
+                            width="120" height="30"
+                            data-theme-logo
+                        >
                         <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>. Todos los derechos reservados.</span>
                     </div>
                 </div>
                 <div class="flex items-center space-x-6">
-                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
-                    <a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
+                    <a href="../../politica-privacidad/politica-privacidad.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="../../terminos-usos/terminos-usos.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
                     <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
                         <i class="fas fa-shield-alt"></i>
                         <span>ISO 27001:2022 | TISAX</span>

@@ -241,6 +241,7 @@ background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
     }
 }
 
+/* Animaciones */
 @keyframes slideInUp {
     from {
         transform: translateY(100%);
@@ -253,7 +254,7 @@ background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
 /* Asegurar que los elementos sean visibles */
 #boton-imprimir-politica,
 #banner-cookies-politica {
-    z-index: 10000;
+    z-index: 10000 !important;
 }
 
 /* Responsive improvements */
@@ -289,4 +290,37 @@ background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
 #rechazar-cookies-politica:focus {
     outline: 2px solid #3b82f6;
     outline-offset: 2px;
+}
+
+
+#boton-imprimir-politica {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Estilos para el banner de cookies */
+#banner-cookies-politica {
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive improvements */
+@media (max-width: 640px) {
+    #boton-imprimir-politica {
+        bottom: 1rem !important;
+        right: 1rem !important;
+        padding: 0.75rem 1rem !important;
+        font-size: 0.875rem !important;
+    }
+    
+    #banner-cookies-politica {
+        padding: 1rem !important;
+    }
+}
+
+/* Estilos para impresión */
+@media print {
+    #boton-imprimir-politica,
+    #banner-cookies-politica {
+        display: none !important;
+    }
 }

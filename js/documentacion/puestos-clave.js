@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializar funcionalidades
-    initThemeToggle();
+    initializeTheme();
     initSearchFunctionality();
     initializeTableOfContents();
     initQuickActions();
@@ -11,35 +11,62 @@ document.addEventListener('DOMContentLoaded', function() {
     initPDFDownload();
 });
 
-// Toggle del tema claro/oscuro
-function initThemeToggle() {
+// Función para el toggle de tema claro/oscuro
+function initializeTheme() {
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
+    const savedTheme = localStorage.getItem('theme') || 'light';
     
-    // Verificar preferencia guardada o del sistema
-    const savedTheme = localStorage.getItem('theme') || 
-                        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    
-    // Aplicar tema guardado
-    if (savedTheme === 'dark') {
-        document.documentElement.classList.add('dark');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
+    // Función para cambiar imágenes
+    function updateImages(isDark) {
+        const logoImages = document.querySelectorAll('[data-theme-logo]');
+        
+        logoImages.forEach(img => {
+            if (isDark) {
+                img.src = img.getAttribute('data-dark-src');
+            } else {
+                img.src = img.getAttribute('data-light-src');
+            }
+        });
     }
     
-    themeToggle.addEventListener('click', function() {
-        document.documentElement.classList.toggle('dark');
-        
-        if (document.documentElement.classList.contains('dark')) {
-            localStorage.setItem('theme', 'dark');
-            themeIcon.classList.remove('fa-moon');
+    // Apply saved theme on initial load
+    if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+        if(themeIcon) {
             themeIcon.classList.add('fa-sun');
-        } else {
-            localStorage.setItem('theme', 'light');
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
+            themeIcon.classList.remove('fa-moon');
         }
-    });
+        updateImages(true);
+    } else {
+        document.documentElement.classList.remove('dark');
+        if(themeIcon) {
+            themeIcon.classList.add('fa-moon');
+            themeIcon.classList.remove('fa-sun');
+        }
+        updateImages(false);
+    }
+    
+    // Toggle theme on button click
+    if(themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            if(themeIcon) {
+                if(isDark) {
+                    themeIcon.classList.add('fa-sun');
+                    themeIcon.classList.remove('fa-moon');
+                } else {
+                    themeIcon.classList.add('fa-moon');
+                    themeIcon.classList.remove('fa-sun');
+                }
+            }
+            
+            // Actualizar imágenes cuando se cambie el tema
+            updateImages(isDark);
+        });
+    }
 }
 
 // Funcionalidad de búsqueda

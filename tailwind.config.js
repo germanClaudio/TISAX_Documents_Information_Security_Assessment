@@ -6,6 +6,7 @@ module.exports = {
         "./js/**/*.js",
         "./views/**/*.html",     // Escanea views y subcarpetas
     ],
+    darkMode: 'class',
     theme: {
         extend: {
             fontFamily: {
