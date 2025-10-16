@@ -42,9 +42,16 @@ jobs:
         run: npm install
 
       - name: Generate production config
-        run: npm run build:prod
+        run: node scripts/generate-config.js
         env:
             ACCESS_CODES: ${{ secrets.ACCESS_CODES }}
+
+      - name: Verify generated file
+        run: |
+          echo "Verificando archivo generado:"
+          ls -la js/config.generated.js
+          echo "Primeras líneas:"
+          head -n 5 js/config.generated.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
