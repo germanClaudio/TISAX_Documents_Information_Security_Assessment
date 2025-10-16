@@ -17,8 +17,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch",
-    "build": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --minify",
+    "dev": "node scripts/generate-config.js && tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --minify && node scripts/generate-config.js",
+    "build:prod": "node scripts/generate-config.js --production",
     "tailwind:install": "npm install -D tailwindcss@latest postcss@latest autoprefixer@latest"
   },
   "dependencies": {

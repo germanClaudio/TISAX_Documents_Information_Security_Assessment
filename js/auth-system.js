@@ -1,14 +1,51 @@
 
-// auth-system.js - Sistema de autenticación para Prodismo SRL
+// auth-system.js - Sistema compatible con ambos entornos
 document.addEventListener('DOMContentLoaded', function() {
-    // Verificar si el usuario ya está autenticado
+    checkAuthStatus();
+});
+
+function checkAuthStatus() {
     if (localStorage.getItem('prodismo_auth') === 'true') {
-        return; // Usuario ya autenticado, no mostrar modal
+        // Si ya está autenticado, asegurarse de que no hay modal
+        const existingOverlay = document.getElementById('auth-overlay');
+        if (existingOverlay) {
+            existingOverlay.remove();
+            document.body.style.overflow = '';
+        }
+        return;
     }
     
-    // Crear y mostrar el modal de autenticación
-    createAuthModal();
-});
+    initializeAuthSystem();
+}
+
+async function initializeAuthSystem() {
+    try {
+        // Esperar a que la configuración esté disponible
+        if (typeof window.CONFIG === 'undefined') {
+            console.warn('Configuración no cargada, reintentando...');
+            await new Promise(resolve => setTimeout(resolve, 100));
+        }
+        
+        if (window.CONFIG && window.CONFIG.ACCESS_CODES) {
+            console.log('✅ Configuración cargada correctamente');
+            console.log('🔐 Entorno:', window.CONFIG.ENV);
+            createAuthModal();
+
+        } else {
+            throw new Error('No se pudo cargar la configuración');
+        }
+        
+    } catch (error) {
+        console.error('Error inicializando sistema de autenticación:', error);
+        
+        // Fallback: mostrar modal con código de desarrollo
+        window.CONFIG = {
+            ACCESS_CODES: ['DEV123'],
+            ENV: 'fallback'
+        };
+        createAuthModal();
+    }
+}
 
 function createAuthModal() {
     // Crear overlay con blur
@@ -120,47 +157,61 @@ function verifyAuthCode() {
     const submitBtn = document.getElementById('submit-btn');
     const errorDiv = document.getElementById('code-error');
     const code = codeInput.value.trim();
+
+    console.log('🔐 Verificando código:', code);
+    console.log('📋 Códigos válidos:', window.CONFIG.ACCESS_CODES);
     
-    // Mostrar estado de carga
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verificando...';
     submitBtn.disabled = true;
     
-    // Simular verificación (en producción, esto sería una llamada a una API)
     setTimeout(() => {
-        // Códigos de acceso válidos (en producción, estos estarían en variables de entorno)
-        const validCodes = ACCESS_CODES
-        
-        if (validCodes.includes(code.toUpperCase())) {
-            // Código válido
-            localStorage.setItem('prodismo_auth', 'true');
-            
-            // Mostrar confirmación
-            Swal.fire({
-                title: '¡Acceso Autorizado!',
-                text: 'Bienvenido al portal de Seguridad de la Información de Prodismo SRL',
-                icon: 'success',
-                confirmButtonText: 'Continuar',
-                confirmButtonColor: '#1e40af'
-            }).then(() => {
-                // Remover modal y restaurar scroll
-                document.getElementById('auth-overlay').remove();
-                document.body.style.overflow = '';
-            });
+        const isValid = window.CONFIG.ACCESS_CODES.includes(code);
+        console.log('✅ Resultado verificación:', isValid);
+
+        if (isValid) {
+            handleSuccessfulAuth();
         } else {
-            // Código inválido
-            errorDiv.style.display = 'block';
-            codeInput.style.borderColor = '#dc2626';
-            codeInput.value = '';
-            codeInput.focus();
-            
-            // Restaurar botón
-            submitBtn.innerHTML = 'Verificar Código';
-            submitBtn.disabled = false;
-            
-            // Agitar animación para indicar error
-            modalShake();
+            handleFailedAuth(codeInput, submitBtn, errorDiv);
         }
-    }, 1000); // Simular tiempo de verificación
+    }, 1000);
+}
+
+function handleSuccessfulAuth() {
+    console.log('🎉 Autenticación exitosa');
+    localStorage.setItem('prodismo_auth', 'true');
+    
+    // Cerrar el modal inmediatamente
+    const overlay = document.getElementById('auth-overlay');
+    if (overlay) {
+        overlay.remove();
+        document.body.style.overflow = '';
+    }
+
+    // Mostrar confirmación después de cerrar el modal
+    Swal.fire({
+        title: '¡Acceso Autorizado!',
+        text: 'Bienvenido al portal de Seguridad de la Información de Prodismo SRL',
+        icon: 'success',
+        confirmButtonText: 'Continuar',
+        confirmButtonColor: '#1e40af'
+    });
+}
+
+
+function handleFailedAuth(codeInput, submitBtn, errorDiv) {
+    errorDiv.style.display = 'block';
+    codeInput.style.borderColor = '#dc2626';
+    codeInput.value = '';
+    codeInput.focus();
+    
+    submitBtn.innerHTML = 'Verificar Código';
+    submitBtn.disabled = false;
+    modalShake();
+    
+    // Mostrar código de desarrollo en consola para debugging
+    if (window.CONFIG.ENV === 'development' || window.CONFIG.ENV === 'fallback') {
+        console.log('🔍 Para desarrollo, usa uno de estos códigos:', window.CONFIG.ACCESS_CODES);
+    }
 }
 
 function requestAccessCode() {
