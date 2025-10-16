@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Procedimiento de Gestión de Servicios de IT Externos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <title>Procedimiento de Gestión de Servicios de IT Externos - Prodismo SRL</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../dist/output.css" rel="stylesheet">
+    
+</head>
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../index.html">
+                            <img 
+                                src="../../../images/ITProdimo_logo.png" 
+                                data-light-src="../../../images/ITProdimo_logo.png" 
+                                data-dark-src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png" 
+                                alt="Logo Prodismo" 
+                                width="200" height="40"
+                                data-theme-logo
+                            >
+                        </a>
+                        
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Procedimiento de Gestión de Servicios de IT Externos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input" 
+                                class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                                placeholder="Buscar en el contenido...">
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+                    
+                    <!-- PDF Download -->
+                    <button id="pdf-download" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input" 
+                            class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                            placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../gestion-activos/proc-clasificacion-activos.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Clasificación de Activos</span>
+                    </a>
+                    <a href="../gestion-riesgos/proc-gestion-riesgos.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Gestión de Riesgos de SI</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Gestión de Servicios de IT Externos</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: P133-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 25/8/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 0</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objetivo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETIVO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Asegurar que servicios cloud, SaaS, o proveedores externos cumplan con los requisitos de seguridad de la información, especialmente para datos críticos (CATIA, SIP/SIP4.0) y clientes automotrices, cumpliendo con los requisitos <strong>TISAX</strong>, <strong>ISO/IEC 27001:2022</strong> y de clientes automotrices.
+                        </p>
+                    </section>
+
+                    <section id="evaluacion-riesgos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            EVALUACIÓN DE RIESGOS PARA SERVICIOS EXTERNOS
+                        </h2>
+                        
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Checklist Inicial:</h3>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Criterio</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Evaluación</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Ejemplo</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Tipo de Datos Procesados</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">¿Maneja datos 🔴 Críticos (CATIA) o 🟡 Altos (SIP)?</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Google Drive almacena diseños 3D.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Ubicación del Servidor</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">¿Cumple GDPR si almacena datos de la UE?</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">AWS región Frankfurt (UE).</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Certificaciones</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">¿Tiene <strong>ISO 27001</strong>, <strong>TISAX</strong>, o SOC 2?</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Microsoft 365 cumple <strong>ISO 27001</strong>.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Controles de Seguridad</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">¿Ofrece MFA, cifrado, y logs de acceso?</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">TeamViewer registra IPs de acceso.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Herramienta:</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Matriz de riesgo con puntuación (ej.: 1-5) por criterio.</p>
+                        </div>
+                    </section>
+
+                    <section id="requisitos-legales" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            REQUISITOS LEGALES Y CONTRACTUALES
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Cláusulas Obligatorias en Contratos:</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Protección de Datos:</strong><br>
+                                "El Proveedor garantizará cifrado AES-256 para datos en tránsito/reposo, cumplimiento con VDA ISA para diseños CATIA."</li>
+                                <li><strong>Acceso y Auditoría:</strong><br>
+                                "El Proveedor permitirá auditorías anuales por parte de [Organización] o clientes (ej.: BMW GS.11)."</li>
+                                <li><strong>Respuesta a Incidentes:</strong><br>
+                                "Notificación de brechas en <24h, con remediación en 72h."</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Ejemplo de Requisitos por Cliente:</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Cliente</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Exigencias Clave</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">VW</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Prohibido usar Dropbox/WeTransfer (solo plataformas aprobadas).</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">BMW</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Watermarking en archivos CAD compartidos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Mercedes</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Retención de logs por 6 meses mínimo.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="armonizacion-proteccion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            ARMONIZACIÓN CON NECESIDADES DE PROTECCIÓN
+                        </h2>
+                        
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Matriz de Alineación:</h3>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Servicio Externo</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Activos Asociados</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Controles Requeridos</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">AWS S3</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">CATIA/NX (🔴)</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Cifrado + MFA + watermarking.</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-green-600 dark:text-green-400">✅ Implementado</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">TeamViewer</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Soporte Remoto (🟡)</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Logs de acceso + IP whitelisting.</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-yellow-600 dark:text-yellow-400">⚠️ Pendiente MFA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Zoom</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Reuniones (🔵)</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Cifrado E2E + grabaciones locales.</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-red-600 dark:text-red-400">❌ No aprobado</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Acciones para No Aprobados:</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Zoom:</strong> Reemplazado por Microsoft Teams (cumple <strong>TISAX</strong>).</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="procedimiento-adquisicion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            PROCEDIMIENTO DE ADQUISICIÓN
+                        </h2>
+                        
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Flujo de Aprobación:</h3>
+                        <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
+                            <li><strong>Solicitud:</strong> Equipo de proyecto envía formulario con:
+                                <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <li>Datos involucrados (ej.: "Subir CATIA a AWS").</li>
+                                    <li>Clasificación CID (🔴/🟡/🔵).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Revisión por IT Manager:</strong>
+                                <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <li>Verificar checklist de riesgos.</li>
+                                    <li>Validar contrato con cláusulas de seguridad.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Implementación:</strong>
+                                <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <li>Configurar controles (ej.: MFA en AWS).</li>
+                                    <li>Capacitar usuarios (ej.: no compartir links públicos en SharePoint).</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section id="monitoreo-auditoria" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            MONITOREO Y AUDITORÍA
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Herramientas:</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Cloud Access Security Broker (CASB):</strong> Monitorear uso de servicios no autorizados (ej.: empleados usando Google Drive).</li>
+                                <li><strong>Informes Trimestrales:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>% de servicios externos cumpliendo <strong>TISAX</strong>.</li>
+                                        <li>Incidentes relacionados (ej.: acceso no autorizado a AWS).</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Plantilla de Registro de Servicios Externos</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">ID</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Servicio</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Proveedor</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Datos Procesados</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Clasificación</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Controles</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha Evaluación</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">EXT-001</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">AWS S3</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Amazon</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">CATIA/NX (🔴)</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-green-600 dark:text-green-400">✅ Cumple</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Cifrado, MFA, logs</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">15/10/2024</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">EXT-002</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">TeamViewer</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">TeamViewer GmbH</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">PC's Ingeniería (🟡)</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-yellow-600 dark:text-yellow-400">⚠️ Parcial</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Faltan logs detallados</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">10/10/2024</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Ejemplo de Rechazo de Servicio</h3>
+                            <div class="bg-red-50 dark:bg-red-900/20 rounded-lg p-4 border border-red-200 dark:border-red-800">
+                                <h4 class="font-semibold text-red-800 dark:text-red-300 mb-2">Servicio: Zoom</h4>
+                                <p class="text-red-700 dark:text-red-300 mb-3"><strong>Motivo:</strong></p>
+                                <ul class="list-disc pl-6 text-red-700 dark:text-red-300 space-y-1 mb-3">
+                                    <li>No cumple cifrado E2E para reuniones con diseños CATIA (requerido por BMW).</li>
+                                </ul>
+                                <p class="text-red-700 dark:text-red-300"><strong>Alternativa Aprobada:</strong> Microsoft Teams con:</p>
+                                <ul class="list-disc pl-6 text-red-700 dark:text-red-300 space-y-1">
+                                    <li>Grabaciones locales.</li>
+                                    <li>MFA obligatorio.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Recomendaciones Clave</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Lista Blanca/Aprobada:</strong> Publicar en intranet servicios externos autorizados (ej.: AWS, MS Teams).</li>
+                                <li><strong>Penalizaciones:</strong> Incluir en contratos multas por incumplimiento (ej.: 3% del pago).</li>
+                                <li><strong>Training:</strong> Capacitar en riesgos de "Shadow IT" (ej.: no usar Dropbox para CATIA).</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            REVISIONES DEL DOCUMENTO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">0</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión del documento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../gestion-activos/proc-clasificacion-activos.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Clasificación de Activos</span>
+                    </a>
+                    <a href="../gestion-riesgos/proc-gestion-riesgos.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Gestión de Riesgos de SI</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objetivo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1. OBJETIVO</a>
+                            <a href="#evaluacion-riesgos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2. EVALUACIÓN DE RIESGOS</a>
+                            <a href="#requisitos-legales" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3. REQUISITOS LEGALES</a>
+                            <a href="#armonizacion-proteccion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4. ARMONIZACIÓN CON PROTECCIÓN</a>
+                            <a href="#procedimiento-adquisicion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5. PROCEDIMIENTO DE ADQUISICIÓN</a>
+                            <a href="#monitoreo-auditoria" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. MONITOREO Y AUDITORÍA</a>
+                            <a href="#revisiones-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. REVISIONES DEL DOCUMENTO</a>
+                        </nav>
+
+                        <!-- Quick Actions -->
+                        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                                Acciones Rápidas
+                            </h4>
+                            <div class="space-y-2">
+                                <button id="report-incident" class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    Reportar incidente
+                                </button>
+                                <button id="contact-support" class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-headset mr-2"></i>
+                                    Contactar soporte
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+                            <h4 class="text-sm font-medium text-gray-900 dark:text-white mb-2">Recursos Relacionados</h4>
+                            <div class="space-y-2">
+                                <a href="../../documentacion/gestion-activos/gestion-activos.html" class="flex items-center text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
+                                    <i class="fas fa-book mr-2"></i>
+                                    Politica Clasificación de Activos
+                                </a>
+                                <a href="../../procedimientos/organizacion-seguridad/proc-responsabilidad-proveedor-externo.html" class="flex items-center text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
+                                    <i class="fas fa-gears mr-2"></i>
+                                    Procedimiento Responsabilidad de Proveedores
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">P133-IT-1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">0.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img 
+                            src="../../../images/logo01-bco.png" 
+                            data-light-src="../../../images/ProdismoFirma.png" 
+                            data-dark-src="../../../images/logo01-bco.png" 
+                            alt="Logo Prodismo" 
+                            width="120" height="30"
+                            data-theme-logo
+                        >
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>. Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../politica-privacidad/politica-privacidad.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="../../terminos-usos/terminos-usos.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>ISO 27001:2022 | TISAX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-colors opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../../js/documentacion/gestion-activos.js"></script>
+</body>
+</html>

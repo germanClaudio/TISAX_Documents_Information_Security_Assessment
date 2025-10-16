@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Procedimiento de Cualificación de Personal en Áreas Sensibles">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <title>Procedimiento de Cualificación de Personal en Áreas Sensibles - Prodismo SRL</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../dist/output.css" rel="stylesheet">
+    
+</head>
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../index.html">
+                            <img 
+                                src="../../../images/ITProdimo_logo.png" 
+                                data-light-src="../../../images/ITProdimo_logo.png" 
+                                data-dark-src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png" 
+                                alt="Logo Prodismo" 
+                                width="200" height="40"
+                                data-theme-logo
+                            >
+                        </a>
+                        
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Procedimiento de Cualificación de Personal en Áreas Sensibles</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input" 
+                                class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                                placeholder="Buscar en el contenido...">
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+                    
+                    <!-- PDF Download -->
+                    <button id="pdf-download" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input" 
+                            class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                            placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../gestion-incidentes/proc-eventos-seguridad.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Eventos de Seguridad</span>
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: #</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Cualificación de Personal en Áreas Sensibles</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: P211-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 25/8/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 0</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objetivo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETIVO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Asegurar que empleados en puestos críticos cumplan con requisitos de competencia, confiabilidad y verificaciones de identidad, alineados con estándares de <strong>ISO/IEC 27001:2022</strong>, así como los requisitos del marco <strong>TISAX</strong> y clientes automotrices.
+                        </p>
+                    </section>
+
+                    <section id="identificacion-puestos-sensibles" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            IDENTIFICACIÓN DE PUESTOS SENSIBLES
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Departamentos y Roles Críticos en Prodismo</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Departamento</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Puesto Sensible</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Razón</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Ingeniería</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Diseñador CATIA/NX</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Acceso a diseños 3D (🔴 Crítico).</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">IT</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Administrador de Redes</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Control sobre servidores on-premise (CATIA, SIP).</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Producción</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Supervisor</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Acceso a órdenes de producción confidenciales.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Compras</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestor de Proveedores</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Manejo de listas de precios y contratos.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="requisitos-perfil-laboral" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            REQUISITOS POR PERFIL LABORAL
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Matriz de Competencias y Verificaciones:</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Puesto</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Requisitos Técnicos</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Verificación de Identidad</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Antecedentes Penales</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Certificaciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Diseñador<br>CATIA/NX</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- Experiencia en Siemens NX.<br>- Conocimiento de watermarking (BMW).</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">✔ DNI/Pasaporte validado.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">✔ Certificado vigente.</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- Certificación CATIA V5/V6.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Administrador IT</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- CISSP o ISO 27001.<br>- Hardening de servidores.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">✔ Validación biométrica.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">✔ Requerido.</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- Microsoft Certified.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Supervisor<br>Producción</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- Gestión de backups.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">✔ Verificación laboral previa.</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">✔ Opcional.</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- N/A</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="proceso-verificacion-identidad" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            PROCESO DE VERIFICACIÓN DE IDENTIDAD Y ANTECEDENTES
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Pasos para Contratación:</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
+                                <li><strong>Validación de Documentos:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>DNI/pasaporte escaneado con software anti-falsificación (ej.: DocuSign Identify).</li>
+                                        <li>Verificación facial (biometría) para puestos 🔴 (ej.: Diseñador CATIA).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Antecedentes Penales:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Exigir certificado emitido por autoridad competente (obligatorio para IT e Ingeniería).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Referencias Laborales:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Contactar al menos 2 empleadores anteriores (especialmente para Compras).</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Herramientas:</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Plataforma de Background Checks:</strong> HireRight o First Advantage.</li>
+                                <li><strong>Base de Datos Interna:</strong> Registrar resultados en Plataforma interna.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="capacitacion-continua" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            CAPACITACIÓN CONTINUA
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Programas Obligatorios:</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Puesto</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Capacitación Anual</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Requisito Cliente</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Diseñador CATIA/NX</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- Seguridad IP (watermarking).<br>- Phishing.</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">BMW GS.11 (watermarking).</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Administrador IT</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- Respuesta a ransomware.<br>- Normativa TISAX.</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">VW IT-Security Requirements.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Gestor de Proveedores</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- Ciberseguridad en cadena de suministro.</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Mercedes-Benz DLP.7.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Evidencias:</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Registros de asistencia.</li>
+                                <li>Evaluaciones post-capacitación (ej.: test de phishing simulado).</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Plantillas Clave</h3>
+                            
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 mt-6">A. Formulario de Verificación de Identidad</h4>
+                            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                    <div>
+                                        <p class="text-gray-700 dark:text-gray-300"><strong>Candidato:</strong> [Nombre]</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-700 dark:text-gray-300"><strong>Puesto:</strong> [Diseñador CATIA]</p>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <p class="text-gray-700 dark:text-gray-300"><strong>Documento:</strong></p>
+                                    <div class="flex items-center space-x-4 mt-2">
+                                        <div class="flex items-center">
+                                            <input type="checkbox" class="rounded text-primary-600 focus:ring-primary-500" checked disabled>
+                                            <span class="ml-2 text-gray-700 dark:text-gray-300">DNI</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <input type="checkbox" class="rounded text-primary-600 focus:ring-primary-500" disabled>
+                                            <span class="ml-2 text-gray-700 dark:text-gray-300">Pasaporte</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-gray-700 dark:text-gray-300">Nº: [XXX]</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="text-gray-700 dark:text-gray-300"><strong>Validez:</strong> [DD/MM/AAAA]</span>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <p class="text-gray-700 dark:text-gray-300"><strong>Biometría:</strong></p>
+                                    <div class="flex items-center space-x-4 mt-2">
+                                        <div class="flex items-center">
+                                            <input type="checkbox" class="rounded text-primary-600 focus:ring-primary-500" checked disabled>
+                                            <span class="ml-2 text-gray-700 dark:text-gray-300">Facial</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <input type="checkbox" class="rounded text-primary-600 focus:ring-primary-500" checked disabled>
+                                            <span class="ml-2 text-gray-700 dark:text-gray-300">Huella</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-gray-700 dark:text-gray-300"><strong>Resultado:</strong> ✔ Válido / ❌ Falsificado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+                                    <p class="text-gray-700 dark:text-gray-300"><strong>Firma del Responsable de RRHH:</strong> ________________</p>
+                                </div>
+                            </div>
+                            
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 mt-6">B. Checklist de Contratación para Puestos 🔴</h4>
+                            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Validación de identidad (DNI + biometría).</li>
+                                    <li>Antecedentes penales vigentes.</li>
+                                    <li>Certificación técnica verificada (ej.: CATIA V6).</li>
+                                    <li>Entrevista con IT Manager (para IT/Ingeniería).</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Ejemplo de No Conformidad y Corrección</h3>
+                            <div class="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4 border border-yellow-200 dark:border-yellow-800">
+                                <p class="text-gray-700 dark:text-gray-300"><strong>Hallazgo:</strong> Diseñador contratado sin certificación CATIA V6 (Por ejemplo requerido por BMW).</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2"><strong>Acción:</strong></p>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1 mt-2">
+                                    <li>Contratar consultor externo mientras el empleado se certifica (plazo: 3 meses).</li>
+                                    <li>Actualizar política de RH para incluir validación previa.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Recomendaciones para Cumplimiento TISAX</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Automatización:</strong> Integrar verificaciones con SAP SuccessFactors.</li>
+                                <li><strong>Ejemplo Clientes Automotrices:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li><strong>BMW:</strong> Asegurar watermarking en capacitaciones de Ingeniería.</li>
+                                        <li><strong>VW:</strong> Validar antecedentes penales para todos los puestos IT.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Auditoría Interna:</strong> Revisar 10% de contrataciones anuales aleatorias.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="flujo-proceso" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            FLUJO DEL PROCESO
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
+                                <img src="../../../images/flow-diagrams/cualificacion-personal-flowchart.png" 
+                                    alt="Flujo del Proceso de Cualificación de Personal"
+                                    class="mx-auto h-80 w-full object-cover md:h-full md:w-80 h-auto cursor-pointer"
+                                    id="cualificacion-flowchart-image">
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                                    Diagrama de Flujo del Proceso de Cualificación de Personal en Áreas Sensibles
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            REVISIONES DEL DOCUMENTO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">0</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión del documento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../gestion-incidentes/proc-eventos-seguridad.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Eventos de Seguridad</span>
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: #</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objetivo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1. OBJETIVO</a>
+                            <a href="#identificacion-puestos-sensibles" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2. IDENTIFICACIÓN DE PUESTOS SENSIBLES</a>
+                            <a href="#requisitos-perfil-laboral" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3. REQUISITOS POR PERFIL LABORAL</a>
+                            <a href="#proceso-verificacion-identidad" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4. PROCESO DE VERIFICACIÓN</a>
+                            <a href="#capacitacion-continua" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5. CAPACITACIÓN CONTINUA</a>
+                            <a href="#flujo-proceso" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. FLUJO DEL PROCESO</a>
+                            <a href="#revisiones-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. REVISIONES DEL DOCUMENTO</a>
+                        </nav>
+                        
+                        <!-- Quick Actions -->
+                        <div class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                                Acciones Rápidas
+                            </h4>
+                            <div class="space-y-2">
+                                <button id="report-incident" class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    Reportar incidente
+                                </button>
+                                <button id="contact-support" class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-headset mr-2"></i>
+                                    Contactar soporte
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+                        <h4 class="text-sm font-medium text-gray-900 dark:text-white mb-2">Recursos Relacionados</h4>
+                        <div class="space-y-2">
+                            <a href="../../documentacion/puestos-clave/puestos-clave.html" class="flex items-center text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
+                                <i class="fas fa-book mr-2"></i>
+                                Política Requisitos Específicos Puestos Claves
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">P211-IT-1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">0.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img 
+                            src="../../../images/logo01-bco.png" 
+                            data-light-src="../../../images/ProdismoFirma.png" 
+                            data-dark-src="../../../images/logo01-bco.png" 
+                            alt="Logo Prodismo" 
+                            width="120" height="30"
+                            data-theme-logo
+                        >
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>. Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../politica-privacidad/politica-privacidad.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="../../terminos-usos/terminos-usos.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>ISO 27001:2022 | TISAX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="../../../js/documentacion/puestos-clave.js"></script>
+    <script type="text/javascript" src="../../../js/procedimientos/flowChart/openFlowChart-cualificacion-personal.js"></script>
+</body>
+</html>

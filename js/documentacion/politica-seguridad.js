@@ -1,5 +1,4 @@
 // scripts.js - Funcionalidades para la Política de Seguridad de Prodismo
-
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initializeTheme();

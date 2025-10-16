@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Procedimiento de Identificación y Registro de Activos de Información">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <title>Procedimiento de Identificación y Registro de Activos de Información - Prodismo SRL</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../dist/output.css" rel="stylesheet">
+    
+</head>
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../index.html">
+                            <img 
+                                src="../../../images/ITProdimo_logo.png" 
+                                data-light-src="../../../images/ITProdimo_logo.png" 
+                                data-dark-src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png" 
+                                alt="Logo Prodismo" 
+                                width="200" height="40"
+                                data-theme-logo
+                            >
+                        </a>
+                        
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Procedimiento de Identificación y Registro de Activos de Información</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input" 
+                                class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                                placeholder="Buscar en el contenido...">
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+                    
+                    <!-- PDF Download -->
+                    <button id="pdf-download" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input" 
+                            class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                            placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../organizacion-seguridad/proc-responsabilidad-proveedor-externo.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Responsabilidad Proveedores IT Externos</span>
+                    </a>
+                    <a href="../gestion-activos/proc-clasificacion-activos.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Clasificación de Activos</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Identificación y Registro de Activos de Información</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: P131-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 25/8/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 0</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objetivo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETIVO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Garantizar el inventario completo y actualizado de los activos críticos de información y soporte y sus responsables, alineado con los sistemas de la organización (ej. Activos de Información: SIP, SIP4.0, CATIA, NX, AutoForm, E-plan, MS Teams, MS Office. Ej. Activos de Soporte: Servidores, laptops, pcs de escritorio), en cumplimiento de los requisitos de seguridad de <strong>ISO/IEC 27001:2022</strong>, <strong>TISAX</strong> y de clientes automotrices.
+                        </p>
+                    </section>
+
+                    <section id="identificacion-activos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            IDENTIFICACIÓN DE ACTIVOS DE INFORMACIÓN
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Definición:</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Activos primarios:</strong> Datos críticos para el negocio.</li>
+                                <li><strong>Activos de soporte:</strong> Sistemas/recursos que los procesan.</li>
+                            </ul>
+                        </div>
+                        
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Ejemplos para IT:</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo de Activo</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Ejemplos en Prodismo SRL</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Confidencialidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">Datos de clientes</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Base de datos en SIP (ERP).</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-orange-600 dark:text-orange-400">Alto</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">Diseños 3D</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Archivos en CATIA/NX.</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-red-600 dark:text-red-400">Crítico</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">Correos corporativos</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Información en MS Office 365.</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-yellow-600 dark:text-yellow-400">Medio</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">Documentos internos</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Manuales en SharePoint/OneDrive.</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-blue-600 dark:text-blue-400">Bajo</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section id="registro-inventario" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            REGISTRO EN INVENTARIO DE ACTIVOS
+                        </h2>
+                        
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Plantilla de Inventario (Excel o herramienta de GRC (<a href="https://snipeitapp.com/" target="_blank" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">Snipe-IT</a>)):</p>
+                        
+                        <div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">ID Activo</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Nombre</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Ubicación</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Contacto</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Clasif.</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">INF-001</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">BD Clientes SIP</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Datos</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Servidor SQL</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Responsable de Datos</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300"><a href="mailto:administracion@prodismo.com" class="text-primary-600 hover:text-primary-800 dark:text-primary-400">administracion@prodismo.com</a></td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-orange-600 dark:text-orange-400">Alto</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">SOP-005</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Servidor Windows</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Infraestructura</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Data Center</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Administrador TI</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300"><a href="mailto:eferrari@prodismo.com" class="text-primary-600 hover:text-primary-800 dark:text-primary-400">eferrari@prodismo.com</a></td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-red-600 dark:text-red-400">Crítico</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">INF-100</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Diseños CATIA - NX - Simulaciones</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Archivos CAD</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">OneDrive / SharePoint</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Responsable de Datos</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300"><a href="mailto:naltamirano@prodismo.com" class="text-primary-600 hover:text-primary-800 dark:text-primary-400">naltamirano@prodimos.com</a></td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-red-600 dark:text-red-400">Crítico</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">INF-200</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Diseños CATIA - Simulaciones</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Archivos CAD</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">OneDrive / SharePoint</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Responsable de Datos</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300"><a href="mailto:jsolimano@prodismo.com" class="text-primary-600 hover:text-primary-800 dark:text-primary-400">jsolimano@prodismo.com</a></td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-red-600 dark:text-red-400">Crítico</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">INF-300</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Diseños CATIA</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Archivos CAD-CAM</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">OneDrive / SharePoint</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Responsable de Datos</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300"><a href="mailto:mfrattini@prodismo.com" class="text-primary-600 hover:text-primary-800 dark:text-primary-400">mfrattini@prodismo.com</a></td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-red-600 dark:text-red-400">Crítico</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Campos Obligatorios:</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>ID único (ej.: <em>INF-001</em> para información, <em>SOP-005</em> para soporte).</li>
+                                <li>Clasificación: Usar etiquetas como Crítico/Alto/Medio/Bajo (basado en impacto).</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="asignacion-responsables" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            ASIGNACIÓN DE RESPONSABLES
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Criterios:</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Activos de información:</strong> Dueño del proceso (ej.: Responsable de Datos para CATIA).</li>
+                                <li><strong>Activos de soporte:</strong> Dueño técnico (ej.: Administrador TI para Windows Server).</li>
+                            </ul>
+                        </div>
+                        
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Ejemplo:</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Activo</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable Asignado</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rol</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tareas</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">SIP/SIP4.0 (ERP)</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">[Nombre]</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gerente Comercial</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Validar accesos, aprobar integraciones.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">Anydesk</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">[Nombre]</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Administrador TI</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revocar accesos no autorizados.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">MS Teams</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Emiliano Ferrari</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Soporte TI</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestionar permisos de usuarios.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section id="herramientas-metodos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            HERRAMIENTAS Y MÉTODOS
+                        </h2>
+                        
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2 mb-6">
+                            <li><strong>Automatización:</strong> Usar herramientas para escanear redes y detectar activos.</li>
+                            <li><strong>Verificación manual:</strong> Entrevistas con dueños de procesos (ej.: equipo de ingeniería para CATIA/NX).</li>
+                        </ul>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Evidencias para <strong>TISAX</strong> AL2</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Inventario de activos con:
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Fecha de creación y última actualización.</li>
+                                        <li>Firmas de responsables y dirección.</li>
+                                    </ul>
+                                </li>
+                                <li>Diagrama de flujo: Mostrar cómo los activos de soporte (ej.: Windows Server) procesan los primarios (ej.: BD SIP).</li>
+                                <li>Registros de revisión: Actas de reuniones donde se validó el inventario.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Ejemplo de Comunicado para Responsables</h3>
+                            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Asunto: 📋 Asignación como Responsable del Activo [ID Activo]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mb-3">"Hola [Nombre],</p>
+                                <p class="text-gray-700 dark:text-gray-300 mb-3">Se te asigna como responsable del activo [Nombre del Activo] (ID: XXX). Tus tareas incluyen:</p>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1 mb-3">
+                                    <li>Validar su clasificación (Confidencialidad/Integridad).</li>
+                                    <li>Reportar incidentes a itprodismo@prodismo.com.</li>
+                                    <li>Revisar accesos cada 6 meses.</li>
+                                </ul>
+                                <p class="text-gray-700 dark:text-gray-300">Firma: [Dirección]</p>
+                                <p class="text-gray-700 dark:text-gray-300">Fecha: [DD/MM/AAAA]".</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Recomendaciones Clave:</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Actualización trimestral:</strong> Añadir nuevos sistemas (ej.: si migran CATIA a la nube).</li>
+                                <li><strong>Integración con <strong>Sistema de Gestión de la Seguridad de la Información (SGSI)</strong>:</strong> Vincular activos a controles (ej.: F132-IT-1 (CATIA) → Control F511-IT-2 (A.18.1.3 - Cifrado)).</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-800">
+                            <h3 class="text-lg font-semibold text-blue-800 dark:text-blue-300 mb-3 flex items-center">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Instructivo de uso de Snipe-IT
+                            </h3>
+                            <ol class="list-decimal pl-6 text-blue-700 dark:text-blue-300 space-y-2">
+                                <li><strong>Acceso:</strong> Ingresar a la plataforma Snipe-IT con las credenciales proporcionadas.</li>
+                                <li><strong>Registro de activos:</strong> 
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Hacer clic en "Assets" en el menú principal.</li>
+                                        <li>Seleccionar "Create New" para agregar un nuevo activo.</li>
+                                        <li>Completar todos los campos obligatorios (ID, nombre, tipo, ubicación, responsable, clasificación).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Asignación de responsables:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>En la pestaña "Users", buscar y seleccionar al responsable.</li>
+                                        <li>Asignar el activo al usuario correspondiente.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Actualizaciones:</strong> Revisar y actualizar trimestralmente la información de los activos.</li>
+                                <li><strong>Reportes:</strong> Generar reportes mensuales de inventario desde la sección "Reports".</li>
+                            </ol>
+                            <p class="text-sm text-blue-600 dark:text-blue-400 mt-3">Para soporte técnico de Snipe-IT, contactar al administrador del sistema.</p>
+                        </div>
+                    </section>
+
+                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            REVISIONES DEL DOCUMENTO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">0</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión del documento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../organizacion-seguridad/proc-responsabilidad-proveedor-externo.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Responsabilidad Proveedores IT Externos</span>
+                    </a>
+                    <a href="../gestion-activos/proc-clasificacion-activos.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Clasificación de Activos</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objetivo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1. OBJETIVO</a>
+                            <a href="#identificacion-activos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2. IDENTIFICACIÓN DE ACTIVOS</a>
+                            <a href="#registro-inventario" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3. REGISTRO EN INVENTARIO</a>
+                            <a href="#asignacion-responsables" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4. ASIGNACIÓN DE RESPONSABLES</a>
+                            <a href="#herramientas-metodos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5. HERRAMIENTAS Y MÉTODOS</a>
+                            <a href="#revisiones-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. REVISIONES DEL DOCUMENTO</a>
+                        </nav>
+
+                        <!-- Quick Actions -->
+                        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                                Acciones Rápidas
+                            </h4>
+                            <div class="space-y-2">
+                                <button id="report-incident" class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    Reportar incidente
+                                </button>
+                                <button id="contact-support" class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-headset mr-2"></i>
+                                    Contactar soporte
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+                            <h4 class="text-sm font-medium text-gray-900 dark:text-white mb-2">Recursos Relacionados</h4>
+                            <div class="space-y-2">
+                                <a href="https://snipeitapp.com/" target="_blank" class="flex items-center text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    Snipe-IT
+                                </a>
+                                <a href="../../documentacion/gestion-activos/gestion-activos.html" class="flex items-center text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
+                                    <i class="fas fa-book mr-2"></i>
+                                    Política Clasificación de Activos
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">P131-IT-1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">0.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img 
+                            src="../../../images/logo01-bco.png" 
+                            data-light-src="../../../images/ProdismoFirma.png" 
+                            data-dark-src="../../../images/logo01-bco.png" 
+                            alt="Logo Prodismo" 
+                            width="120" height="30"
+                            data-theme-logo
+                        >
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>. Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../politica-privacidad/politica-privacidad.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="../../terminos-usos/terminos-usos.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>ISO 27001:2022 | TISAX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-colors opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../../js/documentacion/gestion-activos.js"></script>
+</body>
+</html>
