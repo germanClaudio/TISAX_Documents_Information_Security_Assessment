@@ -55,7 +55,7 @@ function openFlowchartModal() {
 
     const flowchartImage = document.createElement('img');
     flowchartImage.src = '../../../images/flow-diagrams/vinculacion-contractual-flowchart.png';
-    flowchartImage.alt = 'Flujo de Vinvulación legal Contractual - Vista ampliada';
+    flowchartImage.alt = 'Flujo de Vinculación legal Contractual - Vista ampliada';
     flowchartImage.style.cssText = `
         max-width: 100%;
         height: auto;

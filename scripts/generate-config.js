@@ -19,11 +19,11 @@ function generateConfig() {
             const envContent = fs.readFileSync(envPath, 'utf8');
             const match = envContent.match(/ACCESS_CODES=(.+)/);
             accessCodes = match ? match[1] : null;
-            console.log('💻 Modo: Desarrollo Local');
+            // console.log('💻 Modo: Desarrollo Local');
         
         } catch (error) {
             console.log('⚠️  No se encontró .env.local, usando códigos de desarrollo');
-            accessCodes = "DEV123,TEST456"; // Códigos de desarrollo por defecto
+            // Códigos de desarrollo por defecto
         }
     }
     
@@ -59,7 +59,7 @@ function generateConfig() {
     console.log('🔐 Códigos cargados:', codesArray.length);
     
     if (!isProduction) {
-        console.log('📋 Códigos disponibles:', codesArray);
+        // console.log('📋 Códigos disponibles:', codesArray);
     }
 }
 

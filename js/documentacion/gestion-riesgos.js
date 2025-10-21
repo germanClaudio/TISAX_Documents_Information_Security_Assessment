@@ -370,3 +370,41 @@ function generateRiskReport(risks) {
     
     return report;
 }
+
+
+function safeLinkNavigation(url, timeout = 5000) {
+    return new Promise((resolve) => {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeout);
+        
+        fetch(url, { 
+            method: 'HEAD',
+            signal: controller.signal 
+        })
+        .then(response => {
+            clearTimeout(timeoutId);
+            resolve(response.ok);
+        })
+        .catch(() => {
+            clearTimeout(timeoutId);
+            resolve(false);
+        });
+    });
+}
+
+// Uso:
+document.addEventListener('click', async function(event) {
+    const link = event.target.closest('a');
+    
+    if (link && link.hostname === window.location.hostname) {
+        event.preventDefault();
+        
+        const isAvailable = await safeLinkNavigation(link.href);
+        
+        if (isAvailable) {
+            window.location.href = link.href;
+        } else {
+            window.location.href = '/404.html';
+        }
+    }
+});

@@ -85,7 +85,7 @@ function createAuthModal() {
             <h2 style="color: #1e40af; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">
                 Acceso Restringido
             </h2>
-            <p style="color: #6b7280; font-size: 0.95rem;">
+            <p style="color: #1e40af; font-size: 1.1rem;">
                 Información: [INTERNO]
             </p>
             <p style="color: #6b7280; font-size: 0.95rem;">
@@ -159,7 +159,6 @@ function verifyAuthCode() {
     const code = codeInput.value.trim();
 
     console.log('🔐 Verificando código:', code);
-    console.log('📋 Códigos válidos:', window.CONFIG.ACCESS_CODES);
     
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verificando...';
     submitBtn.disabled = true;
@@ -190,7 +189,7 @@ function handleSuccessfulAuth() {
     // Mostrar confirmación después de cerrar el modal
     Swal.fire({
         title: '¡Acceso Autorizado!',
-        text: 'Bienvenido al portal de Seguridad de la Información de Prodismo SRL',
+        text: 'Bienvenido al portal de Seguridad de la Información de PRODISMO SRL',
         icon: 'success',
         confirmButtonText: 'Continuar',
         confirmButtonColor: '#1e40af'
@@ -210,7 +209,7 @@ function handleFailedAuth(codeInput, submitBtn, errorDiv) {
     
     // Mostrar código de desarrollo en consola para debugging
     if (window.CONFIG.ENV === 'development' || window.CONFIG.ENV === 'fallback') {
-        console.log('🔍 Para desarrollo, usa uno de estos códigos:', window.CONFIG.ACCESS_CODES);
+        // console.log('🔍 Para desarrollo, usa uno de estos códigos:', window.CONFIG.ACCESS_CODES);
     }
 }
 

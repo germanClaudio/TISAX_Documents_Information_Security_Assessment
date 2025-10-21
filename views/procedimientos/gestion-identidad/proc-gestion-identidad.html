@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Procedimiento de Gestión de Identidad">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <title>Procedimiento de Gestión de Identidad - Prodismo SRL</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../dist/output.css" rel="stylesheet">
+    
+</head>
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../index.html">
+                            <img 
+                                src="../../../images/ITProdimo_logo.png" 
+                                data-light-src="../../../images/ITProdimo_logo.png" 
+                                data-dark-src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png" 
+                                alt="Logo Prodismo" 
+                                width="200" height="40"
+                                data-theme-logo
+                            >
+                        </a>
+                        
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Procedimiento de Gestión de Identidad</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input" 
+                                class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                                placeholder="Buscar en el contenido...">
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+                    
+                    <!-- PDF Download -->
+                    <button id="pdf-download" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input" 
+                            class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                            placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../seguridad-fisica/proc-dispositivos-moviles.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Dispositivos Móviles</span>
+                    </a>
+                    <a href="../gestion-identidad/proc-servicios-sistemas-aplicaciones.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Protección del Acceso</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Gestión de Identidad</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: P411-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 25/8/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 0</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objetivo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETIVO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Regular los controles y establecer los procedimientos para la gestión segura del ciclo de vida de los medios de identificación utilizados en los accesos físicos y electrónicos de <strong>PRODISMO SRL</strong>, con el fin de garantizar la autenticidad, integridad y confidencialidad de los accesos, prevenir el uso no autorizado cumplir con el requisito sobre gestión de identidad, en cumplimiento de normativas de <strong>ISO/IEC 27001:2022</strong>, así como los requisitos del marco <strong>TISAX</strong> y clientes automotrices.
+                        </p>
+                    </section>
+
+                    <section id="creacion-asignacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            CREACIÓN Y ASIGNACIÓN DE MEDIOS DE IDENTIFICACIÓN
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo</h3>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                Emitir medios de identificación seguros y rastreables.
+                            </p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Pasos:</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Solicitud:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>El departamento de RRHH o el supervisor envía una solicitud a IT/Seguridad con:
+                                            <ul class="list-disc pl-6 mt-2 space-y-1">
+                                                <li>Nombre del empleado.</li>
+                                                <li>Tipo de acceso requerido (físico/electrónico).</li>
+                                                <li>Áreas/autorizaciones necesarias.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Verificación:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>IT valida la necesidad de acceso según el rol (principio de mínimo privilegio).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Creación:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Tarjetas físicas: Se imprimen con foto, nombre, número de empleado y chip cifrado.</li>
+                                        <li>Credenciales electrónicas:
+                                            <ul class="list-disc pl-6 mt-2 space-y-1">
+                                                <li>Contraseñas: Generadas automáticamente (12 caracteres, alfanuméricos + símbolos).</li>
+                                                <li>Tokens: Configurados con certificados digitales (ej.: YubiKey).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Registro:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Se anota en el Inventario de Medios (Excel/CMDB) con:
+                                            <ul class="list-disc pl-6 mt-2 space-y-1">
+                                                <li>ID único, fecha de emisión, usuario asignado.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Entrega:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Firma de Acuse de Recibo (ver plantilla anterior).</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Responsables:</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Equipo de IT + RRHH.</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">D. Evidencia:</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Solicitud firmada + registro en inventario.</p>
+                        </div>
+                    </section>
+
+                    <section id="renovacion-revocacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            RENOVACIÓN Y REVOCACIÓN
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo</h3>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                Garantizar que los medios no expirados o no autorizados sean desactivados.
+                            </p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Pasos:</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Renovación:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>15 días antes de la expiración (según registro), IT notifica al empleado para renovación.</li>
+                                        <li>Para tarjetas físicas: Se verifica la vigencia del empleado (RRHH).</li>
+                                        <li>Para certificados: Se emite uno nuevo y se revoca el antiguo.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Revocación:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>En caso de despido/baja:
+                                            <ul class="list-disc pl-6 mt-2 space-y-1">
+                                                <li>IT desactiva credenciales en Active Directory/IMS.</li>
+                                                <li>Seguridad física recoge la tarjeta y la corta con guillotina.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Actualización de Registro:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Marcar como "Inactivo" en el inventario + motivo (ej.: "Renovación", "Baja laboral").</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Frecuencia:</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Diaria para bajas; mensual para revisiones de expiración.</p>
+                        </div>
+                    </section>
+
+                    <section id="gestion-perdidas-robos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            GESTIÓN DE PÉRDIDAS/ROBOS
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo</h3>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                Responder rápidamente para mitigar riesgos.
+                            </p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Pasos:</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Reporte:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>El empleado notifica a IT/Seguridad en menos de 24 horas mediante:
+                                            <ul class="list-disc pl-6 mt-2 space-y-1">
+                                                <li>Formulario de incidente (físico/digital).</li>
+                                                <li>Datos requeridos: Tipo de medio, última ubicación, datos expuestos.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Bloqueo Inmediato:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Tarjetas: Desactivar en el sistema de control de accesos (ej.: HID Global).</li>
+                                        <li>Credenciales electrónicas: Cambiar contraseñas, revocar certificados.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Investigación:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Revisar logs de acceso y cámaras de seguridad.</li>
+                                        <li>Determinar si hubo negligencia (ej.: tarjeta no reportada por días).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Sanción:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Aplicar medidas correctivas (ej.: capacitación adicional).</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Documentación:</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Formulario de incidente completado.</li>
+                                <li>Registro de acciones en el Inventario de Medios.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="destruccion-segura" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            DESTRUCCIÓN SEGURA
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo</h3>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                Evitar reutilización fraudulenta.
+                            </p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Pasos:</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Recolección:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Medios físicos: Depositados en contenedor seguro con llave.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Destrucción:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Tarjetas: Cortar en 2+ partes con guillotina.</li>
+                                        <li>Tokens/Certificados:
+                                            <ul class="list-disc pl-6 mt-2 space-y-1">
+                                                <li>Borrado criptográfico (ej.: cryptographic erase).</li>
+                                                <li>Certificados digitales: Revocar con la Autoridad Certificadora.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>Registro:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Anotar en inventario: "Destruido" + fecha + responsable.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Frecuencia:</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Semanal para medios físicos; inmediata para electrónicos.</p>
+                        </div>
+                    </section>
+
+                    <section id="auditoria-trazabilidad" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            AUDITORÍA Y TRAZABILIDAD
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo:</h3>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                Cumplir con <strong>TISAX</strong> y mantener trazabilidad.
+                            </p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Pasos:</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Revisiones Periódicas:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Mensualmente: Verificar que todos los medios activos están asignados correctamente.</li>
+                                        <li>Anualmente: Auditoría interna cruzando registros de IT, RRHH y Seguridad Física.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Reportes:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Generar informe con:
+                                            <ul class="list-disc pl-6 mt-2 space-y-1">
+                                                <li>Medios no reclamados.</li>
+                                                <li>Discrepancias (ej.: empleados con acceso sin justificación).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Herramientas:</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Software IAM (ej.: Microsoft Identity Manager) para automatizar revisiones.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="diagrama-flujo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            DIAGRAMA DE FLUJO (RESUMEN)
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
+                                <img src="../../../images/flow-diagrams/gestion-identidad.png" 
+                                    alt="Diagrama de flujo de Gestión de Identidad"
+                                    class="mx-auto h-64 w-full object-cover md:h-full md:w-64 cursor-pointer"
+                                    id="flujo-gestion-image">
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                                    Diagrama de Flujo de Gestión de Activos de Apoyo
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="plantillas-soporte" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            PLANTILLAS DE SOPORTE
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Formulario de Solicitud de Acceso:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Nombre, Departamento, Tipo de Medio, Justificación, Firma del Supervisor.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Registro de Destrucción:</strong>
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>ID Medio, Método de Destrucción, Fecha, Testigo.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Ejemplo de Evidencia para Auditoría:</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Captura de pantalla del sistema IAM mostrando credenciales revocadas.</li>
+                                <li>Fotos de tarjetas cortadas (sin datos visibles).</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="recomendaciones-clave" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            RECOMENDACIONES CLAVE
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Automatización:</strong> Usar herramientas como SailPoint o CyberArk para gestionar credenciales electrónicas.</li>
+                                <li><strong>Integración:</strong> Conectar el sistema de control de accesos físicos (ej.: Lenel) con el IAM.</li>
+                                <li><strong>Capacitación:</strong> Entrenar a empleados en el reporte rápido de pérdidas (simulacros anuales).</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
+                            REVISIONES DEL DOCUMENTO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">0</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión del documento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../seguridad-fisica/proc-dispositivos-moviles.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Dispositivos Móviles</span>
+                    </a>
+                    <a href="../gestion-identidad/proc-servicios-sistemas-aplicaciones.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Protección del Acceso</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objetivo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1. OBJETIVO</a>
+                            <a href="#creacion-asignacion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2. CREACIÓN Y ASIGNACIÓN</a>
+                            <a href="#renovacion-revocacion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3. RENOVACIÓN Y REVOCACIÓN</a>
+                            <a href="#gestion-perdidas-robos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4. GESTIÓN DE PÉRDIDAS/ROBOS</a>
+                            <a href="#destruccion-segura" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5. DESTRUCCIÓN SEGURA</a>
+                            <a href="#auditoria-trazabilidad" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. AUDITORÍA Y TRAZABILIDAD</a>
+                            <a href="#diagrama-flujo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. DIAGRAMA DE FLUJO</a>
+                            <a href="#plantillas-soporte" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8. PLANTILLAS DE SOPORTE</a>
+                            <a href="#recomendaciones-clave" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9. RECOMENDACIONES CLAVE</a>
+                            <a href="#revisiones-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10. REVISIONES DEL DOCUMENTO</a>
+                        </nav>
+                        
+                        <!-- Quick Actions -->
+                        <div class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                                Acciones Rápidas
+                            </h4>
+                            <div class="space-y-2">
+                                <button id="report-incident" class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    Reportar incidente
+                                </button>
+                                <button id="contact-support" class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                    <i class="fas fa-headset mr-2"></i>
+                                    Contactar soporte
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img 
+                            src="../../../images/logo01-bco.png" 
+                            data-light-src="../../../images/ProdismoFirma.png" 
+                            data-dark-src="../../../images/logo01-bco.png" 
+                            alt="Logo Prodismo" 
+                            width="120" height="30"
+                            data-theme-logo
+                        >
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>. Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../politica-privacidad/politica-privacidad.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="../../terminos-usos/terminos-usos.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>ISO 27001:2022 | TISAX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../../../js/documentacion/gestion-medios-identificacion.js"></script>
+    <script type="text/javascript" src="../../../js/procedimientos/flowChart/openFlowChart-gestion-identidad.js"></script>
+</body>
+</html>
