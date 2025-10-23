@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Procedimiento de Protección de Datos Personales">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <title>Protección de Datos Personales - Prodismo SRL</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../dist/output.css" rel="stylesheet">
+    
+</head>
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../index.html">
+                            <img 
+                                src="../../../images/ITProdimo_logo.png" 
+                                data-light-src="../../../images/ITProdimo_logo.png" 
+                                data-dark-src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png" 
+                                alt="Logo Prodismo" 
+                                width="200" height="40"
+                                data-theme-logo
+                            >
+                        </a>
+                        
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Procedimiento de Protección de Datos Personales</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input" 
+                                class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                                placeholder="Buscar en el contenido...">
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+                    
+                    <!-- PDF Download -->
+                    <button id="pdf-download" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input" 
+                            class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white" 
+                            placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../cumplimiento-legal-contractual/proc-cumplimiento-legal-contractual.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Cumplimiento Legal Contractual</span>
+                    </a>
+                    <a href="../politicas-seguridad/proc-seguridad-informacion.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Volver al Inicio</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Protección de Datos Personales</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: P712-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 25/8/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 0</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objetivo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETIVO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Describir los procedimientos y actividades específicas para implementar <a href="../../documentacion/proteccion-datos-personales/proteccion-datos-personales.html" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">MC712-IT-1 Política de Protección de Datos Personales</a>, asegurando el tratamiento lícito, leal y seguro de los datos personales en <strong>PRODISMO SRL</strong>, y asegurando el cumplimiento de los requisitos de protección de <strong>ISO/IEC 27001:2022</strong>, así como con los requisitos del marco <strong>TISAX</strong>.
+                        </p>
+                    </section>
+
+                    <section id="actividades" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            ACTIVIDADES
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2.1. Inventario y Mapeo de Datos (Uso de <a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F712-IT-1</a>)</h3>
+                            
+                            <div class="mb-4">
+                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>El RSI/RDP, en conjunto con cada responsable de área, identificará anualmente los procesos que tratan datos personales.</li>
+                                    <li>Se completará el <a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">Formulario F712-IT-1</a> por cada proceso, detallando:
+                                        <ul class="list-disc pl-6 mt-2 space-y-1">
+                                            <li>Nombre del proceso (ej.: "Reclutamiento y Selección", "Gestión de Nómina", "Control de Acceso Físico").</li>
+                                            <li>Finalidad del tratamiento.</li>
+                                            <li>Categorías de titulares (empleados, postulantes, contactos de clientes).</li>
+                                            <li>Tipos de datos tratados (DNI, datos de salud, datos biométricos, etc.).</li>
+                                            <li>Base legal que sustenta el tratamiento.</li>
+                                            <li>Flujo de los datos (origen, destinos, transferencias).</li>
+                                        </ul>
+                                    </li>
+                                    <li>El inventario será la base para las evaluaciones de riesgo y la aplicación de controles.</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2.2. Evaluación de Riesgos de Privacidad (Uso de <a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F712-IT-2</a>)</h3>
+                            
+                            <div class="mb-4">
+                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Para cada tratamiento de datos identificado, se realizará una evaluación de riesgos utilizando la <a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">Matriz M712-IT-2</a>.</li>
+                                    <li>La evaluación considerará la probabilidad e impacto de un incidente que afecte los derechos de los titulares.</li>
+                                    <li>Según el nivel de riesgo (<span class="font-medium text-red-700">Alto</span>, <span class="font-medium text-orange-700">Medio</span>, <span class="font-medium text-green-700">Bajo</span>), se definirán e implementarán controles de seguridad específicos (ej.: encriptación, controles de acceso, acuerdos de confidencialidad).</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2.3. Gestión del Consentimiento (Uso de <a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F712-IT-3</a>)</h3>
+                            
+                            <div class="mb-4">
+                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Cuando la base legal sea el consentimiento, se deberá utilizar el <a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">Formulario F712-IT-3</a>.</li>
+                                    <li>El formulario debe ser claro, específico y destacado, informando al titular sobre la finalidad del tratamiento.</li>
+                                    <li>Los consentimientos otorgados se almacenarán de forma segura y se gestionarán de manera que se pueda demostrar su obtención.</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2.4. Gestión de los Derechos de los Titulares (Uso de <a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F712-IT-4</a>)</h3>
+                            
+                            <div class="mb-4">
+                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>Las solicitudes de los titulares (acceso, rectificación, etc.) se recibirán en: <a href="mailto:rrhh@prodismo.com" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">rrhh@prodismo.com</a>.</li>
+                                    <li>El RSI/RDP registrará la solicitud en el <a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">Registro F712-IT-4</a>.</li>
+                                    <li>Se verificará la identidad del solicitante.</li>
+                                    <li>El Departamento Legal y el área involucrada (ej.: RRHH) colaborarán para responder la solicitud en un plazo no mayor a 10 días hábiles, prorrogables por 5 más en caso necesario.</li>
+                                    <li>La respuesta se documentará en el mismo registro.</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2.5. Revisión y Actualización</h3>
+                            
+                            <div class="mb-4">
+                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <li>El RSI/RDP revisará trimestralmente el cumplimiento de este procedimiento.</li>
+                                    <li>El inventario (<a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F712-IT-1</a>) y las evaluaciones de riesgo (<a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F712-IT-2</a>) se actualizarán anualmente o cuando se introduzca un nuevo proceso o cambio normativo.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="anexos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            ANEXOS
+                        </h2>
+                        
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li><strong>Anexo A:</strong> <a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">Formulario de Inventario de Tratamiento de Datos Personales (F712-IT-1)</a></li>
+                            <li><strong>Anexo B:</strong> <a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">Matriz de Evaluación de Riesgos de Privacidad (F712-IT-2)</a></li>
+                            <li><strong>Anexo C:</strong> <a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">Formulario de Consentimiento para el Tratamiento de Datos (F712-IT-3)</a></li>
+                            <li><strong>Anexo D:</strong> <a href="#" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">Registro de Ejercicio de Derechos de los Titulares (F712-IT-4)</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            REVISIONES DEL DOCUMENTO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">0</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión del documento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../cumplimiento-legal-contractual/proc-cumplimiento-legal-contractual.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Cumplimiento Legal Contractual</span>
+                    </a>
+                    <a href="../politicas-seguridad/proc-seguridad-informacion.html" class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Volver al Inicio</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Sidebar Navigation -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objetivo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1. OBJETIVO</a>
+                            <a href="#actividades" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2. ACTIVIDADES</a>
+                            <a href="#anexos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3. ANEXOS</a>
+                            <a href="#revisiones-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4. REVISIONES DEL DOCUMENTO</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Acciones Rápidas</h3>
+                        <div class="space-y-3">
+                            <button id="report-incident" class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                Reportar incumplimiento
+                            </button>
+                            <button id="contact-support" class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Related Documents -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Documentos Relacionados</h3>
+                        <div class="space-y-3">
+                            <a href="../../documentacion/proteccion-datos-personales/proteccion-datos-personales.html" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC712-IT-1 Política de Protección de Datos Personales</span>
+                                </div>
+                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                            </a>
+                        </div>
+                        <div class="space-y-3">
+                            <a href="../cumplimiento-legal-contractual/proc-cumplimiento-legal-contractual.html" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">P711-IT-1 Cumplimiento Legal Contractual</span>
+                                </div>
+                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">P712-IT-1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">0.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Fecha de emisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img 
+                            src="../../../images/logo01-bco.png" 
+                            data-light-src="../../../images/ProdismoFirma.png" 
+                            data-dark-src="../../../images/logo01-bco.png" 
+                            alt="Logo Prodismo" 
+                            width="120" height="30"
+                            data-theme-logo
+                        >
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>. Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../politica-privacidad/politica-privacidad.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="../../terminos-usos/terminos-usos.html" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>ISO 27001:2022 | TISAX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="../../../js/documentacion/scripts-general_two.js"></script>
+    <!-- <script type="text/javascript" src="../../../js/procedimientos/proteccion-datos-personales.js"></script> -->
+</body>
+</html>
