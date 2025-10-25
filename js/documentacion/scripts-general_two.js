@@ -282,7 +282,7 @@ function initializeQuickActions() {
     if (inventaryResume) {
         inventaryResume.addEventListener('click', function() {
             // Abrir App inventario en nueva pestaña sin opciones específicas
-            window.open('https://snipeitapp.com/', '_blank', 'noopener,noreferrer');
+            window.open('https://prodismo.snipe-it.io/', '_blank', 'noopener,noreferrer');
         });
     }
 

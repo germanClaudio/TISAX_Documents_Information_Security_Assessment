@@ -1,3 +1,4 @@
+
 // Funcionalidades para la páginas scripts-gerneral-uno
 document.addEventListener('DOMContentLoaded', function() {
     initializeTheme();

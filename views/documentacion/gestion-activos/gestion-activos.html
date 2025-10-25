@@ -136,7 +136,7 @@
                             OBJETIVO
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Establecer los requisitos para la creación, mantenimiento y protección de un inventario completo y actualizado de los activos de información y soporte de <strong>PRODISMO SRL</strong>, con el fin de garantizar su identificación, responsabilidad y gestión adecuada, en cumplimiento de los controles A.5.9 (Inventario de la información y otros activos) y A.8.1 (Responsabilidad por los activos) del Anexo A de ISO/IEC 27001:2022 y los requisitos del marco TISAX.
+                            Establecer los requisitos para la creación, mantenimiento y protección de un inventario completo y actualizado de los activos de información y soporte de <strong>PRODISMO SRL</strong>, con el fin de garantizar su identificación, responsabilidad y gestión adecuada, en cumplimiento de los controles A.5.9 (Inventario de la información y otros activos) y A.8.1 (Responsabilidad por los activos) del Anexo A de <strong>ISO/IEC 27001:2022</strong> y los requisitos del marco <strong>TISAX</strong>.
                         </p>
                     </section>
 
@@ -160,9 +160,9 @@
                             REFERENCIAS NORMATIVAS
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li>ISO/IEC 27001:2022 - Anexo A.5.9, A.8.1</li>
-                            <li>ISO/IEC 27002:2022 - Guía para los controles de seguridad</li>
-                            <li>Marco de evaluación TISAX</li>
+                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.9, A.8.1</li>
+                            <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
+                            <li>Marco de evaluación <strong>TISAX</strong></li>
                             <li>Política de Clasificación de Activos MC131-IT-1</li>
                             <li>Procedimiento de Identificación y Registro de Activos de Información P131-IT-1</li>
                             <li>Procedimiento de Clasificación y Gestión de Activos de Información  P132-IT-1</li>
@@ -297,7 +297,7 @@
                         <div class="mb-6">
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">6.2. Herramienta de Inventario</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li>Se utilizará una herramienta centralizada <a href="https://snipeitapp.com/"><strong>Snipe-IT</strong></a> para el mantenimiento del inventario.</li>
+                                <li>Se utilizará una herramienta centralizada <a href="https://prodismo.snipe-it.io/" class="p-1 bg-gray-200 rounded-lg shadow-blue-lg text-blue-700 hover:text-blue-400 dark:bg-gray-100 dark:hover:text-blue-700"><strong>Snipe-IT</strong></a> para el mantenimiento del inventario.</li>
                                 <li>El acceso a la herramienta estará restringido basado en el principio de mínimos privilegios (MC421-IT-2).</li>
                             </ul>
                         </div>
@@ -603,30 +603,31 @@
                             <a href="#anexos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13. ANEXOS</a>
                             <a href="#revisiones-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14. REVISIONES DOCUMENTO</a>
                         </nav>
-                    
-                        <!-- Quick Actions -->
-                        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
-                            <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                                <i class="fas fa-bolt mr-2 text-primary-600"></i>
-                                Acciones Rápidas
-                            </h4>
-                            <div class="space-y-2">
-                                <button id="report-incident" class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
-                                    <i class="fas fa-exclamation-triangle mr-2"></i>
-                                    Reportar incidente
-                                </button>
-                                <button id="contact-support" class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
-                                    <i class="fas fa-headset mr-2"></i>
-                                    Contactar soporte
-                                </button>
-                                <button id="inventary-resume" class="w-full text-left px-3 py-2 text-sm bg-lime-50 text-lime-700 rounded-lg hover:bg-lime-100 dark:bg-lime-900/20 dark:text-lime-400 dark:hover:bg-lime-900/30 transition-colors flex items-center">
-                                    <i class="fas fa-list mr-2"></i>
-                                    Abrir Inventario
-                                </button>
+                    </div>
 
-                            </div>
+                    <!-- Quick Actions -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 mt-6">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-2">
+                            <button id="report-incident" class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                Reportar incidente
+                            </button>
+                            <button id="contact-support" class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                            <button id="inventary-resume" class="w-full text-left px-3 py-2 text-sm bg-lime-50 text-lime-700 rounded-lg hover:bg-lime-100 dark:bg-lime-900/20 dark:text-lime-400 dark:hover:bg-lime-900/30 transition-colors flex items-center">
+                                <i class="fas fa-list mr-2"></i>
+                                Abrir Inventario
+                            </button>
+
                         </div>
                     </div>
+                    
                     
                     <!-- Informacion del Documento -->
                     <div class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
