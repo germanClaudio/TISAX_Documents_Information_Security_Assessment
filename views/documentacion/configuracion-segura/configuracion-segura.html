@@ -136,7 +136,7 @@
                             OBJETIVO
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Establecer los requisitos y estándares de configuración segura para todos los sistemas, dispositivos y servicios de red dentro de <strong>PRODISMO SRL</strong>, con el fin de garantizar la protección proactiva de los activos de información contra accesos no autorizados, divulgación, modificación o destrucción. Esta política asegura que todos los componentes tecnológicos sean desplegados y mantenidos bajo el principio de "seguridad por diseño", cumpliendo con los requisitos de los controles A.8.1 (Responsabilidad por los activos), A.8.2 (Clasificación de la información), A.8.6 (Mantenimiento de las medidas de seguridad técnicas) de la norma ISO/IEC 27001:2022 y los estrictos requisitos de protección de prototipos e información de diseño del catálogo de evaluación TISAX.
+                            Establecer los requisitos y estándares de configuración segura para todos los sistemas, dispositivos y servicios de red dentro de <strong>PRODISMO SRL</strong>, con el fin de garantizar la protección proactiva de los activos de información contra accesos no autorizados, divulgación, modificación o destrucción.<br>Esta política asegura que todos los componentes tecnológicos sean desplegados y mantenidos bajo el principio de "<strong>seguridad por diseño</strong>", cumpliendo con los requisitos de los controles A.8.1 (Responsabilidad por los activos), A.8.2 (Clasificación de la información), A.8.6 (Mantenimiento de las medidas de seguridad técnicas) de la norma <strong>ISO/IEC 27001:2022</strong> y los estrictos requisitos de protección de información de la normativa de <strong>TISAX</strong>.
                         </p>
                     </section>
 
@@ -146,7 +146,7 @@
                             ALCANCE
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a todos los:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><strong>Sistemas y Servidores:</strong> Servidores físicos y virtuales (Windows Server, Linux), servicios en la nube (IaaS, PaaS, SaaS), incluido el Servidor de Diseños 3D y Documentación.</li>
                             <li><strong>Estaciones de Trabajo:</strong> PC's de escritorio, laptops, estaciones de trabajo técnicas y todos los dispositivos de usuario final.</li>
                             <li><strong>Dispositivos Móviles:</strong> Tablets y smartphones propiedad de la empresa que accedan a información corporativa.</li>
@@ -162,8 +162,9 @@
                             REFERENCIAS NORMATIVAS
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li>ISO/IEC 27001:2022 - Anexo A.8 (Gestión de activos), A.9 (Controles de acceso), A.12 (Seguridad de las operaciones)</li>
-                            <li>Marco de evaluación TISAX (Protection of Prototype Parts, Data Protection)</li>
+                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8 (Gestión de activos), A.9 (Controles de acceso), A.12 (Seguridad de las operaciones)</li>
+                            <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
+                            <li>Marco de evaluación <strong>TISAX</strong></li>
                             <li>Política de Control de Acceso MC412-IT-1 Política de Autenticación y Control de Accesos</li>
                             <li>Política de Protocolos Criptográficos MC511-IT-5 Política de Protocolos Criptográficos Seguros</li>
                             <li>Política de Transferencia Segura MC512-IT-3 Política de Transferencia Segura</li>
@@ -213,7 +214,7 @@
                         <div class="space-y-6">
                             <div>
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">5.1. Requisitos Genéricos para Todos los Dispositivos:</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>Inventario:</strong> Todo activo debe estar registrado en el CMDB (Base de datos de gestión de configuración) con propietario, ubicación y finalidad.</li>
                                     <li><strong>Hardening:</strong> Debe aplicarse la hardening de sistemas según estándares reconocidos (CIS Benchmarks).</li>
                                     <li><strong>Parches y Actualizaciones:</strong> Los sistemas deben configurarse para recibir e instalar actualizaciones de seguridad críticas en un plazo máximo de 14 días desde su lanzamiento. Se debe tener un plan de gestión de vulnerabilidades.</li>
@@ -230,7 +231,7 @@
                                 <p class="text-gray-700 dark:text-gray-300 mb-4">
                                     Este sistema alberga información crítica (prototipos, planos, diseños) y está sujeto a controles reforzados:
                                 </p>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>Aislamiento de Red:</strong> El servidor debe ubicarse en un segmento de red VLAN aislado y restringido, con reglas de firewall estrictas que limiten el acceso solo a las direcciones IP de las estaciones de trabajo autorizadas.</li>
                                     <li><strong>Control de Acceso Reforzado:</strong>
                                         <ul class="list-circle pl-6 mt-2 space-y-1">
@@ -255,7 +256,7 @@
                         <div class="space-y-6">
                             <div class="p-4 bg-blue-50 rounded-lg dark:bg-blue-900/20 border-l-4 border-blue-400">
                                 <h3 class="font-semibold text-blue-900 dark:text-blue-300 mb-2">6.1. Sistemas SIP/SIP4.0 (Sistemas de Información de Producción):</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>Segmentación:</strong> Deben residir en una red industrial (OT) segmentada y aislada de la red corporativa (IT) mediante un firewall con reglas de filtrado unidireccional (DMZ).</li>
                                     <li><strong>Acceso Remoto:</strong> Cualquier acceso remoto para mantenimiento debe realizarse a través de una VPN segregada y con autenticación MFA. Las sesiones deben ser monitoreadas y/o grabadas y reportadas.</li>
                                     <li><strong>Parches:</strong> Los parches deben probarse primero en un entorno de laboratorio idéntico antes de su despliegue en producción, para garantizar la estabilidad del proceso productivo.</li>
@@ -265,7 +266,7 @@
                             
                             <div class="p-4 bg-green-50 rounded-lg dark:bg-green-900/20 border-l-4 border-green-400">
                                 <h3 class="font-semibold text-green-900 dark:text-green-300 mb-2">6.2. PC's y Laptops (Estaciones de Trabajo Windows/macOS):</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>Configuración Base:</strong> Imagen corporativa pre-hardeneada desplegada mediante herramientas de MDM (Intune) o SCCM.</li>
                                     <li><strong>Privilegios de Usuario:</strong> Los usuarios deben operar con permisos de usuario estándar, sin derechos de administrador local.</li>
                                     <li><strong>Autenticación:</strong> La contraseña debe cumplir la política de complejidad (mínimo 12 caracteres, mayúsculas, minúsculas, números y símbolos).</li>
@@ -276,7 +277,7 @@
                             
                             <div class="p-4 bg-purple-50 rounded-lg dark:bg-purple-900/20 border-l-4 border-purple-400">
                                 <h3 class="font-semibold text-purple-900 dark:text-purple-300 mb-2">6.3. Tablets y Dispositivos Móviles (BYOD y COPE):</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>Gestión de Dispositivos Móviles (MDM):</strong> Obligatorio el registro en la solución MDM corporativa (Microsoft Intune).</li>
                                     <li><strong>Políticas de MDM:</strong> Se aplicarán políticas que exijan: código de desbloqueo, cifrado del dispositivo, capacidad de borrado remoto, y separación de datos corporativos y personales (Contenedores de trabajo).</li>
                                     <li><strong>Jailbreak/Root:</strong> <span class="text-red-600 dark:text-red-400"><i class="fas fa-ban mr-1"></i>Está terminantemente prohibido</span> el uso de dispositivos con jailbreak o root. El MDM detectará y bloqueará el acceso de estos dispositivos.</li>
@@ -291,7 +292,7 @@
                             CICLO DE VIDA Y MANTENIMIENTO
                         </h2>
                         
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><strong>Despliegue:</strong> Ningún dispositivo nuevo será conectado a la red sin haber aplicado la configuración segura base.</li>
                             <li><strong>Operación:</strong> Monitoreo continuo del cumplimiento de las configuraciones mediante herramientas automatizadas (Ej.: Intune Compliance Policies).</li>
                             <li><strong>Baja:</strong> Cuando un activo sea dado de baja, se procederá al borrado seguro de los datos (método DoD 5220.22-M o destrucción física) antes de su disposición o reasignación.</li>
@@ -309,22 +310,82 @@
                         </p>
                     </section>
 
-                    <section id="auditoria-documento" class="mb-12 scroll-mt-20">
+                    <section id="anexos" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            ANEXOS <i class="fa-solid fa-paperclip ml-2"></i>
+                        </h2>
+                        <div class="space-y-4">
+
+                            <!-- Anexo A -->
+                        <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                            Anexo A: <a href="../../documentacion/autenticacion-accesos/autenticacion-accesos.html"
+                                title="Política de Autenticación y Control de Accesos"
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fa-solid fa-shield-halved text-gray-600"></i>
+                                    <span class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        MC412-IT-1
+                                    </span>
+                                    Política de Autenticación y Control de Accesos
+                                    <i class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Documento de autenticación y control de accesos]</p>
+                        </div>
+
+                        <!-- Anexo B -->
+                        <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                            Anexo B: <a href="../../documentacion/protocolos-criptograficos/protocolos-criptograficos.html"
+                                title="Política de Protocolos Criptográficos Seguros"
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fa-solid fa-shield-halved text-gray-600"></i>
+                                    <span class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        MC511-IT-2
+                                    </span>
+                                    Política de Protocolos Criptográficos Seguros
+                                    <i class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Documento de protocolos criptográficos seguros]</p>
+                        </div>
+
+                        <!-- Anexo C -->
+                        <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                            Anexo C: <a href="../../documentacion/transferencia-segura/transferencia-segura.html"
+                                title="Política de Transferencia Segura"
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fa-solid fa-shield-halved text-gray-600"></i>
+                                    <span class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        MC512-IT-3
+                                    </span>
+                                    Política de Transferencia Segura
+                                    <i class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Documento de transferencia segura de la información]</p>                            
+                        </div>
+
+                    </section>
+
+                    <section id="auditoria-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
                             AUDITORÍA DEL DOCUMENTO
                         </h2>
                         
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                             <li>Esta política será revisada anualmente por el RSI, o ante cambios tecnológicos significativos.</li>
-                            <li>El cumplimiento de esta política se verificará mediante auditorías internas del SGSI, scans de vulnerabilidades trimestrales y evaluaciones TISAX.</li>
+                            <li>El cumplimiento de esta política se verificará mediante auditorías internas del <strong>SGSI</strong>, scans de vulnerabilidades trimestrales y evaluaciones <strong>TISAX</strong>.</li>
                             <li>Los resultados de los scans y las auditorías se presentarán al Comité de Seguridad para su análisis y se definirán planes de acción para abordar las no conformidades.</li>
                         </ul>
                     </section>
 
                     <section id="revision-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
                             REVISIÓN DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
@@ -378,8 +439,9 @@
                             <a href="#configuraciones-especificas" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. CONFIGURACIONES ESPECÍFICAS</a>
                             <a href="#ciclo-vida-mantenimiento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. CICLO DE VIDA Y MANTENIMIENTO</a>
                             <a href="#excepciones" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8. EXCEPCIONES</a>
-                            <a href="#auditoria-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9. AUDITORÍA DEL DOCUMENTO</a>
-                            <a href="#revision-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10. REVISIÓN DEL DOCUMENTO</a>
+                            <a href="#anexos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9. ANEXOS</a>
+                            <a href="#auditoria-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10. AUDITORÍA DEL DOCUMENTO</a>
+                            <a href="#revision-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11. REVISIÓN DEL DOCUMENTO</a>
                         </nav>
                     </div>
 

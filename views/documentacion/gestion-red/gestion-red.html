@@ -136,7 +136,7 @@
                             OBJETIVO
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Establecer los requisitos y esquema de segmentación de red para aislar y proteger los diferentes tipos de tráfico y sistemas de información de <strong>PRODISMO SRL</strong>, minimizando el riesgo de propagación de incidentes de seguridad y garantizando la confidencialidad, integridad y disponibilidad de los activos críticos, en cumplimiento de los controles A.8.21 (Seguridad de las redes) y A.8.23 (Seguridad de la información para el uso de servicios en la nube) del Anexo A de ISO/IEC 27001:2022 y los requisitos de protección de información del marco TISAX.
+                            Establecer los requisitos y esquema de segmentación de red para aislar y proteger los diferentes tipos de tráfico y sistemas de información de <strong>PRODISMO SRL</strong>, minimizando el riesgo de propagación de incidentes de seguridad y garantizando la confidencialidad, integridad y disponibilidad de los activos críticos, en cumplimiento de los controles A.8.21 (Seguridad de las redes) y A.8.23 (Seguridad de la información para el uso de servicios en la nube) del Anexo A de <strong>ISO/IEC 27001:2022</strong> y los requisitos de protección de información del marco <strong>TISAX</strong>.
                         </p>
                     </section>
 
@@ -161,11 +161,13 @@
                             REFERENCIAS NORMATIVAS
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li>ISO/IEC 27001:2022 - Anexo A.8.21, A.8.23</li>
-                            <li>ISO/IEC 27002:2022 - Guía para los controles de seguridad</li>
-                            <li>Marco de evaluación TISAX</li>
-                            <li><strong>MC412-IT-1</strong> Política de Autenticación y Control de Accesos</li>
-                            <li><strong>MC523-IT-2</strong> Política de Configuración Segura</li>
+                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8.21, A.8.23</li>
+                            <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
+                            <li>Marco de evaluación <strong>TISAX</strong></li>
+                            <li>MC412-IT-1 Política de Autenticación y Control de Accesos</li>
+                            <li>MC523-IT-2 Política de Configuración Segura</li>
+                            <li>P527-IT-1 Procedimiento de Gestión y Segmentación de Red</li>
+                            <li>P512-IT-2 Procedimiento de Configuración de VPN</li>
                         </ul>
                     </section>
 
@@ -233,7 +235,7 @@
                         
                         <div class="space-y-6">
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">6.1. Principio de Mínimo Privilegio</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">6.1. Principio de Mínimo Privilegio</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>Los sistemas solo tendrán acceso a los recursos estrictamente necesarios</li>
                                     <li>Denegar por defecto, permitir por excepción</li>
@@ -241,7 +243,7 @@
                             </div>
                             
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">6.2. Defensa en Profundidad</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">6.2. Defensa en Profundidad</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>Múltiples capas de segmentación (física, lógica, microsegmentación)</li>
                                     <li>Controles complementarios en diferentes niveles</li>
@@ -249,7 +251,7 @@
                             </div>
                             
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">6.3. Seguridad por Diseño</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">6.3. Seguridad por Diseño</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>La segmentación debe ser considerada desde el diseño de la red</li>
                                     <li>No como medida posterior o correctiva</li>
@@ -266,7 +268,7 @@
                         
                         <div class="space-y-6">
                             <div class="p-4 bg-blue-50 rounded-lg dark:bg-blue-900/20">
-                                <h3 class="font-semibold text-blue-900 dark:text-blue-300 mb-2">7.1. VLANs Corporativa</h3>
+                                <h3 class="font-bold text-blue-900 dark:text-blue-300 mb-2">7.1. VLANs Corporativa</h3>
                                 <div class="overflow-x-auto">
                                     <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                         <thead class="bg-gray-50 dark:bg-gray-800">
@@ -320,7 +322,7 @@
                             </div>
                             
                             <div class="p-4 bg-red-50 rounded-lg dark:bg-red-900/20">
-                                <h3 class="font-semibold text-red-900 dark:text-red-300 mb-2">7.2. VLANs de Sistemas Críticos</h3>
+                                <h3 class="font-bold text-red-900 dark:text-red-300 mb-2">7.2. VLANs de Sistemas Críticos</h3>
                                 <div class="overflow-x-auto">
                                     <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                         <thead class="bg-gray-50 dark:bg-gray-800">
@@ -360,7 +362,7 @@
                             </div>
                             
                             <div class="p-4 bg-purple-50 rounded-lg dark:bg-purple-900/20">
-                                <h3 class="font-semibold text-purple-900 dark:text-purple-300 mb-2">7.3. VLANs de Infraestructura</h3>
+                                <h3 class="font-bold text-purple-900 dark:text-purple-300 mb-2">7.3. VLANs de Infraestructura</h3>
                                 <div class="overflow-x-auto">
                                     <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                         <thead class="bg-gray-50 dark:bg-gray-800">
@@ -402,7 +404,7 @@
                         
                         <div class="space-y-6">
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">8.1. Reglas Generales entre VLANs</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">8.1. Reglas Generales entre VLANs</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>VLAN INVITADOS → Cualquier VLAN: DENEGAR (solo salida a Internet)</li>
                                     <li>VLAN USUARIOS → VLAN SERVERS: PERMITIR puertos específicos</li>
@@ -412,7 +414,7 @@
                             </div>
                             
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">8.2. Reglas Específicas para Sistemas Críticos</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">8.2. Reglas Específicas para Sistemas Críticos</h3>
                                 <div class="space-y-4">
                                     <div>
                                         <h4 class="font-medium text-gray-900 dark:text-white mb-2">VLAN DISEÑO-3D (110)</h4>
@@ -433,7 +435,7 @@
                             </div>
                             
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">8.3. Reglas de Comunicación con Internet</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">8.3. Reglas de Comunicación con Internet</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>NAT obligatorio para todas las VLANs internas</li>
                                     <li>Filtrado de contenido para VLAN USUARIOS e INVITADOS</li>
@@ -451,7 +453,7 @@
                         
                         <div class="space-y-6">
                             <div class="p-4 bg-blue-50 rounded-lg dark:bg-blue-900/20">
-                                <h3 class="font-semibold text-blue-900 dark:text-blue-300 mb-4">9.1. Diagrama de Arquitectura General</h3>
+                                <h3 class="font-bold text-blue-900 dark:text-blue-300 mb-4">9.1. Diagrama de Arquitectura General</h3>
                                 <div class="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
                                     <img src="../../../images/flow-diagrams/noImageFound.png" 
                                         alt="Diagrama de Arquitectura General de Red" 
@@ -463,7 +465,7 @@
                             </div>
                             
                             <div class="p-4 bg-blue-50 rounded-lg dark:bg-blue-900/20">
-                                <h3 class="font-semibold text-blue-900 dark:text-blue-300 mb-4">9.2. Diagrama de VLANs Críticas</h3>
+                                <h3 class="font-bold text-blue-900 dark:text-blue-300 mb-4">9.2. Diagrama de VLANs Críticas</h3>
                                 <div class="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
                                     <img src="../../../images/flow-diagrams/noImageFound.png" 
                                         alt="Diagrama de VLANs Críticas" 
@@ -484,7 +486,7 @@
                         
                         <div class="space-y-6">
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">10.1. Autenticación de Dispositivos</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">10.1. Autenticación de Dispositivos</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>802.1X para conexiones cableadas y wireless corporativas</li>
                                     <li>MAC Authentication Bypass (MAB) para dispositivos no compatibles</li>
@@ -493,7 +495,7 @@
                             </div>
                             
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">10.2. Perfiles de Acceso</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">10.2. Perfiles de Acceso</h3>
                                 <div class="overflow-x-auto">
                                     <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                         <thead class="bg-gray-50 dark:bg-gray-800">
@@ -534,7 +536,7 @@
                         
                         <div class="space-y-6">
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">11.1. Monitorización de Tráfico</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">11.1. Monitorización de Tráfico</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>NetFlow/IPFIX para análisis de tráfico entre VLANs</li>
                                     <li>Alertas por comunicación no autorizada entre segmentos</li>
@@ -543,7 +545,7 @@
                             </div>
                             
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">11.2. Detección de Violaciones</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">11.2. Detección de Violaciones</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>Comunicación desde VLAN INVITADOS a VLANs internas</li>
                                     <li>Tráfico no autorizado hacia VLANs críticas</li>
@@ -561,7 +563,7 @@
                         
                         <div class="space-y-6">
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">12.1. Solicitud de Cambio</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">12.1. Solicitud de Cambio</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>Formulario formal con justificación técnica/operativa</li>
                                     <li>Evaluación de impacto en seguridad por el RSI</li>
@@ -570,7 +572,7 @@
                             </div>
                             
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">12.2. Implementación de Cambios</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">12.2. Implementación de Cambios</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>Ventana de mantenimiento autorizada</li>
                                     <li>Rollback plan definido</li>
@@ -587,7 +589,7 @@
                         </h2>
                         
                         <div class="p-4">
-                            <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">13.1. Solicitud de Excepción</h3>
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">13.1. Solicitud de Excepción</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                 <li>Justificación técnica/negocio detallada</li>
                                 <li>Evaluación de riesgo y medidas compensatorias</li>
@@ -605,7 +607,7 @@
                         
                         <div class="space-y-6">
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">14.1. Revisiones Periódicas</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">14.1. Revisiones Periódicas</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>Revisión trimestral: Verificación de reglas de filtrado</li>
                                     <li>Revisión anual: Evaluación completa de la segmentación</li>
@@ -614,12 +616,12 @@
                             </div>
                             
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">14.2. Auditorías de Cumplimiento</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">14.2. Auditorías de Cumplimiento</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>Verificación de segregación de redes críticas</li>
                                     <li>Pruebas de penetración entre segmentos</li>
                                     <li>Revisión de configuraciones de dispositivos de red</li>
-                                    <li>Inclusión en evaluaciones TISAX y auditorías ISO 27001</li>
+                                    <li>Inclusión en evaluaciones <strong>TISAX</strong> y auditorías <strong>ISO/IEC 27001:2022</strong></li>
                                 </ul>
                             </div>
                         </div>
@@ -630,22 +632,78 @@
                             <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">15</span>
                             ANEXOS <i class="fa-solid fa-paperclip ml-2"></i>
                         </h2>
-                        
                         <div class="space-y-4">
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Anexo A: Diagramas Detallados de Conectividad</h3>
-                                <p class="text-gray-700 dark:text-gray-300">[Diagramas técnicos completos de toda la infraestructura]</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Anexo B: Configuraciones de Dispositivos de Red</h3>
-                                <p class="text-gray-700 dark:text-gray-300">[Plantillas de configuración para switches, firewalls, routers]</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Anexo C: Procedimiento de Respuesta a Incidentes de Red</h3>
-                                <p class="text-gray-700 dark:text-gray-300">[Proceso específico para incidentes que afecten la segmentación]</p>
-                            </div>
+
+                            <!-- Anexo A -->
+                        <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                            Anexo A: <a href="../../procedimientos/gestion-red/proc-gestion-red.html"
+                                title="Procedimiento de Gestión y Segmentación de Red"
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-gears text-gray-500"></i>
+                                    <span class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        P527-IT-1
+                                    </span>
+                                    Procedimiento de Gestión y Segmentación de Red
+                                    <i class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instrucciones detalladas para la gestión y segmentación de red]</p>
                         </div>
-                    </section>
+
+                        <!-- Anexo B -->
+                        <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                            Anexo B: <a href="../../procedimientos/gestion-red/proc-configuracion-accesos.html"
+                                target="_blank"
+                                title="Procedimiento de Configuración de Accesos de Red"
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-gears text-gray-500"></i>
+                                    <span class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        P527-IT-2
+                                    </span>
+                                    Procedimiento de Configuración de Accesos de Red
+                                    <i class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instrucciones detalladas para la gestión de configuración para switches, firewalls, routers]</p>
+                        </div>
+
+                        <!-- Anexo C -->
+                        <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                            Anexo C: <a href="../../procedimientos/gestion-red/proc-respuesta-incidentes-seguridad.html"
+                                title="Procedimiento de Respuesta a Incidentes de Seguridad de Red"
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-gears text-gray-500"></i>
+                                    <span class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        P527-IT-3
+                                    </span>
+                                    Procedimiento de Respuesta a Incidentes de Seguridad de Red
+                                    <i class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instrucciones detalladas para la gestión de respuestas a incidentes de seguridad de red]</p>                            
+                        </div>
+
+                        <!-- Anexo D -->
+                        <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                            Anexo D: <a href="../../procedimientos/ciberseguridad/proc-configuracion-vpn.html"
+                                title="Procedimiento de Configuración de VPN"
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-gears text-gray-500"></i>
+                                    <span class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        P512-IT-2
+                                    </span>
+                                    Procedimiento de Configuración de VPN
+                                    <i class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instrucciones detalladas para la configuración de VPN]</p>                            
+                        </div>
+
+                    </section>                    
 
                     <section id="revision-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">

@@ -136,7 +136,7 @@
                             OBJETIVO
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            El objetivo de esta política es establecer un marco para la clasificación de la información manejada por <strong>PRODISMO SRL</strong>, con el fin de garantizar su protección adecuada según su nivel de sensibilidad, valor y criticidad. Esta política busca minimizar los riesgos asociados al tratamiento no autorizado, divulgación, modificación o destrucción de la información, cumpliendo con los requisitos de la norma ISO/IEC 27001 y el esquema TISAX.
+                            El objetivo de esta política es establecer un marco para la clasificación de la información manejada por <strong>PRODISMO SRL</strong>, con el fin de garantizar su protección adecuada según su nivel de sensibilidad, valor y criticidad. Esta política busca minimizar los riesgos asociados al tratamiento no autorizado, divulgación, modificación o destrucción de la información, cumpliendo con los requisitos de la norma <strong>ISO/IEC 27001:2022</strong> y el esquema <strong>TISAX</strong>.
                         </p>
                     </section>
 
@@ -149,7 +149,7 @@
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                             <li>Toda la información: En todos sus formatos (electrónico, físico, verbal).</li>
                             <li>Todos los sistemas de información: Utilizados para almacenar, procesar o transmitir información de la compañía.</li>
-                            <li>Todos los empleados, contratistas, proveedores y terceros: Que tengan acceso a los activos de información de PRODISMO SRL.</li>
+                            <li>Todos los empleados, contratistas, proveedores y terceros: Que tengan acceso a los activos de información de <strong>PRODISMO SRL</strong>.</li>
                             <li>Todas las sedes y ubicaciones de la empresa.</li>
                         </ul>
                     </section>
@@ -160,8 +160,9 @@
                             REFERENCIAS NORMATIVAS
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li>ISO/IEC 27001:2022</li>
-                            <li>Marco de evaluación TISAX</li>
+                            <li><strong>ISO/IEC 27001:2022</strong></li>
+                            <li><strong>ISO/IEC 27002:2022</strong></li>
+                            <li>Marco de evaluación <strong>TISAX</strong></li>
                             <li>Política de Protocolos Criptográficos MC511-IT-2</li> 
                             <li>Gestión de Procedimientos Criptográficos P511-IT-1</li>
                             <li>Informe de Pruebas de Cifrado F512-IT-5</li>
@@ -184,7 +185,7 @@
                                 <p class="text-gray-700 dark:text-gray-300">Es responsable de identificar y clasificar la información bajo su custodia.</p>
                             </div>
                             <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Departamento de TI / Ciberseguridad:</h3>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Departamento de IT / Ciberseguridad:</h3>
                                 <p class="text-gray-700 dark:text-gray-300">Es responsable de implementar los controles técnicos necesarios para aplicar la clasificación (cifrado, permisos de acceso, etc.).</p>
                             </div>
                             <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
@@ -204,12 +205,12 @@
                             ÁMBITO DE APLICACIÓN
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 mb-4">
-                            La política se aplica a toda la información creada, recopilada, almacenada, procesada o transmitida por PRODISMO SRL en el desarrollo de sus actividades, incluyendo (pero no limitado a):
+                            La política se aplica a toda la información creada, recopilada, almacenada, procesada o transmitida por <strong>PRODISMO SRL</strong> en el desarrollo de sus actividades, incluyendo (pero no limitado a):
                         </p>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                             <li>Información de clientes y proveedores.</li>
                             <li>Datos de empleados.</li>
-                            <li>Propiedad intelectual (diseños, planos, fórmulas, software).</li>
+                            <li>Propiedad intelectual (diseños 3D, planos, fórmulas, softwares y aplicaciones).</li>
                             <li>Información financiera y estratégica.</li>
                             <li>Información operativa y de procesos.</li>
                         </ul>
@@ -248,7 +249,7 @@
                                         </td>
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                             <ul class="list-disc pl-4 space-y-1">
-                                                <li>Planos de diseño</li>
+                                                <li>Planos o diseños 3D</li>
                                                 <li>Fórmulas patentadas</li>
                                                 <li>Claves de producto</li>
                                                 <li>Acuerdos de confidencialidad (NDA)</li>
@@ -347,7 +348,410 @@
                         </div>
                     </section>
 
-                    <section id="procedimiento-clasificacion" class="mb-12 scroll-mt-20">
+                    <section id="clasificacion-criterios" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">7</span>
+                            CRITERIOS DE CLASIFICACIÓN DE LA INFORMACIÓN
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                    Se deben aplicar los siguientes criterios para la clasificación de datos:
+                                </p>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Confidencialidad:</strong> Determinación del nivel de confidencialidad asociado a la información. Evaluación del impacto del acceso por parte de personas no autorizadas.</li>
+                                    <li><strong>Integridad:</strong> Importancia de que la información sea precisa e inalterable. Evaluación del impacto de correcciones no autorizadas.</li>
+                                    <li><strong>Disponibilidad:</strong> Criticidad de que la información esté disponible en todo momento. Evaluación del impacto de la falta de disponibilidad.</li>
+                                    <li><strong>Obligaciones legales y regulatorias:</strong> Verificación de si los datos están sujetos a leyes de protección de datos como RGPD, HIPAA, o requisitos contractuales.</li>
+                                    <li><strong>Valor comercial y criticidad:</strong> Evaluación de qué tan críticos son los datos para las operaciones comerciales, reputación o ventaja competitiva.</li>
+                                    <li><strong>Impacto potencial de la vulneración:</strong> Análisis de las consecuencias de divulgación, modificación o pérdida no autorizadas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="proceso-clasificacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">8</span>
+                            PROCESO DE CLASIFICACIÓN DE LA INFORMACIÓN
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                    Proceso simple y repetible para clasificar la información:
+                                </p>
+                                
+                                <div class="grid md:grid-cols-1 gap-4">
+                                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">a. Identificación</h3>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Los propietarios de la información deberán identificar y registrar cualquier activo de información dentro de su alcance, incluyendo el formato de los datos, la ubicación de la empresa y el motivo de su actividad.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">b. Evaluación</h3>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Cada activo se evaluará según los criterios de clasificación según las dimensiones de confidencialidad, integridad, disponibilidad, requisitos legales y comerciales.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">c. Asignación del nivel</h3>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            El nivel de clasificación se asignará en función de la evaluación realizada. La lógica de la decisión deberá documentarse.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">d. Etiquetado</h3>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Aplicación de etiquetas de clasificación para activos físicos y electrónicos según el nivel asignado.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">e. Comunicación y capacitación</h3>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Informar a todos los usuarios sobre el esquema de clasificación y capacitarlos sobre los requisitos para su manejo.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">f. Revisión y actualización</h3>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Revisión periódica (anualmente o cuando la empresa cambie) para garantizar que las clasificaciones sigan siendo relevantes.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="etiquetado-manejo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">9</span>
+                            ETIQUETADO Y MANEJO DE LA INFORMACIÓN
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                    Toda la información clasificada debe estar claramente marcada para indicar su nivel de clasificación, lo que permite comprender de inmediato cómo debe manejarse.
+                                </p>
+                                
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Requisitos de Etiquetado</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Documentos físicos</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Encabezados, pies de página o marcas de agua que indiquen la clasificación (ej: "Confidencial")</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Archivos electrónicos</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Aplicación de etiquetas digitales, etiquetas de metadatos o propiedades del documento</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Correos electrónicos</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Inclusión de etiquetas de clasificación en el asunto o cuerpo del documento</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Comunicaciones verbales</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Nota de clasificación al iniciar conversaciones sobre temas sensibles</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="mt-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
+                                    <h4 class="font-semibold text-blue-800 dark:text-blue-300 mb-2">Definición de Requisitos de Gestión</h4>
+                                    <p class="text-blue-700 dark:text-blue-300 text-sm">
+                                        Se definirán los requisitos de gestión para cada nivel de clasificación, incluyendo almacenamiento, transmisión, uso compartido y eliminación. Por ejemplo, la información "Confidencial" puede requerir cifrado en tránsito y en reposo, acceso restringido y métodos seguros de eliminación.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="control-acceso-intercambio" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">10</span>
+                            CONTROL DE ACCESO E INTERCAMBIO
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                    El acceso a la información debe otorgarse según la necesidad de conocerla, según la clasificación:
+                                </p>
+                                
+                                <div class="grid gap-4">
+                                    <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
+                                        <h4 class="font-semibold text-green-800 dark:text-green-300 mb-2">PÚBLICA</h4>
+                                        <p class="text-green-700 dark:text-green-300">
+                                            Accesible para cualquier persona, incluidas partes externas.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4">
+                                        <h4 class="font-semibold text-yellow-800 dark:text-yellow-300 mb-2">INTERNA</h4>
+                                        <p class="text-yellow-700 dark:text-yellow-300">
+                                            Solo los empleados y contratistas autorizados pueden acceder.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="bg-red-50 dark:bg-red-900/20 rounded-lg p-4">
+                                        <h4 class="font-semibold text-red-800 dark:text-red-300 mb-2">CONFIDENCIAL / RESTRINGIDA</h4>
+                                        <p class="text-red-700 dark:text-red-300">
+                                            Acceso claramente controlado, supervisado y registrado. Compartir información externamente requiere la aprobación de la gerencia y, si corresponde, acuerdos de confidencialidad.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-300 mb-2">⚠️ Compartir Información Externa</h4>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Al compartir información fuera de la organización, asegúrese de que la parte receptora comprenda y acepte los requisitos de clasificación y manejo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="almacenamiento-transmision-eliminacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">11</span>
+                            ALMACENAMIENTO, TRANSMISIÓN Y ELIMINACIÓN
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                    Cada clase de datos debe establecer requisitos específicos en la plantilla de política de clasificación de datos:
+                                </p>
+                                
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Aspecto</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Requisitos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Almacenamiento</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Dónde y cómo se puede almacenar la información: unidades cifradas para datos confidenciales, gabinetes cerrados para documentos físicos, etc.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Transmisión</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Especificación de métodos seguros para el envío de información: correo electrónico cifrado, transferencia segura de archivos o mensajería para documentos físicos.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Eliminación</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Métodos seguros de eliminación, por ejemplo, trituración para papel, borrado seguro o destrucción para medios electrónicos.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="capacitacion-concientizacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">12</span>
+                            CAPACITACIÓN Y CONCIENTIZACIÓN
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                    Todos los empleados y proveedores externos relevantes deben recibir capacitación periódica sobre:
+                                </p>
+                                
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>La importancia de la clasificación de la información</li>
+                                    <li>El esquema de clasificación de la organización</li>
+                                    <li>Las normas de manejo de información clasificada</li>
+                                    <li>Cómo identificar y etiquetar adecuadamente la información</li>
+                                    <li>Procedimientos para reportar casos de posible filtración o manejo indebido</li>
+                                </ul>
+                                
+                                <div class="mt-6 bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4">
+                                    <h4 class="font-semibold text-purple-800 dark:text-purple-300 mb-2">Programas de Concientización</h4>
+                                    <p class="text-purple-700 dark:text-purple-300">
+                                        Los programas generales de concientización se centran en integrar prácticas de clasificación en las operaciones comerciales diarias y minimizar la fuga accidental de información.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="cumplimiento-auditoria" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">13</span>
+                            REQUISITOS DE CUMPLIMIENTO Y AUDITORÍA
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                    La evidencia del cumplimiento de las políticas y procedimientos documentados con respecto a la clasificación y la gestión de la información durante las auditorías de certificación o de seguimiento de la norma <strong>ISO/IEC 27001:2022</strong> y <strong>TISAX</strong>, incluye demostrar cómo:
+                                </p>
+                                
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Todos los activos de información se han clasificado y etiquetado correctamente</li>
+                                    <li>Se cumplen los requisitos de manejo en la práctica</li>
+                                    <li>Se mantienen registros de capacitación y se demuestra la concienciación de los usuarios</li>
+                                    <li>Se documenta y renueva periódicamente la política</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="legal-regulatorio-contractual" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">14</span>
+                            LEGAL, REGULATORIO Y CONTRACTUAL
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                    Obligaciones de incorporar todas las obligaciones legales, regulatorias y contractuales pertinentes en la política de clasificación de datos:
+                                </p>
+                                
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Ejemplos y Requisitos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Leyes de protección de datos</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Protecciones específicas necesarias para datos personales o sensibles, como las del RGPD, HIPAA, CCPA, etc.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Estándares del sector</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    PCI DSS, SOX o cualquier otro de la misma naturaleza, para hacer cumplir las normas de clasificación y manejo.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Contratos con clientes</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Disposiciones específicas en los acuerdos con clientes o socios pueden exigir el manejo de un elemento de datos específico en ciertos niveles de clasificación.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="mt-6 bg-orange-50 dark:bg-orange-900/20 rounded-lg p-4">
+                                    <h4 class="font-semibold text-orange-800 dark:text-orange-300 mb-2">‼️ Consecuencias del Incumplimiento</h4>
+                                    <p class="text-orange-700 dark:text-orange-300">
+                                        El incumplimiento expone a sanciones legales, daño a la reputación y pérdida de oportunidades de negocio.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="errores-comunes" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">15</span>
+                            ERRORES COMUNES Y CÓMO EVITARLOS
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                    El modelo sobre clasificación de datos puede resultar difícil. Entre los obstáculos se incluyen los siguientes:
+                                </p>
+                                
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Error Común</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Consecuencias</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Cómo Evitarlo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Sobre clasificación</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Asignar incorrectamente el nivel de protección más alto a todo, lo que genera frustración y costos innecesarios.
+                                                </td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Establecer criterios claros y proporcionar ejemplos prácticos para cada nivel de clasificación.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Infra clasificación</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    La información confidencial no está diferenciada ni protegida, aumentando el riesgo.
+                                                </td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Implementar revisiones periódicas y auditorías para identificar información mal clasificada.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Falta de capacitación</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Los usuarios desconocen la política ni cómo aplicarla, por lo que su manejo es inconsistente.
+                                                </td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Implementar programas de capacitación regulares y materiales de referencia accesibles.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Pocas veces se evalúa</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    La política se vuelve obsoleta con el tiempo a medida que cambian las necesidades de la empresa o las regulaciones.
+                                                </td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Establecer revisiones periódicas (anuales) y procesos de actualización ágiles.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Etiquetado incorrecto</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Las etiquetas inconsistentes y poco claras generan confusión y un manejo inadecuado.
+                                                </td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Proporcionar plantillas y herramientas estandarizadas para el etiquetado.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- <section id="procedimiento-clasificacion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
                             PROCEDIMIENTO DE CLASIFICACIÓN Y ETIQUETADO
@@ -368,8 +772,8 @@
                                 </p>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li><strong>Documentos físicos:</strong> Sello o impresión en la portada con el nivel de clasificación.</li>
-                                    <li><strong>Documentos electrónicos:</strong> Encabezado, pie de página o marca de agua con el texto (ej: "CONFIDENCIAL") y/o el color correspondiente.</li>
-                                    <li><strong>Correos electrónicos:</strong> Incluir la leyenda de clasificación en el asunto o cuerpo del mensaje (ej: [INTERNO]).</li>
+                                    <li><strong>Documentos electrónicos:</strong> Encabezado, pie de página o marca de agua con el texto (ej: <strong class="text-red-500">"CONFIDENCIAL"</strong>) y/o el color correspondiente [🔴].</li>
+                                    <li><strong>Correos electrónicos:</strong> Incluir la leyenda de clasificación en el asunto o cuerpo del mensaje (ej: <strong class="text-blue-500">[INTERNO]</strong> o 🔵).</li>
                                 </ul>
                             </div>
                             
@@ -380,11 +784,71 @@
                                 </p>
                             </div>
                         </div>
+                    </section> -->
+
+                    <section id="anexos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">16</span>
+                            ANEXOS <i class="fa-solid fa-paperclip ml-2"></i>
+                        </h2>
+                        <div class="space-y-4">
+
+                        <!-- Anexo A -->
+                        <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                            Anexo A: <a href="../protocolos-criptograficos/protocolos-criptograficos.html"
+                                title="Política de Protocolos Criptográficos"
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-word text-blue-500"></i>
+                                    <span class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        MC511-IT-2
+                                    </span>
+                                    Política de Protocolos Criptográficos
+                                    <i class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Política de protocolos criptográficos, algoritmos y estándares de seguridad]</p>
+                        </div>
+
+                        <!-- Anexo B -->
+                        <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                            Anexo B: <a href="#"
+                                target="_blank"
+                                title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fa-solid fa-file-contract text-gray-700"></i>
+                                    <span class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F512-IT-5
+                                    </span>
+                                    Informe de Pruebas de Cifrado
+                                    <i class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Informe de pruebas de cifrado]</p>
+                        </div>
+
+                        <!-- Anexo C -->
+                        <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                            Anexo C: <a href="../../procedimientos/ciberseguridad/"
+                                title="Procedimientos Criptográficos"
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-gears text-gray-500"></i>
+                                    <span class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        P511-IT-1
+                                    </span>
+                                    Procedimientos Criptográficos
+                                    <i class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Flujo detallado del proceso de gestión de procedimientos criptográficos]</p>                            
+                        </div>
                     </section>
 
                     <section id="revision-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            <span class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">17</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 mb-6">
@@ -439,8 +903,17 @@
                             <a href="#responsables" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4. RESPONSABLES</a>
                             <a href="#ambito-aplicacion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5. ÁMBITO DE APLICACIÓN</a>
                             <a href="#clasificacion-datos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. CLASIFICACIÓN DE LOS DATOS</a>
-                            <a href="#procedimiento-clasificacion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. PROCEDIMIENTO DE CLASIFICACIÓN</a>
-                            <a href="#revision-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8. REVISIONES DEL DOCUMENTO</a>
+                            <a href="#clasificacion-criterios" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. CRITERIOS DE CLASIFICACIÓN DE LA INFORMACIÓN</a>
+                            <a href="#proceso-clasificacion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8. PROCESO DE CLASIFICACIÓN DE LA INFORMACIÓN</a>
+                            <a href="#etiquetado-manejo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9. ETIQUETADO Y MANEJO DE LA INFORMACIÓN</a>
+                            <a href="#control-acceso-intercambio" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10. CONTROL DE ACCESO E INTERCAMBIO</a>
+                            <a href="#almacenamiento-transmision-eliminacion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11. ALMACENAMIENTO, TRANSMISIÓN Y ELIMINACIÓN</a>
+                            <a href="#capacitacion-concientizacion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12. CAPACITACIÓN Y CONCIENTIZACIÓN</a>
+                            <a href="#cumplimiento-auditoria" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13. REQUISITOS DE CUMPLIMIENTO Y AUDITORÍA</a>
+                            <a href="#legal-regulatorio-contractual" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14. LEGAL, REGULATORIO Y CONTRACTUAL</a>
+                            <a href="#errores-comunes" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">15. ERRORES COMUNES Y CÓMO EVITARLOS</a>
+                            <a href="#anexos" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">16. ANEXOS</a>
+                            <a href="#revision-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">17. REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
 
