@@ -151,8 +151,14 @@
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">2.1. Solicitud de Visita</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                 <li>El empleado anfitrión debe enviar la solicitud de visita con al menos 24 horas de antelación para visitantes generales y 48 horas para visitantes de alto riesgo.</li>
-                                <li><strong>F311-IT-4 Formulario Solicitud de Visita.</strong> La solicitud debe incluir: nombre del visitante, empresa, motivo de la visita, áreas a visitar y duración estimada.</li>
+                                <li><strong>F311-IT-4 Formulario Solicitud de Visitantes.</strong> La solicitud debe incluir: nombre y apellido del visitante, empresa, motivo de la visita, clasificación de la visita y duración estimada.</li>
                             </ul>
+                            <div class="flex bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center mt-2">
+                                <img src="../../../images/seguridad-fisica/Código QR para Formulario Registro de Visitantes F311-IT-4.png" 
+                                    alt="Código QR para Formulario Solicitud Visitantes F311-IT-4"
+                                    class="my-auto mx-auto h-64 w-full object-cover md:h-full md:w-64 rounded-lg"
+                                    id="formulario-qr-solicitud-acceso">
+                    </div>
                         </div>
 
                         <div class="mb-6">
@@ -173,6 +179,15 @@
                                             alt="Código QR para Formulario Registro de Dispositivos Electrónicos Visitantes F311-IT-3"
                                             class="my-auto mx-auto h-64 w-full object-cover md:h-full md:w-64 rounded-lg"
                                             id="formulario-qr-dispositivos">
+                            </div>
+                            <!-- Botón para copiar URLs -->
+                            <div class="mt-4 text-center">
+                                <button id="copiar-urls-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200">
+                                    Copiar URLs
+                                </button>
+                                <div id="mensaje-copiado" class="mt-2 text-green-600 dark:text-green-400 hidden">
+                                    URLs copiadas al portapapeles
+                                </div>
                             </div>
                         </div>
                         
@@ -297,6 +312,7 @@
                                 <li><strong>F311-IT-1:</strong> Formulario de Registro de Visitantes (completo y firmado).</li>
                                 <li><strong>F311-IT-2:</strong> Acuerdo de Confidencialidad para Visitantes (firmado).</li>
                                 <li><strong>F311-IT-3:</strong> Registro de dispositivos electrónicos ingresados.</li>
+                                <li><strong>F311-IT-4:</strong> Formulario Solicitud de Visita.</li>
                                 <li>Control de credenciales entregadas y devueltas.</li>
                             </ul>
                         </div>

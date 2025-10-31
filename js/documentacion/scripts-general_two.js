@@ -519,3 +519,37 @@ document.addEventListener('click', async function(event) {
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const botonCopiar = document.getElementById('copiar-urls-btn');
+    const mensajeCopiado = document.getElementById('mensaje-copiado');
+    
+    if (botonCopiar && mensajeCopiado) {
+        botonCopiar.addEventListener('click', function() {
+            // Definir las URLs que quieres copiar
+            const urls = [
+                'https://forms.office.com/r/RR3wYqHg8v',
+                'https://forms.office.com/r/Rd0zz2RpvN' 
+            ];
+            
+            // Formatear las URLs para copiar
+            const textoParaCopiar = urls.join('\n');
+            
+            // Usar la API del portapapeles
+            navigator.clipboard.writeText(textoParaCopiar)
+                .then(() => {
+                    // Mostrar mensaje de éxito
+                    mensajeCopiado.classList.remove('hidden');
+                    
+                    // Ocultar mensaje después de 3 segundos
+                    setTimeout(() => {
+                        mensajeCopiado.classList.add('hidden');
+                    }, 3000);
+                })
+                .catch(err => {
+                    console.error('Error al copiar al portapapeles: ', err);
+                    alert('No se pudo copiar al portapapeles. Por favor, copia las URLs manualmente.');
+                });
+        });
+    }
+});
